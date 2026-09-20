@@ -576,7 +576,7 @@ function R() {
           (t, n) =>
             `<button data-answer="` +
             n +
-            `" ` +
+            `" aria-label="Answer ` + String.fromCharCode(65 + n) + `: ` + T(t) + `" ` +
             (b === null ? `` : `disabled`) +
             ` class="` +
             (b === null
