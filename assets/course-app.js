@@ -1,6 +1,7 @@
 import { validateClarifications, clarificationPage, bindClarifications, gradingConfirmed, pointsGrade, pointsTarget } from './clarifications.js';
 import { scheduleCard, registrationState } from './schedule.js';
 import { lecturePreview, lecturePage, bindLecturePrep, validateLecturePrep, lectureQuiz, quizCard } from './lecture-prep.js';
+import {sourceLink,sourceLibrary} from './source-files.js';
 let quizTitle = '';
 const systemAppearance = matchMedia('(prefers-color-scheme: dark)');
 function applyAppearance() {
@@ -325,16 +326,7 @@ var l = document.querySelector(`#app`),
     `<button data-action="` + t + `" ` + n + `>` + e + `</button>`,
   O = (e) => f.sources.find((t) => t.id === e)?.title ?? e;
 function k(e, t = 1) {
-  let n = T(O(e));
-  return d
-    ? `<button class="quiet" data-source="` +
-        T(e) +
-        `" data-page="` +
-        t +
-        `">` +
-        n +
-        `</button>`
-    : n;
+  return sourceLink(f,e,t,d);
 }
 function A(e) {
   return e.refs
@@ -516,7 +508,7 @@ function L() {
   return (
     `<p class="lede">Lecture objectives first. Textbook explanations and figures alongside them.</p><div class="unit-grid">` +
     f.units.map(I).join(``) +
-    `</div><section class="card unit-detail"><div><span class="eyebrow">CHAPTERS ` +
+    `</div>` + sourceLibrary(f,d) + `<section class="card unit-detail"><div><span class="eyebrow">CHAPTERS ` +
     e.chapters +
     `</span><h2>` +
     T(e.title) +
@@ -530,7 +522,7 @@ function L() {
     `</ul><p>` +
     (d
       ? `Open your original class documents above. The full textbook opens at OpenStax.`
-      : `Instructor originals are not redistributed here. Refer to your supplied class files.`) +
+      : `Open the original documents above. PDF links jump to the cited page where supported. Shared for noncommercial study; do not sell. The full textbook opens at OpenStax.`) +
     `</p></details></div>` +
     N(e) +
     `</section>` +

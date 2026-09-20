@@ -1,0 +1,173 @@
+{
+  "permission": "Noncommercial sharing approved by Douglas Woods, as reported by project owner on 2026-09-20; materials must not be sold.",
+  "files": [
+    {
+      "id": "source-01",
+      "filename": "source-01.pdf",
+      "title": "06 Recap-Endocrine System Lab-1.pdf",
+      "bytes": 865165,
+      "sha256": "81b27e1179d70a6e5a575c88bce531f56e2a990072079ff1397b8c39d962e9d4"
+    },
+    {
+      "id": "source-02",
+      "filename": "source-02.pdf",
+      "title": "02 Stations.pdf",
+      "bytes": 2328336,
+      "sha256": "290d1396e7fa0425dd21c444f46f9a56f9c4bf0780e4e7055a9e43919358310b"
+    },
+    {
+      "id": "source-03",
+      "filename": "source-03.pdf",
+      "title": "01 Stations.pdf",
+      "bytes": 2583296,
+      "sha256": "4e264c11b31a8361be006f45e60db72c66b74b1c67b27feee4c657842a145dce"
+    },
+    {
+      "id": "source-04",
+      "filename": "source-04.pdf",
+      "title": "09 Fertilization.pdf",
+      "bytes": 652610,
+      "sha256": "afc17b6f38db7f520f5929d13a7a46cad94539d3fb666a9cb2aa745b2b6d852d"
+    },
+    {
+      "id": "source-05",
+      "filename": "source-05.pdf",
+      "title": "08 Reproductive System Lab.pdf",
+      "bytes": 1632594,
+      "sha256": "e429d75d639c95398a333d19030e8f3d711118238cb9280948dfd15dee410f1a"
+    },
+    {
+      "id": "source-06",
+      "filename": "source-06.pdf",
+      "title": "07 Lymphatic and Immune Lab.pdf",
+      "bytes": 403099,
+      "sha256": "b6eaaa11bcb8524908e69f16c6b7f55272c4aea795fd422b0784a1bedf121d08"
+    },
+    {
+      "id": "source-07",
+      "filename": "source-07.pdf",
+      "title": "06 Endocrine System Lab.pdf",
+      "bytes": 125940,
+      "sha256": "dc2b68680a8725ca3217e2a0853c2a9e20429f80ce9ff589e5da9c2231d72e13"
+    },
+    {
+      "id": "source-08",
+      "filename": "source-08.pdf",
+      "title": "05 Acid Base Compartments Lab.pdf",
+      "bytes": 1361951,
+      "sha256": "8d12a3fe87847cd9d336dc0dfc8b7a2b02abfd28b923ead26ef9902448959572"
+    },
+    {
+      "id": "source-09",
+      "filename": "source-09.pdf",
+      "title": "04 Urinalysis.pdf",
+      "bytes": 448425,
+      "sha256": "520e71a846f7d1ba8f0b37b830fe47bbbecd4d7b623df523f88737a7d959cdd2"
+    },
+    {
+      "id": "source-10",
+      "filename": "source-10.pdf",
+      "title": "03 Anatomy of Urinary Disease.pdf",
+      "bytes": 319976,
+      "sha256": "39334d217065f76017e7d9654a26671464fa14b125aae6c63f8a486bb3d2f739"
+    },
+    {
+      "id": "source-11",
+      "filename": "source-11.docx",
+      "title": "02 Table Digestive Physiology.docx",
+      "bytes": 14353,
+      "sha256": "b69435e2db539264f4f01d7e0748153546ccae0ffca9b05852d618440f968921"
+    },
+    {
+      "id": "source-12",
+      "filename": "source-12.pdf",
+      "title": "02 Chemical Digestion.pdf",
+      "bytes": 1433278,
+      "sha256": "ad4749f1a5dc211d92ddc177fc5cc7c1317bf40a7afffbfc4e4b2d03b7583a7b"
+    },
+    {
+      "id": "source-13",
+      "filename": "source-13.pdf",
+      "title": "01 Mechanical Digestion.pdf",
+      "bytes": 209699,
+      "sha256": "58962e18b97b71277692f85322d333b4d998961a42a1ce27c5fa016878b34d30"
+    },
+    {
+      "id": "source-14",
+      "filename": "source-14.pdf",
+      "title": "bio40c_OvarianPhysiology_Birth.pdf",
+      "bytes": 944816,
+      "sha256": "142debafd2ef0b0f555efc60330b30e5289db8e9ab24f7d670e83ff7b5df6736"
+    },
+    {
+      "id": "source-15",
+      "filename": "source-15.pdf",
+      "title": "bio40c_reproduction.pdf",
+      "bytes": 1487480,
+      "sha256": "bfee186d5b0855f5021e28e40a3d043ca15ac86aeb291dc37bc5db996d7f4a1b"
+    },
+    {
+      "id": "source-16",
+      "filename": "source-16.pdf",
+      "title": "bio40c_hormones-casestudy_wrapup_immunity.pdf",
+      "bytes": 569060,
+      "sha256": "531b4c7bdbaf89d753e9fd356725285c154787dcf002b7153d702d10d77ef7c1"
+    },
+    {
+      "id": "source-17",
+      "filename": "source-17.pdf",
+      "title": "bio40c_mysteryhormones_bodydefenses.pdf",
+      "bytes": 3843851,
+      "sha256": "12a2eab6d2f3fa500636f57bc470c99a510f5613b9b41dc70db18b280cc90a5c"
+    },
+    {
+      "id": "source-18",
+      "filename": "source-18.pdf",
+      "title": "bio40c_hormones.pdf",
+      "bytes": 1669621,
+      "sha256": "530131f6c26a38939f98c145ac6bf31b391275c522502faba0e229923a6fa021"
+    },
+    {
+      "id": "source-19",
+      "filename": "source-19.pdf",
+      "title": "bio40c_acid-base-1.pdf",
+      "bytes": 2240867,
+      "sha256": "3da772052ab9a2bfa174c8191c552396054ba823d6ff90b93b429762c41a8d14"
+    },
+    {
+      "id": "source-20",
+      "filename": "source-20.pdf",
+      "title": "bio40a_urinary-case-scenarios.pdf",
+      "bytes": 766520,
+      "sha256": "b28b04fbe87e42bc4e481a7380262ca6d6457084a500d689dfe12eac0b8556d0"
+    },
+    {
+      "id": "source-21",
+      "filename": "source-21.pdf",
+      "title": "bio40c_gfr.pdf",
+      "bytes": 2052376,
+      "sha256": "ca2ce0e350181d9b8402ab86f6e4b335c040db9695cf6333a7cc9c8b204e1dea"
+    },
+    {
+      "id": "source-22",
+      "filename": "source-22.pdf",
+      "title": "bio40c_digestion-weightlosssurgery.pdf",
+      "bytes": 2010717,
+      "sha256": "e57bd9bb850f14cfbeb7650c7be3282b839f116a1ac6f26b451f8f3e0cd3ed41"
+    },
+    {
+      "id": "source-23",
+      "filename": "source-23.pdf",
+      "title": "F23bio40c_digestive_organs.pdf",
+      "bytes": 675375,
+      "sha256": "abd36cad745836d02b94e6977e8c8c9810ad6f14188f7d7905fb42bdcf0875a3"
+    },
+    {
+      "id": "source-24",
+      "filename": "source-24.pdf",
+      "title": "Bio40C Syllabus Sections 4-5 F23 Doug Woods V2-4.pdf",
+      "bytes": 359373,
+      "sha256": "3e35fa155dec3a84d75807a801ca6315f4aeb0958f0ec3978260053601f598ac"
+    }
+  ]
+}

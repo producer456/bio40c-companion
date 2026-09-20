@@ -41,6 +41,10 @@ input[type="checkbox"] { accent-color:var(--green); flex-shrink:0; }
 #course-schedule .list-row { padding:14px 0; }
 #course-schedule .list-row p { margin:5px 0 0; }
 .lecture-preview a { display:inline-block; padding:10px 0; }
+.source-file-list { list-style:none; padding:0; }
+.source-file-list li { padding:14px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.source-file-list li:last-child { border-bottom:0; }
+.source-download { display:block; width:fit-content; min-height:44px; padding:10px 0; font-size:14px; }
 #learning-activities { border-top:3px solid var(--green); }
 #learning-form > details { border:1px solid var(--line); border-radius:12px; padding:0 16px; background:var(--paper); }
 #learning-form > details > summary { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; font-size:16px; line-height:1.5; list-style:none; }

@@ -1,4 +1,5 @@
 // Optional, ungraded study activities. Uses existing cited questions; no telemetry.
+import {sourceLink} from './source-files.js';
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const confidence=['','guessing','somewhat','very'];
 const fields=['prediction','after','uncertainty','teachback'];
@@ -30,7 +31,7 @@ export function activityPlan(course,state,day) {
 }
 function questionCard(course,q,data,kind) {
   const row=data.answers?.[q.id]??{answer:'',confidence:'',checked:false,verdict:''};
-  const refs=q.refs.map(r=>`${esc(course.sources.find(s=>s.id===r.source)?.title??r.source)} · PDF p. ${r.page}`).join('<br>');
+  const refs=q.refs.map(r=>`${sourceLink(course,r.source,r.page,typeof window!=='undefined' && !!window.webkit?.messageHandlers?.companion)} · PDF p. ${r.page}`).join('<br>');
   return `<section class="card" data-recall="${q.id}"><h3>${esc(q.prompt)}</h3><label>Your answer from memory<textarea data-answer rows="2" maxlength="2000">${esc(row.answer)}</textarea></label><label>How sure are you?<select data-confidence>${confidence.map((value,i)=>`<option value="${value}" ${row.confidence===value?'selected':''}>${['Choose (optional)','Guessing','Somewhat sure','Very sure'][i]}</option>`).join('')}</select></label><button type="button" data-check="${q.id}">Save &amp; check explanation</button><p class="muted">${kind} · Try a sentence before checking; “not sure” is a useful answer. No score or grade.</p>${row.checked?`<div class="feedback"><p><strong>Reference answer:</strong> ${esc(q.choices[q.correct])}</p><p>${esc(q.explanation)}</p><p class="sources">${refs}</p><label>Compare your reasoning (self-check, not automatic grading)<select data-verdict><option value="">Choose (optional)</option><option value="got-it" ${row.verdict==='got-it'?'selected':''}>My reasoning matched</option><option value="revisit" ${row.verdict==='revisit'?'selected':''}>I need to revisit this</option></select></label>${row.confidence==='very'&&row.verdict==='revisit'?'<p class="notice">Bring this uncertainty to class: “I was sure because ___. Which step in my reasoning needs changing?”</p>':''}</div>`:''}</section>`;
 }
 export function learningCard(course,state,day) {

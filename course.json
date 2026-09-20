@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "bio40c",
-  "version": "2026.09.20.4",
+  "version": "2026.09.20.5",
   "title": "Bio 40C",
   "subtitle": "Human Anatomy & Physiology III",
   "policyStatus": "Provisional — confirm with instructor",
@@ -18,134 +18,147 @@
     "source": "Registration schedule supplied September 20, 2026",
     "sourceDate": "2026-09-20",
     "timeZone": "America/Los_Angeles",
-    "lectureDays": [2, 4],
+    "lectureDays": [
+      2,
+      4
+    ],
     "lectureStart": "09:00",
     "lectureEnd": "10:50",
     "meetings": [
-      { "type": "Lecture", "days": "Tuesday & Thursday", "time": "9:00–10:50 AM", "room": "8403" },
-      { "type": "Lab", "days": "Thursday", "time": "11:00 AM–1:50 PM", "room": "8710" }
+      {
+        "type": "Lecture",
+        "days": "Tuesday & Thursday",
+        "time": "9:00–10:50 AM",
+        "room": "8403"
+      },
+      {
+        "type": "Lab",
+        "days": "Thursday",
+        "time": "11:00 AM–1:50 PM",
+        "room": "8710"
+      }
     ]
   },
   "sources": [
     {
       "id": "source-01",
       "title": "06 Recap-Endocrine System Lab-1.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-02",
       "title": "02 Stations.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-03",
       "title": "01 Stations.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-04",
       "title": "09 Fertilization.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-05",
       "title": "08 Reproductive System Lab.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-06",
       "title": "07 Lymphatic and Immune Lab.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-07",
       "title": "06 Endocrine System Lab.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-08",
       "title": "05 Acid Base Compartments Lab.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-09",
       "title": "04 Urinalysis.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-10",
       "title": "03 Anatomy of Urinary Disease.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-11",
       "title": "02 Table Digestive Physiology.docx",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-12",
       "title": "02 Chemical Digestion.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-13",
       "title": "01 Mechanical Digestion.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-14",
       "title": "bio40c_OvarianPhysiology_Birth.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-15",
       "title": "bio40c_reproduction.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-16",
       "title": "bio40c_hormones-casestudy_wrapup_immunity.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-17",
       "title": "bio40c_mysteryhormones_bodydefenses.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-18",
       "title": "bio40c_hormones.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-19",
       "title": "bio40c_acid-base-1.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-20",
       "title": "bio40a_urinary-case-scenarios.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-21",
       "title": "bio40c_gfr.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-22",
       "title": "bio40c_digestion-weightlosssurgery.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-23",
       "title": "F23bio40c_digestive_organs.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-24",
       "title": "Bio40C Syllabus Sections 4-5 F23 Doug Woods V2-4.pdf",
-      "access": "Supplied class material; reference only"
+      "access": "Noncommercial study sharing permitted, as reported by project owner; not for sale"
     },
     {
       "id": "source-25",
@@ -1907,5 +1920,6 @@
     "endocrine": 701,
     "immune": 935,
     "reproduction": 1250
-  }
+  },
+  "originalFilesHosted": true
 }
