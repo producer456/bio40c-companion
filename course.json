@@ -1,0 +1,1911 @@
+{
+  "schemaVersion": 1,
+  "id": "bio40c",
+  "version": "2026.09.20.2",
+  "title": "Bio 40C",
+  "subtitle": "Human Anatomy & Physiology III",
+  "policyStatus": "Provisional — confirm with instructor",
+  "schedule": {
+    "course": "BIOL F040C",
+    "section": "02",
+    "crn": "20088",
+    "instructor": "Douglas Woods",
+    "campus": "Foothill, Main Campus",
+    "instruction": "In-person",
+    "units": 5,
+    "termStart": "2026-09-21",
+    "termEnd": "2026-12-11",
+    "source": "Registration schedule supplied September 20, 2026",
+    "sourceDate": "2026-09-20",
+    "timeZone": "America/Los_Angeles",
+    "lectureDays": [2, 4],
+    "lectureStart": "09:00",
+    "lectureEnd": "10:50",
+    "meetings": [
+      { "type": "Lecture", "days": "Tuesday & Thursday", "time": "9:00–10:50 AM", "room": "8403" },
+      { "type": "Lab", "days": "Thursday", "time": "11:00 AM–1:50 PM", "room": "8710" }
+    ]
+  },
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "06 Recap-Endocrine System Lab-1.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-02",
+      "title": "02 Stations.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-03",
+      "title": "01 Stations.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-04",
+      "title": "09 Fertilization.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-05",
+      "title": "08 Reproductive System Lab.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-06",
+      "title": "07 Lymphatic and Immune Lab.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-07",
+      "title": "06 Endocrine System Lab.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-08",
+      "title": "05 Acid Base Compartments Lab.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-09",
+      "title": "04 Urinalysis.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-10",
+      "title": "03 Anatomy of Urinary Disease.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-11",
+      "title": "02 Table Digestive Physiology.docx",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-12",
+      "title": "02 Chemical Digestion.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-13",
+      "title": "01 Mechanical Digestion.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-14",
+      "title": "bio40c_OvarianPhysiology_Birth.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-15",
+      "title": "bio40c_reproduction.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-16",
+      "title": "bio40c_hormones-casestudy_wrapup_immunity.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-17",
+      "title": "bio40c_mysteryhormones_bodydefenses.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-18",
+      "title": "bio40c_hormones.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-19",
+      "title": "bio40c_acid-base-1.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-20",
+      "title": "bio40a_urinary-case-scenarios.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-21",
+      "title": "bio40c_gfr.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-22",
+      "title": "bio40c_digestion-weightlosssurgery.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-23",
+      "title": "F23bio40c_digestive_organs.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-24",
+      "title": "Bio40C Syllabus Sections 4-5 F23 Doug Woods V2-4.pdf",
+      "access": "Supplied class material; reference only"
+    },
+    {
+      "id": "source-25",
+      "title": "anatomy-and-physiology-2e_-_WEB.pdf",
+      "access": "OpenStax CC BY-NC-SA 4.0"
+    }
+  ],
+  "units": [
+    {
+      "id": "digestion",
+      "title": "Digestion & metabolism",
+      "subtitle": "Follow a meal from molecules to cells.",
+      "chapters": "23–24",
+      "sources": [
+        "source-23",
+        "source-22",
+        "source-13",
+        "source-12",
+        "source-11",
+        "source-03",
+        "source-02"
+      ],
+      "objectives": [
+        "Distinguish mechanical digestion, chemical digestion, and absorption.",
+        "Trace carbohydrates, proteins, and fats through digestion and transport.",
+        "Predict how enzymes, pH, and changes to anatomy affect digestion."
+      ],
+      "guide": [
+        "Mechanical digestion increases exposed surface area; chemical digestion breaks molecular bonds. Absorption moves products across the intestinal epithelium.",
+        "Amylase acts on starch, proteases on proteins, and lipases on fats. Enzyme activity depends on conditions including pH.",
+        "Most absorbed sugars and amino acids enter villus capillaries and travel toward the liver through the hepatic portal system. Most long-chain dietary fat travels initially through lacteals.",
+        "Use the coffee-with-cream example to trace each nutrient separately. For surgery questions, identify what organ function is changed before predicting the effect."
+      ]
+    },
+    {
+      "id": "urinary",
+      "title": "Kidneys & urine",
+      "subtitle": "Connect filtration to the evidence in a sample.",
+      "chapters": "25",
+      "sources": [
+        "source-21",
+        "source-20",
+        "source-10",
+        "source-09"
+      ],
+      "objectives": [
+        "Trace blood and filtrate through the kidney.",
+        "Distinguish filtration, reabsorption, secretion, and excretion.",
+        "Connect glomerular injury and hormonal regulation to urine findings."
+      ],
+      "guide": [
+        "Filtration moves fluid from glomerular blood into the capsule. Reabsorption returns substances from tubular fluid to blood; secretion moves substances the other way.",
+        "The afferent arteriole supplies the glomerulus, and the efferent arteriole drains it. Filtration depends on pressures and the barrier, not just systemic blood pressure.",
+        "A healthy barrier retains cells and most large proteins. Persistent urinary albumin can indicate barrier damage.",
+        "Interpret case findings together. A urine result is evidence to explain physiologically, not a diagnosis by itself."
+      ]
+    },
+    {
+      "id": "balance",
+      "title": "Fluids & acid–base",
+      "subtitle": "Explain where water goes and what controls pH.",
+      "chapters": "26",
+      "sources": [
+        "source-19",
+        "source-18",
+        "source-08"
+      ],
+      "objectives": [
+        "Predict cell volume changes from tonicity.",
+        "Distinguish intracellular, interstitial, and plasma compartments.",
+        "Explain buffering, ventilation, and kidney contributions to pH."
+      ],
+      "guide": [
+        "Intracellular fluid is inside cells. Extracellular fluid includes plasma and interstitial fluid; water crosses between compartments.",
+        "Tonicity depends on effectively nonpenetrating solutes. Water enters cells in hypotonic surroundings and leaves cells in hypertonic surroundings.",
+        "Buffers resist pH change. Ventilation adjusts carbon dioxide; kidneys regulate hydrogen-ion excretion and bicarbonate handling.",
+        "Use the egg-osmosis experiment to explain mass changes. Use the exhaled-carbon-dioxide experiment to connect ventilation to acid–base chemistry."
+      ]
+    },
+    {
+      "id": "endocrine",
+      "title": "Hormones & feedback",
+      "subtitle": "Reason through the signal, receptor, and response.",
+      "chapters": "17",
+      "sources": [
+        "source-18",
+        "source-17",
+        "source-07",
+        "source-01"
+      ],
+      "objectives": [
+        "Relate hormone solubility to receptor location and action.",
+        "Trace hypothalamic–pituitary–target gland feedback.",
+        "Interpret experimental changes in endocrine organs."
+      ],
+      "guide": [
+        "A hormone can circulate widely, but only cells with suitable receptors respond directly.",
+        "Many water-soluble hormones bind surface receptors and signal through intracellular pathways. Steroid hormones commonly bind intracellular receptors and alter gene expression.",
+        "In negative feedback, rising target-gland hormone usually reduces upstream stimulation. Distinguish the hormone injected from the organ that normally produces it.",
+        "For mystery-hormone experiments, compare the treated group with a control, then explain changes at every step of the axis."
+      ]
+    },
+    {
+      "id": "immune",
+      "title": "Lymph & immunity",
+      "subtitle": "Trace the route from a barrier to immune memory.",
+      "chapters": "21",
+      "sources": [
+        "source-17",
+        "source-16",
+        "source-06"
+      ],
+      "objectives": [
+        "Trace lymph return and identify lymphatic organ functions.",
+        "Compare innate and adaptive defenses.",
+        "Explain antigen specificity, vaccination, and autoimmunity."
+      ],
+      "guide": [
+        "Lymphatic vessels return interstitial fluid to circulation; intestinal lacteals also transport absorbed dietary lipids.",
+        "Innate defenses include barriers, phagocytes, natural killer cells, and inflammation. Adaptive responses involve antigen-specific B and T lymphocytes.",
+        "Activated B cells can become antibody-secreting plasma cells. Memory cells support faster responses on later encounters.",
+        "Distinguish the spleen, which filters blood, from lymph nodes, which filter lymph. Use mechanisms rather than symptoms alone when explaining autoimmune cases."
+      ]
+    },
+    {
+      "id": "reproduction",
+      "title": "Reproduction & development",
+      "subtitle": "Connect anatomy, hormone cycles, and fertilization.",
+      "chapters": "27–28",
+      "sources": [
+        "source-15",
+        "source-14",
+        "source-05",
+        "source-04"
+      ],
+      "objectives": [
+        "Explain gamete production and transport.",
+        "Relate hormone feedback to ovulation and contraception.",
+        "Explain fertilization, early development, and childbirth feedback."
+      ],
+      "guide": [
+        "Spermatogenesis occurs in seminiferous tubules. Sertoli (nurse) cells support developing germ cells; Leydig cells produce testosterone.",
+        "FSH supports follicular development. Sustained high estradiol near midcycle can produce positive feedback and the LH surge.",
+        "After ovulation, the corpus luteum produces progesterone and estrogen. Falling hormone support contributes to endometrial shedding if pregnancy does not occur.",
+        "Connect the ovarian cycle to IVF reasoning, and connect oxytocin-driven contractions to positive feedback during birth."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-01",
+      "unit": "digestion",
+      "objective": "Distinguish mechanical digestion, chemical digestion, and absorption.",
+      "prompt": "Why can chewing improve subsequent enzyme action?",
+      "choices": [
+        "It increases accessible surface area",
+        "It activates pepsin before food reaches the stomach",
+        "It transfers nutrients through villus capillaries",
+        "It emulsifies fats into micelles"
+      ],
+      "correct": 0,
+      "explanation": "Chewing physically breaks food into smaller pieces, exposing more substrate to digestive enzymes. It is not pepsin activation, transport across the intestinal lining, or bile-mediated emulsification.",
+      "rationales": [
+        "Chewing physically breaks food into smaller pieces, exposing more substrate to digestive enzymes. It is not pepsin activation, transport across the intestinal lining, or bile-mediated emulsification.",
+        "“It activates pepsin before food reaches the stomach” is not the best answer here. Chewing physically breaks food into smaller pieces, exposing more substrate to digestive enzymes. It is not pepsin activation, transport across the intestinal lining, or bile-mediated emulsification.",
+        "“It transfers nutrients through villus capillaries” is not the best answer here. Chewing physically breaks food into smaller pieces, exposing more substrate to digestive enzymes. It is not pepsin activation, transport across the intestinal lining, or bile-mediated emulsification.",
+        "“It emulsifies fats into micelles” is not the best answer here. Chewing physically breaks food into smaller pieces, exposing more substrate to digestive enzymes. It is not pepsin activation, transport across the intestinal lining, or bile-mediated emulsification."
+      ],
+      "refs": [
+        {
+          "source": "source-23",
+          "page": 11
+        }
+      ],
+      "image": "figures/digestion.png",
+      "imageAlt": "Supplied OpenStax digestion figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "digestion-02",
+      "unit": "digestion",
+      "objective": "Distinguish mechanical digestion, chemical digestion, and absorption.",
+      "prompt": "Why is bile emulsification classified as mechanical rather than chemical digestion?",
+      "choices": [
+        "It hydrolyzes triglycerides into fatty acids",
+        "It disperses droplets without hydrolyzing triglycerides",
+        "It digests proteins into short peptides",
+        "It transports lipid products across enterocytes"
+      ],
+      "correct": 1,
+      "explanation": "Bile disperses lipid droplets and increases lipase access; lipase, rather than bile itself, catalyzes triglyceride hydrolysis.",
+      "rationales": [
+        "“It hydrolyzes triglycerides into fatty acids” is not the best answer here. Bile disperses lipid droplets and increases lipase access; lipase, rather than bile itself, catalyzes triglyceride hydrolysis.",
+        "Bile disperses lipid droplets and increases lipase access; lipase, rather than bile itself, catalyzes triglyceride hydrolysis.",
+        "“It digests proteins into short peptides” is not the best answer here. Bile disperses lipid droplets and increases lipase access; lipase, rather than bile itself, catalyzes triglyceride hydrolysis.",
+        "“It transports lipid products across enterocytes” is not the best answer here. Bile disperses lipid droplets and increases lipase access; lipase, rather than bile itself, catalyzes triglyceride hydrolysis."
+      ],
+      "refs": [
+        {
+          "source": "source-22",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "digestion-03",
+      "unit": "digestion",
+      "objective": "Trace carbohydrates, proteins, and fats through digestion and transport.",
+      "prompt": "After absorption, most glucose from a meal first travels from intestinal villi toward which organ?",
+      "choices": [
+        "Heart through intestinal lacteals",
+        "Kidneys through the renal portal vein",
+        "Liver through portal blood",
+        "Gallbladder through the common bile duct"
+      ],
+      "correct": 2,
+      "explanation": "Absorbed monosaccharides enter villus capillaries and travel to the liver in hepatic portal blood. Lacteals instead transport much long-chain dietary lipid; bile ducts transport bile toward the intestine.",
+      "rationales": [
+        "“Heart through intestinal lacteals” is not the best answer here. Absorbed monosaccharides enter villus capillaries and travel to the liver in hepatic portal blood. Lacteals instead transport much long-chain dietary lipid; bile ducts transport bile toward the intestine.",
+        "“Kidneys through the renal portal vein” is not the best answer here. Absorbed monosaccharides enter villus capillaries and travel to the liver in hepatic portal blood. Lacteals instead transport much long-chain dietary lipid; bile ducts transport bile toward the intestine.",
+        "Absorbed monosaccharides enter villus capillaries and travel to the liver in hepatic portal blood. Lacteals instead transport much long-chain dietary lipid; bile ducts transport bile toward the intestine.",
+        "“Gallbladder through the common bile duct” is not the best answer here. Absorbed monosaccharides enter villus capillaries and travel to the liver in hepatic portal blood. Lacteals instead transport much long-chain dietary lipid; bile ducts transport bile toward the intestine."
+      ],
+      "refs": [
+        {
+          "source": "source-22",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "digestion-04",
+      "unit": "digestion",
+      "objective": "Trace carbohydrates, proteins, and fats through digestion and transport.",
+      "prompt": "Which route carries most absorbed long-chain dietary fat away from intestinal villi initially?",
+      "choices": [
+        "Villus capillaries directly into portal blood",
+        "Hepatic bile ducts into the liver",
+        "Pancreatic ducts into systemic blood",
+        "Lacteals into lymph"
+      ],
+      "correct": 3,
+      "explanation": "Enterocytes package much long-chain dietary lipid in chylomicrons that enter lacteals. The other routes are outside intestinal fat absorption.",
+      "rationales": [
+        "“Villus capillaries directly into portal blood” is not the best answer here. Enterocytes package much long-chain dietary lipid in chylomicrons that enter lacteals. The other routes are outside intestinal fat absorption.",
+        "“Hepatic bile ducts into the liver” is not the best answer here. Enterocytes package much long-chain dietary lipid in chylomicrons that enter lacteals. The other routes are outside intestinal fat absorption.",
+        "“Pancreatic ducts into systemic blood” is not the best answer here. Enterocytes package much long-chain dietary lipid in chylomicrons that enter lacteals. The other routes are outside intestinal fat absorption.",
+        "Enterocytes package much long-chain dietary lipid in chylomicrons that enter lacteals. The other routes are outside intestinal fat absorption."
+      ],
+      "refs": [
+        {
+          "source": "source-22",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "digestion-05",
+      "unit": "digestion",
+      "objective": "Trace carbohydrates, proteins, and fats through digestion and transport.",
+      "prompt": "A lab tube models protein digestion in the stomach. Which enzyme is the best match?",
+      "choices": [
+        "Pepsin",
+        "Amylase",
+        "Lactase",
+        "Pancreatic lipase"
+      ],
+      "correct": 0,
+      "explanation": "Pepsin digests proteins in the stomach. Amylase digests starch, lactase digests lactose, and pancreatic lipase acts on fats in the small intestine.",
+      "rationales": [
+        "Pepsin digests proteins in the stomach. Amylase digests starch, lactase digests lactose, and pancreatic lipase acts on fats in the small intestine.",
+        "“Amylase” is not the best answer here. Pepsin digests proteins in the stomach. Amylase digests starch, lactase digests lactose, and pancreatic lipase acts on fats in the small intestine.",
+        "“Lactase” is not the best answer here. Pepsin digests proteins in the stomach. Amylase digests starch, lactase digests lactose, and pancreatic lipase acts on fats in the small intestine.",
+        "“Pancreatic lipase” is not the best answer here. Pepsin digests proteins in the stomach. Amylase digests starch, lactase digests lactose, and pancreatic lipase acts on fats in the small intestine."
+      ],
+      "refs": [
+        {
+          "source": "source-12",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "digestion-06",
+      "unit": "digestion",
+      "objective": "Predict how enzymes, pH, and changes to anatomy affect digestion.",
+      "prompt": "Why might a digestive enzyme work poorly at the wrong pH?",
+      "choices": [
+        "The enzyme's substrate specificity changes to every nutrient",
+        "Its structure and active-site chemistry may be altered",
+        "Absorption must increase to compensate immediately",
+        "Its optimal temperature necessarily increases by the same amount"
+      ],
+      "correct": 1,
+      "explanation": "pH affects enzyme conformation and the ionization of active-site groups, which can reduce catalysis. This does not make an enzyme act on every nutrient, necessarily change its optimal temperature, or directly increase absorption.",
+      "rationales": [
+        "“The enzyme's substrate specificity changes to every nutrient” is not the best answer here. pH affects enzyme conformation and the ionization of active-site groups, which can reduce catalysis. This does not make an enzyme act on every nutrient, necessarily change its optimal temperature, or directly increase absorption.",
+        "pH affects enzyme conformation and the ionization of active-site groups, which can reduce catalysis. This does not make an enzyme act on every nutrient, necessarily change its optimal temperature, or directly increase absorption.",
+        "“Absorption must increase to compensate immediately” is not the best answer here. pH affects enzyme conformation and the ionization of active-site groups, which can reduce catalysis. This does not make an enzyme act on every nutrient, necessarily change its optimal temperature, or directly increase absorption.",
+        "“Its optimal temperature necessarily increases by the same amount” is not the best answer here. pH affects enzyme conformation and the ionization of active-site groups, which can reduce catalysis. This does not make an enzyme act on every nutrient, necessarily change its optimal temperature, or directly increase absorption."
+      ],
+      "refs": [
+        {
+          "source": "source-12",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "digestion-07",
+      "unit": "digestion",
+      "objective": "Distinguish mechanical digestion, chemical digestion, and absorption.",
+      "prompt": "Which process actually moves digested nutrients into the body's internal fluids?",
+      "choices": [
+        "Mastication",
+        "Defecation",
+        "Absorption",
+        "Ingestion"
+      ],
+      "correct": 2,
+      "explanation": "Absorption crosses the epithelial barrier into blood or lymph. Ingestion brings food into the tract, mastication breaks it physically, and defecation removes residues.",
+      "rationales": [
+        "“Mastication” is not the best answer here. Absorption crosses the epithelial barrier into blood or lymph. Ingestion brings food into the tract, mastication breaks it physically, and defecation removes residues.",
+        "“Defecation” is not the best answer here. Absorption crosses the epithelial barrier into blood or lymph. Ingestion brings food into the tract, mastication breaks it physically, and defecation removes residues.",
+        "Absorption crosses the epithelial barrier into blood or lymph. Ingestion brings food into the tract, mastication breaks it physically, and defecation removes residues.",
+        "“Ingestion” is not the best answer here. Absorption crosses the epithelial barrier into blood or lymph. Ingestion brings food into the tract, mastication breaks it physically, and defecation removes residues."
+      ],
+      "refs": [
+        {
+          "source": "source-23",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "digestion-08",
+      "unit": "digestion",
+      "objective": "Predict how enzymes, pH, and changes to anatomy affect digestion.",
+      "prompt": "Blocking stomach G-cell activity would most directly reduce which signal?",
+      "choices": [
+        "Secretin from duodenal cells",
+        "Cholecystokinin from intestinal cells",
+        "Ghrelin as the only signal controlling acid secretion",
+        "Gastrin"
+      ],
+      "correct": 3,
+      "explanation": "G cells release gastrin, which stimulates gastric secretory activity. Secretin and cholecystokinin are intestinal hormones with different stimuli and targets; ghrelin is not the sole controller of acid secretion.",
+      "rationales": [
+        "“Secretin from duodenal cells” is not the best answer here. G cells release gastrin, which stimulates gastric secretory activity. Secretin and cholecystokinin are intestinal hormones with different stimuli and targets; ghrelin is not the sole controller of acid secretion.",
+        "“Cholecystokinin from intestinal cells” is not the best answer here. G cells release gastrin, which stimulates gastric secretory activity. Secretin and cholecystokinin are intestinal hormones with different stimuli and targets; ghrelin is not the sole controller of acid secretion.",
+        "“Ghrelin as the only signal controlling acid secretion” is not the best answer here. G cells release gastrin, which stimulates gastric secretory activity. Secretin and cholecystokinin are intestinal hormones with different stimuli and targets; ghrelin is not the sole controller of acid secretion.",
+        "G cells release gastrin, which stimulates gastric secretory activity. Secretin and cholecystokinin are intestinal hormones with different stimuli and targets; ghrelin is not the sole controller of acid secretion."
+      ],
+      "refs": [
+        {
+          "source": "source-22",
+          "page": 6
+        },
+        {
+          "source": "source-25",
+          "page": 1062
+        }
+      ]
+    },
+    {
+      "id": "digestion-09",
+      "unit": "digestion",
+      "objective": "Predict how enzymes, pH, and changes to anatomy affect digestion.",
+      "prompt": "Why can bypassing an absorptive part of the small intestine affect nutrition?",
+      "choices": [
+        "It reduces the functional surface exposed to food",
+        "It increases absorptive contact time in the bypassed segment",
+        "It replaces bile's role with gastric acid",
+        "It makes pancreatic enzymes unnecessary for digestion"
+      ],
+      "correct": 0,
+      "explanation": "Bypass reduces food contact with some absorptive surfaces and can alter mixing with digestive secretions. Absorption still requires transport across intestinal epithelium, and pancreatic enzymes remain important.",
+      "rationales": [
+        "Bypass reduces food contact with some absorptive surfaces and can alter mixing with digestive secretions. Absorption still requires transport across intestinal epithelium, and pancreatic enzymes remain important.",
+        "“It increases absorptive contact time in the bypassed segment” is not the best answer here. Bypass reduces food contact with some absorptive surfaces and can alter mixing with digestive secretions. Absorption still requires transport across intestinal epithelium, and pancreatic enzymes remain important.",
+        "“It replaces bile's role with gastric acid” is not the best answer here. Bypass reduces food contact with some absorptive surfaces and can alter mixing with digestive secretions. Absorption still requires transport across intestinal epithelium, and pancreatic enzymes remain important.",
+        "“It makes pancreatic enzymes unnecessary for digestion” is not the best answer here. Bypass reduces food contact with some absorptive surfaces and can alter mixing with digestive secretions. Absorption still requires transport across intestinal epithelium, and pancreatic enzymes remain important."
+      ],
+      "refs": [
+        {
+          "source": "source-22",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "id": "digestion-10",
+      "unit": "digestion",
+      "objective": "Predict how enzymes, pH, and changes to anatomy affect digestion.",
+      "prompt": "How does removal of lactase activity help explain gas after lactose consumption?",
+      "choices": [
+        "Lactose is absorbed intact and fermented in blood",
+        "Unabsorbed lactose can reach bacteria that ferment it",
+        "Pepsin digests lactose into gas in the stomach",
+        "The pancreas must release extra bile to digest lactose"
+      ],
+      "correct": 1,
+      "explanation": "Lactose that is not hydrolyzed and absorbed can be fermented by colonic bacteria, generating gas; it can also contribute to osmotic water retention.",
+      "rationales": [
+        "“Lactose is absorbed intact and fermented in blood” is not the best answer here. Lactose that is not hydrolyzed and absorbed can be fermented by colonic bacteria, generating gas; it can also contribute to osmotic water retention.",
+        "Lactose that is not hydrolyzed and absorbed can be fermented by colonic bacteria, generating gas; it can also contribute to osmotic water retention.",
+        "“Pepsin digests lactose into gas in the stomach” is not the best answer here. Lactose that is not hydrolyzed and absorbed can be fermented by colonic bacteria, generating gas; it can also contribute to osmotic water retention.",
+        "“The pancreas must release extra bile to digest lactose” is not the best answer here. Lactose that is not hydrolyzed and absorbed can be fermented by colonic bacteria, generating gas; it can also contribute to osmotic water retention."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "urinary-01",
+      "unit": "urinary",
+      "objective": "Distinguish filtration, reabsorption, secretion, and excretion.",
+      "prompt": "In the glomerular diagram, constricting the afferent arteriole tends to do what, other factors held constant?",
+      "choices": [
+        "Reduce blood entry and filtration pressure",
+        "Increase filtration by raising resistance after the glomerulus",
+        "Increase water reabsorption by inserting aquaporins directly",
+        "Increase protein passage by widening filtration slits"
+      ],
+      "correct": 0,
+      "explanation": "The afferent arteriole supplies the glomerulus. Its constriction tends to reduce glomerular pressure and GFR, although whole-body regulation adds complexity.",
+      "rationales": [
+        "The afferent arteriole supplies the glomerulus. Its constriction tends to reduce glomerular pressure and GFR, although whole-body regulation adds complexity.",
+        "“Increase filtration by raising resistance after the glomerulus” is not the best answer here. The afferent arteriole supplies the glomerulus. Its constriction tends to reduce glomerular pressure and GFR, although whole-body regulation adds complexity.",
+        "“Increase water reabsorption by inserting aquaporins directly” is not the best answer here. The afferent arteriole supplies the glomerulus. Its constriction tends to reduce glomerular pressure and GFR, although whole-body regulation adds complexity.",
+        "“Increase protein passage by widening filtration slits” is not the best answer here. The afferent arteriole supplies the glomerulus. Its constriction tends to reduce glomerular pressure and GFR, although whole-body regulation adds complexity."
+      ],
+      "refs": [
+        {
+          "source": "source-21",
+          "page": 13
+        }
+      ],
+      "image": "figures/urinary.png",
+      "imageAlt": "Supplied OpenStax urinary figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "urinary-02",
+      "unit": "urinary",
+      "objective": "Trace blood and filtrate through the kidney.",
+      "prompt": "What is tubular reabsorption?",
+      "choices": [
+        "Movement from renal pelvis into a ureter",
+        "Movement from tubular fluid back toward blood",
+        "Movement from blood into the tubule",
+        "Movement from bladder to the outside"
+      ],
+      "correct": 1,
+      "explanation": "Reabsorption recovers substances from tubular fluid. Blood-to-tubule movement is secretion, while the other choices describe urinary outflow.",
+      "rationales": [
+        "“Movement from renal pelvis into a ureter” is not the best answer here. Reabsorption recovers substances from tubular fluid. Blood-to-tubule movement is secretion, while the other choices describe urinary outflow.",
+        "Reabsorption recovers substances from tubular fluid. Blood-to-tubule movement is secretion, while the other choices describe urinary outflow.",
+        "“Movement from blood into the tubule” is not the best answer here. Reabsorption recovers substances from tubular fluid. Blood-to-tubule movement is secretion, while the other choices describe urinary outflow.",
+        "“Movement from bladder to the outside” is not the best answer here. Reabsorption recovers substances from tubular fluid. Blood-to-tubule movement is secretion, while the other choices describe urinary outflow."
+      ],
+      "refs": [
+        {
+          "source": "source-09",
+          "page": 9
+        },
+        {
+          "source": "source-25",
+          "page": 1165
+        }
+      ]
+    },
+    {
+      "id": "urinary-03",
+      "unit": "urinary",
+      "objective": "Trace blood and filtrate through the kidney.",
+      "prompt": "What is tubular secretion?",
+      "choices": [
+        "Expulsion of urine through the urethra",
+        "Breakdown of food in the stomach",
+        "Transfer from blood/interstitium into tubular fluid",
+        "Return of tubular glucose to blood"
+      ],
+      "correct": 2,
+      "explanation": "Secretion adds substances to the tubule from blood or surrounding fluid. Reabsorption moves in the opposite direction.",
+      "rationales": [
+        "“Expulsion of urine through the urethra” is not the best answer here. Secretion adds substances to the tubule from blood or surrounding fluid. Reabsorption moves in the opposite direction.",
+        "“Breakdown of food in the stomach” is not the best answer here. Secretion adds substances to the tubule from blood or surrounding fluid. Reabsorption moves in the opposite direction.",
+        "Secretion adds substances to the tubule from blood or surrounding fluid. Reabsorption moves in the opposite direction.",
+        "“Return of tubular glucose to blood” is not the best answer here. Secretion adds substances to the tubule from blood or surrounding fluid. Reabsorption moves in the opposite direction."
+      ],
+      "refs": [
+        {
+          "source": "source-09",
+          "page": 9
+        },
+        {
+          "source": "source-25",
+          "page": 1168
+        }
+      ]
+    },
+    {
+      "id": "urinary-04",
+      "unit": "urinary",
+      "objective": "Connect glomerular injury and hormonal regulation to urine findings.",
+      "prompt": "Why is persistent albumin in urine relevant to a kidney case?",
+      "choices": [
+        "Albumin is normally the main urinary solute",
+        "It proves a specific diagnosis without other evidence",
+        "It means the ureter makes albumin",
+        "It can indicate impaired retention by the filtration barrier"
+      ],
+      "correct": 3,
+      "explanation": "The healthy barrier retains most large proteins. Albuminuria supports investigating injury, but it must be interpreted with other findings.",
+      "rationales": [
+        "“Albumin is normally the main urinary solute” is not the best answer here. The healthy barrier retains most large proteins. Albuminuria supports investigating injury, but it must be interpreted with other findings.",
+        "“It proves a specific diagnosis without other evidence” is not the best answer here. The healthy barrier retains most large proteins. Albuminuria supports investigating injury, but it must be interpreted with other findings.",
+        "“It means the ureter makes albumin” is not the best answer here. The healthy barrier retains most large proteins. Albuminuria supports investigating injury, but it must be interpreted with other findings.",
+        "The healthy barrier retains most large proteins. Albuminuria supports investigating injury, but it must be interpreted with other findings."
+      ],
+      "refs": [
+        {
+          "source": "source-19",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "id": "urinary-05",
+      "unit": "urinary",
+      "objective": "Trace blood and filtrate through the kidney.",
+      "prompt": "Which vessel carries blood away from the glomerular capillary tuft?",
+      "choices": [
+        "Efferent arteriole",
+        "Afferent arteriole",
+        "Ureter",
+        "Collecting duct"
+      ],
+      "correct": 0,
+      "explanation": "Efferent means exiting the glomerulus. The afferent arteriole supplies it; ureters and collecting ducts contain urine or tubular fluid, not the tuft's outgoing blood.",
+      "rationales": [
+        "Efferent means exiting the glomerulus. The afferent arteriole supplies it; ureters and collecting ducts contain urine or tubular fluid, not the tuft's outgoing blood.",
+        "“Afferent arteriole” is not the best answer here. Efferent means exiting the glomerulus. The afferent arteriole supplies it; ureters and collecting ducts contain urine or tubular fluid, not the tuft's outgoing blood.",
+        "“Ureter” is not the best answer here. Efferent means exiting the glomerulus. The afferent arteriole supplies it; ureters and collecting ducts contain urine or tubular fluid, not the tuft's outgoing blood.",
+        "“Collecting duct” is not the best answer here. Efferent means exiting the glomerulus. The afferent arteriole supplies it; ureters and collecting ducts contain urine or tubular fluid, not the tuft's outgoing blood."
+      ],
+      "refs": [
+        {
+          "source": "source-21",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "id": "urinary-06",
+      "unit": "urinary",
+      "objective": "Distinguish filtration, reabsorption, secretion, and excretion.",
+      "prompt": "Which combination is normally retained by an intact glomerular filtration barrier?",
+      "choices": [
+        "All glucose because it is too large to filter",
+        "Blood cells and most large plasma proteins",
+        "All sodium because it is protein-bound",
+        "All urea because it must be secreted instead"
+      ],
+      "correct": 1,
+      "explanation": "Water and many small solutes enter filtrate. Blood cells and most large proteins are retained; filtered glucose is normally reabsorbed subsequently.",
+      "rationales": [
+        "“All glucose because it is too large to filter” is not the best answer here. Water and many small solutes enter filtrate. Blood cells and most large proteins are retained; filtered glucose is normally reabsorbed subsequently.",
+        "Water and many small solutes enter filtrate. Blood cells and most large proteins are retained; filtered glucose is normally reabsorbed subsequently.",
+        "“All sodium because it is protein-bound” is not the best answer here. Water and many small solutes enter filtrate. Blood cells and most large proteins are retained; filtered glucose is normally reabsorbed subsequently.",
+        "“All urea because it must be secreted instead” is not the best answer here. Water and many small solutes enter filtrate. Blood cells and most large proteins are retained; filtered glucose is normally reabsorbed subsequently."
+      ],
+      "refs": [
+        {
+          "source": "source-21",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "urinary-07",
+      "unit": "urinary",
+      "objective": "Distinguish filtration, reabsorption, secretion, and excretion.",
+      "prompt": "How does ADH help conserve body water?",
+      "choices": [
+        "It decreases collecting-duct water permeability",
+        "It prevents sodium filtration at the glomerulus",
+        "It increases water permeability in parts of the distal nephron",
+        "It directly pumps water into the renal pelvis"
+      ],
+      "correct": 2,
+      "explanation": "ADH promotes water reabsorption by increasing water permeability, especially by adding aquaporins to collecting-duct cells. Water then follows osmotic gradients; ADH does not pump water or prevent all sodium filtration.",
+      "rationales": [
+        "“It decreases collecting-duct water permeability” is not the best answer here. ADH promotes water reabsorption by increasing water permeability, especially by adding aquaporins to collecting-duct cells. Water then follows osmotic gradients; ADH does not pump water or prevent all sodium filtration.",
+        "“It prevents sodium filtration at the glomerulus” is not the best answer here. ADH promotes water reabsorption by increasing water permeability, especially by adding aquaporins to collecting-duct cells. Water then follows osmotic gradients; ADH does not pump water or prevent all sodium filtration.",
+        "ADH promotes water reabsorption by increasing water permeability, especially by adding aquaporins to collecting-duct cells. Water then follows osmotic gradients; ADH does not pump water or prevent all sodium filtration.",
+        "“It directly pumps water into the renal pelvis” is not the best answer here. ADH promotes water reabsorption by increasing water permeability, especially by adding aquaporins to collecting-duct cells. Water then follows osmotic gradients; ADH does not pump water or prevent all sodium filtration."
+      ],
+      "refs": [
+        {
+          "source": "source-20",
+          "page": 7
+        },
+        {
+          "source": "source-25",
+          "page": 1185
+        }
+      ]
+    },
+    {
+      "id": "urinary-08",
+      "unit": "urinary",
+      "objective": "Connect glomerular injury and hormonal regulation to urine findings.",
+      "prompt": "Which urinary result is most consistent with increased glucose delivery exceeding reabsorptive capacity?",
+      "choices": [
+        "Increased protein alone in urine",
+        "Absence of glucose from both blood and urine",
+        "Reduced glucose filtration despite elevated blood glucose",
+        "Glucose in urine"
+      ],
+      "correct": 3,
+      "explanation": "Filtered glucose is normally reabsorbed. When the filtered load exceeds tubular transport capacity, some glucose remains in urine. This is different from protein leakage across the filtration barrier.",
+      "rationales": [
+        "“Increased protein alone in urine” is not the best answer here. Filtered glucose is normally reabsorbed. When the filtered load exceeds tubular transport capacity, some glucose remains in urine. This is different from protein leakage across the filtration barrier.",
+        "“Absence of glucose from both blood and urine” is not the best answer here. Filtered glucose is normally reabsorbed. When the filtered load exceeds tubular transport capacity, some glucose remains in urine. This is different from protein leakage across the filtration barrier.",
+        "“Reduced glucose filtration despite elevated blood glucose” is not the best answer here. Filtered glucose is normally reabsorbed. When the filtered load exceeds tubular transport capacity, some glucose remains in urine. This is different from protein leakage across the filtration barrier.",
+        "Filtered glucose is normally reabsorbed. When the filtered load exceeds tubular transport capacity, some glucose remains in urine. This is different from protein leakage across the filtration barrier."
+      ],
+      "refs": [
+        {
+          "source": "source-09",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "urinary-09",
+      "unit": "urinary",
+      "objective": "Connect glomerular injury and hormonal regulation to urine findings.",
+      "prompt": "What does a higher urine specific gravity generally indicate when comparing otherwise similar samples?",
+      "choices": [
+        "More concentrated dissolved material",
+        "Lower total solute concentration",
+        "A unique diagnosis of diabetes mellitus",
+        "Lower density relative to water"
+      ],
+      "correct": 0,
+      "explanation": "Specific gravity compares density with water and usually rises with concentration. It is not a diagnosis by itself and depends on the substances present.",
+      "rationales": [
+        "Specific gravity compares density with water and usually rises with concentration. It is not a diagnosis by itself and depends on the substances present.",
+        "“Lower total solute concentration” is not the best answer here. Specific gravity compares density with water and usually rises with concentration. It is not a diagnosis by itself and depends on the substances present.",
+        "“A unique diagnosis of diabetes mellitus” is not the best answer here. Specific gravity compares density with water and usually rises with concentration. It is not a diagnosis by itself and depends on the substances present.",
+        "“Lower density relative to water” is not the best answer here. Specific gravity compares density with water and usually rises with concentration. It is not a diagnosis by itself and depends on the substances present."
+      ],
+      "refs": [
+        {
+          "source": "source-09",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "urinary-10",
+      "unit": "urinary",
+      "objective": "Trace blood and filtrate through the kidney.",
+      "prompt": "Which route correctly follows urine after it leaves a kidney?",
+      "choices": [
+        "Urethra, bladder, ureter",
+        "Ureter, bladder, urethra",
+        "Ureter, urethra, bladder",
+        "Bladder, ureter, urethra"
+      ],
+      "correct": 1,
+      "explanation": "Urine travels from a kidney through a ureter to the bladder, then leaves through the urethra. Ureters connect kidneys to bladder; the urethra is downstream of the bladder.",
+      "rationales": [
+        "“Urethra, bladder, ureter” is not the best answer here. Urine travels from a kidney through a ureter to the bladder, then leaves through the urethra. Ureters connect kidneys to bladder; the urethra is downstream of the bladder.",
+        "Urine travels from a kidney through a ureter to the bladder, then leaves through the urethra. Ureters connect kidneys to bladder; the urethra is downstream of the bladder.",
+        "“Ureter, urethra, bladder” is not the best answer here. Urine travels from a kidney through a ureter to the bladder, then leaves through the urethra. Ureters connect kidneys to bladder; the urethra is downstream of the bladder.",
+        "“Bladder, ureter, urethra” is not the best answer here. Urine travels from a kidney through a ureter to the bladder, then leaves through the urethra. Ureters connect kidneys to bladder; the urethra is downstream of the bladder."
+      ],
+      "refs": [
+        {
+          "source": "source-10",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "balance-01",
+      "unit": "balance",
+      "objective": "Predict cell volume changes from tonicity.",
+      "prompt": "In the fluid-compartment figure, which fluid bathes tissue cells outside blood vessels?",
+      "choices": [
+        "Interstitial fluid",
+        "Intracellular fluid",
+        "Plasma inside vessels",
+        "Cytosol only"
+      ],
+      "correct": 0,
+      "explanation": "Interstitial fluid occupies spaces between tissue cells. Cytosol is intracellular; plasma is the fluid portion within blood vessels.",
+      "rationales": [
+        "Interstitial fluid occupies spaces between tissue cells. Cytosol is intracellular; plasma is the fluid portion within blood vessels.",
+        "“Intracellular fluid” is not the best answer here. Interstitial fluid occupies spaces between tissue cells. Cytosol is intracellular; plasma is the fluid portion within blood vessels.",
+        "“Plasma inside vessels” is not the best answer here. Interstitial fluid occupies spaces between tissue cells. Cytosol is intracellular; plasma is the fluid portion within blood vessels.",
+        "“Cytosol only” is not the best answer here. Interstitial fluid occupies spaces between tissue cells. Cytosol is intracellular; plasma is the fluid portion within blood vessels."
+      ],
+      "refs": [
+        {
+          "source": "source-25",
+          "page": 1204
+        }
+      ],
+      "image": "figures/balance.png",
+      "imageAlt": "Supplied OpenStax balance figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "balance-02",
+      "unit": "balance",
+      "objective": "Distinguish intracellular, interstitial, and plasma compartments.",
+      "prompt": "A cell is placed in a hypertonic solution containing nonpenetrating solute. What is expected?",
+      "choices": [
+        "Water enters the cell and it swells",
+        "Water leaves the cell and it shrinks",
+        "Cell volume stays constant because water cannot cross membranes",
+        "The cell swells because extracellular osmolarity is higher"
+      ],
+      "correct": 1,
+      "explanation": "A hypertonic extracellular solution draws water out by osmosis. A hypotonic solution instead favors swelling.",
+      "rationales": [
+        "“Water enters the cell and it swells” is not the best answer here. A hypertonic extracellular solution draws water out by osmosis. A hypotonic solution instead favors swelling.",
+        "A hypertonic extracellular solution draws water out by osmosis. A hypotonic solution instead favors swelling.",
+        "“Cell volume stays constant because water cannot cross membranes” is not the best answer here. A hypertonic extracellular solution draws water out by osmosis. A hypotonic solution instead favors swelling.",
+        "“The cell swells because extracellular osmolarity is higher” is not the best answer here. A hypertonic extracellular solution draws water out by osmosis. A hypotonic solution instead favors swelling."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "balance-03",
+      "unit": "balance",
+      "objective": "Distinguish intracellular, interstitial, and plasma compartments.",
+      "prompt": "A de-shelled egg gains mass in a hypotonic solution. What best explains this?",
+      "choices": [
+        "Salt enters and is converted into egg protein",
+        "Net water leaves because the surroundings are hypotonic",
+        "Net water entry by osmosis",
+        "The egg membrane prevents any osmotic water movement"
+      ],
+      "correct": 2,
+      "explanation": "Net osmotic water entry increases mass. This does not require making protein or pumping water against an osmotic gradient.",
+      "rationales": [
+        "“Salt enters and is converted into egg protein” is not the best answer here. Net osmotic water entry increases mass. This does not require making protein or pumping water against an osmotic gradient.",
+        "“Net water leaves because the surroundings are hypotonic” is not the best answer here. Net osmotic water entry increases mass. This does not require making protein or pumping water against an osmotic gradient.",
+        "Net osmotic water entry increases mass. This does not require making protein or pumping water against an osmotic gradient.",
+        "“The egg membrane prevents any osmotic water movement” is not the best answer here. Net osmotic water entry increases mass. This does not require making protein or pumping water against an osmotic gradient."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "balance-04",
+      "unit": "balance",
+      "objective": "Predict cell volume changes from tonicity.",
+      "prompt": "Which compartments together make up most extracellular fluid?",
+      "choices": [
+        "Cytosol and interstitial fluid",
+        "Plasma and cytosol",
+        "Only plasma, excluding interstitial fluid",
+        "Interstitial fluid and plasma"
+      ],
+      "correct": 3,
+      "explanation": "Extracellular fluid lies outside cells. Its major subdivisions are interstitial fluid between cells and plasma within blood vessels. Cytosol is intracellular, not extracellular.",
+      "rationales": [
+        "“Cytosol and interstitial fluid” is not the best answer here. Extracellular fluid lies outside cells. Its major subdivisions are interstitial fluid between cells and plasma within blood vessels. Cytosol is intracellular, not extracellular.",
+        "“Plasma and cytosol” is not the best answer here. Extracellular fluid lies outside cells. Its major subdivisions are interstitial fluid between cells and plasma within blood vessels. Cytosol is intracellular, not extracellular.",
+        "“Only plasma, excluding interstitial fluid” is not the best answer here. Extracellular fluid lies outside cells. Its major subdivisions are interstitial fluid between cells and plasma within blood vessels. Cytosol is intracellular, not extracellular.",
+        "Extracellular fluid lies outside cells. Its major subdivisions are interstitial fluid between cells and plasma within blood vessels. Cytosol is intracellular, not extracellular."
+      ],
+      "refs": [
+        {
+          "source": "source-25",
+          "page": 1204
+        }
+      ]
+    },
+    {
+      "id": "balance-05",
+      "unit": "balance",
+      "objective": "Explain buffering, ventilation, and kidney contributions to pH.",
+      "prompt": "What happens chemically when more carbon dioxide dissolves in water in the lab model?",
+      "choices": [
+        "The carbonic acid system can increase hydrogen ions",
+        "Hydrogen-ion concentration falls and pH rises",
+        "Bicarbonate buffering eliminates all pH changes indefinitely",
+        "CO2 cannot influence pH without a kidney present"
+      ],
+      "correct": 0,
+      "explanation": "Dissolved carbon dioxide participates in carbonic acid/bicarbonate equilibria. Greater CO2 can increase hydrogen-ion concentration and lower pH.",
+      "rationales": [
+        "Dissolved carbon dioxide participates in carbonic acid/bicarbonate equilibria. Greater CO2 can increase hydrogen-ion concentration and lower pH.",
+        "“Hydrogen-ion concentration falls and pH rises” is not the best answer here. Dissolved carbon dioxide participates in carbonic acid/bicarbonate equilibria. Greater CO2 can increase hydrogen-ion concentration and lower pH.",
+        "“Bicarbonate buffering eliminates all pH changes indefinitely” is not the best answer here. Dissolved carbon dioxide participates in carbonic acid/bicarbonate equilibria. Greater CO2 can increase hydrogen-ion concentration and lower pH.",
+        "“CO2 cannot influence pH without a kidney present” is not the best answer here. Dissolved carbon dioxide participates in carbonic acid/bicarbonate equilibria. Greater CO2 can increase hydrogen-ion concentration and lower pH."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "balance-06",
+      "unit": "balance",
+      "objective": "Explain buffering, ventilation, and kidney contributions to pH.",
+      "prompt": "What is the central role of a chemical buffer?",
+      "choices": [
+        "Hold pH perfectly constant regardless of acid load",
+        "Resist pH change by accepting or releasing hydrogen ions",
+        "Remove carbon dioxide by increasing ventilation",
+        "Excrete hydrogen ions through the renal tubule"
+      ],
+      "correct": 1,
+      "explanation": "Buffers accept or release hydrogen ions, reducing pH changes within their limited capacity. Ventilation removes carbon dioxide and kidneys excrete acid, but those are physiological regulatory processes rather than the action of a chemical buffer.",
+      "rationales": [
+        "“Hold pH perfectly constant regardless of acid load” is not the best answer here. Buffers accept or release hydrogen ions, reducing pH changes within their limited capacity. Ventilation removes carbon dioxide and kidneys excrete acid, but those are physiological regulatory processes rather than the action of a chemical buffer.",
+        "Buffers accept or release hydrogen ions, reducing pH changes within their limited capacity. Ventilation removes carbon dioxide and kidneys excrete acid, but those are physiological regulatory processes rather than the action of a chemical buffer.",
+        "“Remove carbon dioxide by increasing ventilation” is not the best answer here. Buffers accept or release hydrogen ions, reducing pH changes within their limited capacity. Ventilation removes carbon dioxide and kidneys excrete acid, but those are physiological regulatory processes rather than the action of a chemical buffer.",
+        "“Excrete hydrogen ions through the renal tubule” is not the best answer here. Buffers accept or release hydrogen ions, reducing pH changes within their limited capacity. Ventilation removes carbon dioxide and kidneys excrete acid, but those are physiological regulatory processes rather than the action of a chemical buffer."
+      ],
+      "refs": [
+        {
+          "source": "source-19",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "balance-07",
+      "unit": "balance",
+      "objective": "Explain buffering, ventilation, and kidney contributions to pH.",
+      "prompt": "Increased ventilation can help remove which acid–base-related substance?",
+      "choices": [
+        "Bicarbonate directly through the lungs",
+        "Sodium ions through alveolar gas exchange",
+        "Carbon dioxide",
+        "Hydrogen ions exhaled as free ions"
+      ],
+      "correct": 2,
+      "explanation": "Ventilation removes carbon dioxide as a gas. Because CO2 participates in the carbonic acid/bicarbonate equilibrium, changing ventilation changes hydrogen-ion concentration. Bicarbonate and free hydrogen or sodium ions are not exhaled as gases.",
+      "rationales": [
+        "“Bicarbonate directly through the lungs” is not the best answer here. Ventilation removes carbon dioxide as a gas. Because CO2 participates in the carbonic acid/bicarbonate equilibrium, changing ventilation changes hydrogen-ion concentration. Bicarbonate and free hydrogen or sodium ions are not exhaled as gases.",
+        "“Sodium ions through alveolar gas exchange” is not the best answer here. Ventilation removes carbon dioxide as a gas. Because CO2 participates in the carbonic acid/bicarbonate equilibrium, changing ventilation changes hydrogen-ion concentration. Bicarbonate and free hydrogen or sodium ions are not exhaled as gases.",
+        "Ventilation removes carbon dioxide as a gas. Because CO2 participates in the carbonic acid/bicarbonate equilibrium, changing ventilation changes hydrogen-ion concentration. Bicarbonate and free hydrogen or sodium ions are not exhaled as gases.",
+        "“Hydrogen ions exhaled as free ions” is not the best answer here. Ventilation removes carbon dioxide as a gas. Because CO2 participates in the carbonic acid/bicarbonate equilibrium, changing ventilation changes hydrogen-ion concentration. Bicarbonate and free hydrogen or sodium ions are not exhaled as gases."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "balance-08",
+      "unit": "balance",
+      "objective": "Explain buffering, ventilation, and kidney contributions to pH.",
+      "prompt": "Which organ system provides slower regulation through hydrogen-ion excretion and bicarbonate handling?",
+      "choices": [
+        "Respiratory system through alveolar bicarbonate secretion",
+        "Digestive system through salivary filtration",
+        "Endocrine system through a single pH hormone",
+        "Urinary system"
+      ],
+      "correct": 3,
+      "explanation": "The kidneys regulate acid excretion and bicarbonate balance. Breathing contributes faster CO2 adjustment, while the listed alternatives do not provide this renal function.",
+      "rationales": [
+        "“Respiratory system through alveolar bicarbonate secretion” is not the best answer here. The kidneys regulate acid excretion and bicarbonate balance. Breathing contributes faster CO2 adjustment, while the listed alternatives do not provide this renal function.",
+        "“Digestive system through salivary filtration” is not the best answer here. The kidneys regulate acid excretion and bicarbonate balance. Breathing contributes faster CO2 adjustment, while the listed alternatives do not provide this renal function.",
+        "“Endocrine system through a single pH hormone” is not the best answer here. The kidneys regulate acid excretion and bicarbonate balance. Breathing contributes faster CO2 adjustment, while the listed alternatives do not provide this renal function.",
+        "The kidneys regulate acid excretion and bicarbonate balance. Breathing contributes faster CO2 adjustment, while the listed alternatives do not provide this renal function."
+      ],
+      "refs": [
+        {
+          "source": "source-19",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "balance-09",
+      "unit": "balance",
+      "objective": "Explain buffering, ventilation, and kidney contributions to pH.",
+      "prompt": "Why should an alkaline drink not be assumed to permanently raise blood pH?",
+      "choices": [
+        "Digestive chemistry and homeostatic regulation intervene",
+        "Blood pH equilibrates directly with the drink's pH",
+        "Stomach acid permanently stops when an alkaline drink enters",
+        "Only the kidneys respond, and buffers have no role"
+      ],
+      "correct": 0,
+      "explanation": "Ingested substances interact with gastric acid and body buffering, respiratory, and renal regulation. Drink pH alone does not establish a lasting blood-pH change.",
+      "rationales": [
+        "Ingested substances interact with gastric acid and body buffering, respiratory, and renal regulation. Drink pH alone does not establish a lasting blood-pH change.",
+        "“Blood pH equilibrates directly with the drink's pH” is not the best answer here. Ingested substances interact with gastric acid and body buffering, respiratory, and renal regulation. Drink pH alone does not establish a lasting blood-pH change.",
+        "“Stomach acid permanently stops when an alkaline drink enters” is not the best answer here. Ingested substances interact with gastric acid and body buffering, respiratory, and renal regulation. Drink pH alone does not establish a lasting blood-pH change.",
+        "“Only the kidneys respond, and buffers have no role” is not the best answer here. Ingested substances interact with gastric acid and body buffering, respiratory, and renal regulation. Drink pH alone does not establish a lasting blood-pH change."
+      ],
+      "refs": [
+        {
+          "source": "source-19",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "balance-10",
+      "unit": "balance",
+      "objective": "Distinguish intracellular, interstitial, and plasma compartments.",
+      "prompt": "Why can unabsorbed lactose contribute to watery stool?",
+      "choices": [
+        "It draws water out of the lumen into blood",
+        "It retains water osmotically in the intestinal lumen",
+        "It is absorbed more rapidly than glucose",
+        "It stimulates gastric protein digestion to release water"
+      ],
+      "correct": 1,
+      "explanation": "Poorly absorbed solute retains luminal water, while bacterial fermentation can add gas. The other choices do not explain osmotic diarrhea.",
+      "rationales": [
+        "“It draws water out of the lumen into blood” is not the best answer here. Poorly absorbed solute retains luminal water, while bacterial fermentation can add gas. The other choices do not explain osmotic diarrhea.",
+        "Poorly absorbed solute retains luminal water, while bacterial fermentation can add gas. The other choices do not explain osmotic diarrhea.",
+        "“It is absorbed more rapidly than glucose” is not the best answer here. Poorly absorbed solute retains luminal water, while bacterial fermentation can add gas. The other choices do not explain osmotic diarrhea.",
+        "“It stimulates gastric protein digestion to release water” is not the best answer here. Poorly absorbed solute retains luminal water, while bacterial fermentation can add gas. The other choices do not explain osmotic diarrhea."
+      ],
+      "refs": [
+        {
+          "source": "source-08",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "endocrine-01",
+      "unit": "endocrine",
+      "objective": "Relate hormone solubility to receptor location and action.",
+      "prompt": "From the hormone-structure figure, why can steroid hormones often act through intracellular receptors?",
+      "choices": [
+        "Their lipid solubility favors membrane passage",
+        "They must bind only to extracellular receptors",
+        "They are too large to pass through a lipid membrane",
+        "They act by digesting the receptor protein"
+      ],
+      "correct": 0,
+      "explanation": "Steroids are lipid-derived and often cross the membrane to bind intracellular receptors. Water-soluble peptide signals commonly use cell-surface receptors.",
+      "rationales": [
+        "Steroids are lipid-derived and often cross the membrane to bind intracellular receptors. Water-soluble peptide signals commonly use cell-surface receptors.",
+        "“They must bind only to extracellular receptors” is not the best answer here. Steroids are lipid-derived and often cross the membrane to bind intracellular receptors. Water-soluble peptide signals commonly use cell-surface receptors.",
+        "“They are too large to pass through a lipid membrane” is not the best answer here. Steroids are lipid-derived and often cross the membrane to bind intracellular receptors. Water-soluble peptide signals commonly use cell-surface receptors.",
+        "“They act by digesting the receptor protein” is not the best answer here. Steroids are lipid-derived and often cross the membrane to bind intracellular receptors. Water-soluble peptide signals commonly use cell-surface receptors."
+      ],
+      "refs": [
+        {
+          "source": "source-18",
+          "page": 18
+        }
+      ],
+      "image": "figures/endocrine.png",
+      "imageAlt": "Supplied OpenStax endocrine figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "endocrine-02",
+      "unit": "endocrine",
+      "objective": "Relate hormone solubility to receptor location and action.",
+      "prompt": "A hormone is circulating but one cell does not respond directly. What is the best explanation?",
+      "choices": [
+        "All tissues must respond equally to the same concentration",
+        "The cell lacks a suitable receptor",
+        "Only the hormone's source gland can respond",
+        "Endocrine signals cannot reach distant tissues"
+      ],
+      "correct": 1,
+      "explanation": "Specific receptors determine direct target-cell responsiveness; circulating widely does not mean acting on every cell.",
+      "rationales": [
+        "“All tissues must respond equally to the same concentration” is not the best answer here. Specific receptors determine direct target-cell responsiveness; circulating widely does not mean acting on every cell.",
+        "Specific receptors determine direct target-cell responsiveness; circulating widely does not mean acting on every cell.",
+        "“Only the hormone's source gland can respond” is not the best answer here. Specific receptors determine direct target-cell responsiveness; circulating widely does not mean acting on every cell.",
+        "“Endocrine signals cannot reach distant tissues” is not the best answer here. Specific receptors determine direct target-cell responsiveness; circulating widely does not mean acting on every cell."
+      ],
+      "refs": [
+        {
+          "source": "source-07",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "endocrine-03",
+      "unit": "endocrine",
+      "objective": "Trace hypothalamic–pituitary–target gland feedback.",
+      "prompt": "An injected target-gland hormone suppresses upstream stimulation. This illustrates what?",
+      "choices": [
+        "Positive feedback amplifying upstream secretion",
+        "A feed-forward signal with no return influence",
+        "Negative feedback",
+        "Exocrine secretion through a duct"
+      ],
+      "correct": 2,
+      "explanation": "Negative feedback reduces the processes producing the original signal. Positive feedback would amplify rather than suppress that process.",
+      "rationales": [
+        "“Positive feedback amplifying upstream secretion” is not the best answer here. Negative feedback reduces the processes producing the original signal. Positive feedback would amplify rather than suppress that process.",
+        "“A feed-forward signal with no return influence” is not the best answer here. Negative feedback reduces the processes producing the original signal. Positive feedback would amplify rather than suppress that process.",
+        "Negative feedback reduces the processes producing the original signal. Positive feedback would amplify rather than suppress that process.",
+        "“Exocrine secretion through a duct” is not the best answer here. Negative feedback reduces the processes producing the original signal. Positive feedback would amplify rather than suppress that process."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "endocrine-04",
+      "unit": "endocrine",
+      "objective": "Trace hypothalamic–pituitary–target gland feedback.",
+      "prompt": "Which sequence correctly traces the thyroid axis?",
+      "choices": [
+        "TSH, TRH, thyroid hormone",
+        "CRH, ACTH, thyroid hormone",
+        "TRH, thyroid hormone, TSH",
+        "TRH, TSH, thyroid hormone"
+      ],
+      "correct": 3,
+      "explanation": "Hypothalamic TRH stimulates anterior-pituitary TSH, which stimulates thyroid hormone production. Reversing that order confuses the releasing and stimulating hormones; CRH and ACTH instead belong to the adrenal axis.",
+      "rationales": [
+        "“TSH, TRH, thyroid hormone” is not the best answer here. Hypothalamic TRH stimulates anterior-pituitary TSH, which stimulates thyroid hormone production. Reversing that order confuses the releasing and stimulating hormones; CRH and ACTH instead belong to the adrenal axis.",
+        "“CRH, ACTH, thyroid hormone” is not the best answer here. Hypothalamic TRH stimulates anterior-pituitary TSH, which stimulates thyroid hormone production. Reversing that order confuses the releasing and stimulating hormones; CRH and ACTH instead belong to the adrenal axis.",
+        "“TRH, thyroid hormone, TSH” is not the best answer here. Hypothalamic TRH stimulates anterior-pituitary TSH, which stimulates thyroid hormone production. Reversing that order confuses the releasing and stimulating hormones; CRH and ACTH instead belong to the adrenal axis.",
+        "Hypothalamic TRH stimulates anterior-pituitary TSH, which stimulates thyroid hormone production. Reversing that order confuses the releasing and stimulating hormones; CRH and ACTH instead belong to the adrenal axis."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "endocrine-05",
+      "unit": "endocrine",
+      "objective": "Trace hypothalamic–pituitary–target gland feedback.",
+      "prompt": "In the adrenal axis, ACTH primarily stimulates which tissue?",
+      "choices": [
+        "Adrenal cortex",
+        "Thyroid follicular cells",
+        "Pancreatic ducts",
+        "Seminiferous tubule lumen"
+      ],
+      "correct": 0,
+      "explanation": "ACTH acts on the adrenal cortex, especially glucocorticoid production. The thyroid is stimulated by TSH; ducts and luminal spaces are not the adrenal target.",
+      "rationales": [
+        "ACTH acts on the adrenal cortex, especially glucocorticoid production. The thyroid is stimulated by TSH; ducts and luminal spaces are not the adrenal target.",
+        "“Thyroid follicular cells” is not the best answer here. ACTH acts on the adrenal cortex, especially glucocorticoid production. The thyroid is stimulated by TSH; ducts and luminal spaces are not the adrenal target.",
+        "“Pancreatic ducts” is not the best answer here. ACTH acts on the adrenal cortex, especially glucocorticoid production. The thyroid is stimulated by TSH; ducts and luminal spaces are not the adrenal target.",
+        "“Seminiferous tubule lumen” is not the best answer here. ACTH acts on the adrenal cortex, especially glucocorticoid production. The thyroid is stimulated by TSH; ducts and luminal spaces are not the adrenal target."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "endocrine-06",
+      "unit": "endocrine",
+      "objective": "Trace hypothalamic–pituitary–target gland feedback.",
+      "prompt": "Why does cortisol administration tend to reduce CRH and ACTH?",
+      "choices": [
+        "It stimulates TSH as its principal feedback action",
+        "Cortisol feeds back on hypothalamus and pituitary",
+        "It raises CRH and ACTH through positive feedback",
+        "It acts only on the adrenal medulla"
+      ],
+      "correct": 1,
+      "explanation": "Cortisol inhibits upstream CRH and ACTH secretion through negative feedback on the hypothalamus and anterior pituitary. Positive feedback would increase upstream stimulation; TSH and the adrenal medulla are not the main components of this axis.",
+      "rationales": [
+        "“It stimulates TSH as its principal feedback action” is not the best answer here. Cortisol inhibits upstream CRH and ACTH secretion through negative feedback on the hypothalamus and anterior pituitary. Positive feedback would increase upstream stimulation; TSH and the adrenal medulla are not the main components of this axis.",
+        "Cortisol inhibits upstream CRH and ACTH secretion through negative feedback on the hypothalamus and anterior pituitary. Positive feedback would increase upstream stimulation; TSH and the adrenal medulla are not the main components of this axis.",
+        "“It raises CRH and ACTH through positive feedback” is not the best answer here. Cortisol inhibits upstream CRH and ACTH secretion through negative feedback on the hypothalamus and anterior pituitary. Positive feedback would increase upstream stimulation; TSH and the adrenal medulla are not the main components of this axis.",
+        "“It acts only on the adrenal medulla” is not the best answer here. Cortisol inhibits upstream CRH and ACTH secretion through negative feedback on the hypothalamus and anterior pituitary. Positive feedback would increase upstream stimulation; TSH and the adrenal medulla are not the main components of this axis."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "endocrine-07",
+      "unit": "endocrine",
+      "objective": "Relate hormone solubility to receptor location and action.",
+      "prompt": "Why is the pancreas described as both endocrine and exocrine?",
+      "choices": [
+        "It sends insulin and digestive enzymes through the same duct",
+        "All pancreatic secretions reach blood without ducts",
+        "It releases hormones into blood and digestive secretions into ducts",
+        "Its digestive enzymes are hormones released by islet cells"
+      ],
+      "correct": 2,
+      "explanation": "Pancreatic islets provide endocrine secretion; exocrine cells supply digestive juice through ducts. These routes and functions are distinct.",
+      "rationales": [
+        "“It sends insulin and digestive enzymes through the same duct” is not the best answer here. Pancreatic islets provide endocrine secretion; exocrine cells supply digestive juice through ducts. These routes and functions are distinct.",
+        "“All pancreatic secretions reach blood without ducts” is not the best answer here. Pancreatic islets provide endocrine secretion; exocrine cells supply digestive juice through ducts. These routes and functions are distinct.",
+        "Pancreatic islets provide endocrine secretion; exocrine cells supply digestive juice through ducts. These routes and functions are distinct.",
+        "“Its digestive enzymes are hormones released by islet cells” is not the best answer here. Pancreatic islets provide endocrine secretion; exocrine cells supply digestive juice through ducts. These routes and functions are distinct."
+      ],
+      "refs": [
+        {
+          "source": "source-07",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "endocrine-08",
+      "unit": "endocrine",
+      "objective": "Trace hypothalamic–pituitary–target gland feedback.",
+      "prompt": "Which pancreatic hormone generally promotes glucose storage and lowers elevated blood glucose?",
+      "choices": [
+        "Glucagon",
+        "TSH",
+        "Oxytocin",
+        "Insulin"
+      ],
+      "correct": 3,
+      "explanation": "Insulin supports glucose uptake and storage in responsive tissues. Glucagon generally supports glucose release; TSH and oxytocin have different principal roles.",
+      "rationales": [
+        "“Glucagon” is not the best answer here. Insulin supports glucose uptake and storage in responsive tissues. Glucagon generally supports glucose release; TSH and oxytocin have different principal roles.",
+        "“TSH” is not the best answer here. Insulin supports glucose uptake and storage in responsive tissues. Glucagon generally supports glucose release; TSH and oxytocin have different principal roles.",
+        "“Oxytocin” is not the best answer here. Insulin supports glucose uptake and storage in responsive tissues. Glucagon generally supports glucose release; TSH and oxytocin have different principal roles.",
+        "Insulin supports glucose uptake and storage in responsive tissues. Glucagon generally supports glucose release; TSH and oxytocin have different principal roles."
+      ],
+      "refs": [
+        {
+          "source": "source-01",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "id": "endocrine-09",
+      "unit": "endocrine",
+      "objective": "Relate hormone solubility to receptor location and action.",
+      "prompt": "Why may a hormonal stress response outlast a brief nerve signal?",
+      "choices": [
+        "Circulating hormones can continue acting until cleared",
+        "Endocrine signals always travel faster than nerve impulses",
+        "Hormones remain permanently bound to every receptor",
+        "Hormones must be cleared before they can act"
+      ],
+      "correct": 0,
+      "explanation": "Hormones circulate until cleared, and receptor-triggered cellular effects may persist. This can make endocrine responses longer-lasting than brief neural impulses, without making hormone binding permanent or hormone signaling universally faster.",
+      "rationales": [
+        "Hormones circulate until cleared, and receptor-triggered cellular effects may persist. This can make endocrine responses longer-lasting than brief neural impulses, without making hormone binding permanent or hormone signaling universally faster.",
+        "“Endocrine signals always travel faster than nerve impulses” is not the best answer here. Hormones circulate until cleared, and receptor-triggered cellular effects may persist. This can make endocrine responses longer-lasting than brief neural impulses, without making hormone binding permanent or hormone signaling universally faster.",
+        "“Hormones remain permanently bound to every receptor” is not the best answer here. Hormones circulate until cleared, and receptor-triggered cellular effects may persist. This can make endocrine responses longer-lasting than brief neural impulses, without making hormone binding permanent or hormone signaling universally faster.",
+        "“Hormones must be cleared before they can act” is not the best answer here. Hormones circulate until cleared, and receptor-triggered cellular effects may persist. This can make endocrine responses longer-lasting than brief neural impulses, without making hormone binding permanent or hormone signaling universally faster."
+      ],
+      "refs": [
+        {
+          "source": "source-01",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "endocrine-10",
+      "unit": "endocrine",
+      "objective": "Interpret experimental changes in endocrine organs.",
+      "prompt": "Why is a control group needed in a mystery-hormone experiment?",
+      "choices": [
+        "It removes the need to measure treated animals",
+        "It supplies a baseline for interpreting treatment changes",
+        "It ensures only one organ can change",
+        "It proves a hormone's identity without considering feedback"
+      ],
+      "correct": 1,
+      "explanation": "Controls allow comparison with untreated or baseline conditions. They help interpretation without eliminating variability or proving a diagnosis alone.",
+      "rationales": [
+        "“It removes the need to measure treated animals” is not the best answer here. Controls allow comparison with untreated or baseline conditions. They help interpretation without eliminating variability or proving a diagnosis alone.",
+        "Controls allow comparison with untreated or baseline conditions. They help interpretation without eliminating variability or proving a diagnosis alone.",
+        "“It ensures only one organ can change” is not the best answer here. Controls allow comparison with untreated or baseline conditions. They help interpretation without eliminating variability or proving a diagnosis alone.",
+        "“It proves a hormone's identity without considering feedback” is not the best answer here. Controls allow comparison with untreated or baseline conditions. They help interpretation without eliminating variability or proving a diagnosis alone."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "immune-01",
+      "unit": "immune",
+      "objective": "Trace lymph return and identify lymphatic organ functions.",
+      "prompt": "Which organ shown in the lymphatic figure filters blood rather than lymph?",
+      "choices": [
+        "Spleen",
+        "Lymph node",
+        "Thoracic duct",
+        "Right lymphatic duct"
+      ],
+      "correct": 0,
+      "explanation": "The spleen monitors blood and removes aging blood cells. Lymph nodes filter lymph, while the thoracic duct transports it.",
+      "rationales": [
+        "The spleen monitors blood and removes aging blood cells. Lymph nodes filter lymph, while the thoracic duct transports it.",
+        "“Lymph node” is not the best answer here. The spleen monitors blood and removes aging blood cells. Lymph nodes filter lymph, while the thoracic duct transports it.",
+        "“Thoracic duct” is not the best answer here. The spleen monitors blood and removes aging blood cells. Lymph nodes filter lymph, while the thoracic duct transports it.",
+        "“Right lymphatic duct” is not the best answer here. The spleen monitors blood and removes aging blood cells. Lymph nodes filter lymph, while the thoracic duct transports it."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 5
+        }
+      ],
+      "image": "figures/immune.png",
+      "imageAlt": "Supplied OpenStax immune figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "immune-02",
+      "unit": "immune",
+      "objective": "Trace lymph return and identify lymphatic organ functions.",
+      "prompt": "What is a major homeostatic role of lymphatic vessels?",
+      "choices": [
+        "Carry arterial blood from the heart to tissues",
+        "Return excess interstitial fluid to blood",
+        "Filter all plasma directly into the bladder",
+        "Deliver oxygen primarily using red cells in lymph"
+      ],
+      "correct": 1,
+      "explanation": "Lymphatic vessels collect interstitial fluid and return it to venous circulation. They do not replace arteries or transport urine.",
+      "rationales": [
+        "“Carry arterial blood from the heart to tissues” is not the best answer here. Lymphatic vessels collect interstitial fluid and return it to venous circulation. They do not replace arteries or transport urine.",
+        "Lymphatic vessels collect interstitial fluid and return it to venous circulation. They do not replace arteries or transport urine.",
+        "“Filter all plasma directly into the bladder” is not the best answer here. Lymphatic vessels collect interstitial fluid and return it to venous circulation. They do not replace arteries or transport urine.",
+        "“Deliver oxygen primarily using red cells in lymph” is not the best answer here. Lymphatic vessels collect interstitial fluid and return it to venous circulation. They do not replace arteries or transport urine."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "immune-03",
+      "unit": "immune",
+      "objective": "Trace lymph return and identify lymphatic organ functions.",
+      "prompt": "Where do T lymphocytes undergo maturation?",
+      "choices": [
+        "Bone marrow as the main site of final T-cell maturation",
+        "Spleen as the sole site of T-cell maturation",
+        "Thymus",
+        "Thyroid gland"
+      ],
+      "correct": 2,
+      "explanation": "T-cell precursors arise from bone marrow but undergo maturation in the thymus. The spleen supports immune responses to blood-borne antigens; the thyroid produces thyroid hormones rather than maturing T cells.",
+      "rationales": [
+        "“Bone marrow as the main site of final T-cell maturation” is not the best answer here. T-cell precursors arise from bone marrow but undergo maturation in the thymus. The spleen supports immune responses to blood-borne antigens; the thyroid produces thyroid hormones rather than maturing T cells.",
+        "“Spleen as the sole site of T-cell maturation” is not the best answer here. T-cell precursors arise from bone marrow but undergo maturation in the thymus. The spleen supports immune responses to blood-borne antigens; the thyroid produces thyroid hormones rather than maturing T cells.",
+        "T-cell precursors arise from bone marrow but undergo maturation in the thymus. The spleen supports immune responses to blood-borne antigens; the thyroid produces thyroid hormones rather than maturing T cells.",
+        "“Thyroid gland” is not the best answer here. T-cell precursors arise from bone marrow but undergo maturation in the thymus. The spleen supports immune responses to blood-borne antigens; the thyroid produces thyroid hormones rather than maturing T cells."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 3
+        },
+        {
+          "source": "source-25",
+          "page": 938
+        }
+      ]
+    },
+    {
+      "id": "immune-04",
+      "unit": "immune",
+      "objective": "Compare innate and adaptive defenses.",
+      "prompt": "Which cells directly secrete large amounts of antibody after B-cell differentiation?",
+      "choices": [
+        "Cytotoxic T cells",
+        "Natural killer cells",
+        "Neutrophils",
+        "Plasma cells"
+      ],
+      "correct": 3,
+      "explanation": "Activated B cells differentiate into plasma cells that secrete antibodies. Cytotoxic T cells and natural killer cells kill abnormal host cells, while neutrophils are phagocytes; these are not the main antibody-secreting cells.",
+      "rationales": [
+        "“Cytotoxic T cells” is not the best answer here. Activated B cells differentiate into plasma cells that secrete antibodies. Cytotoxic T cells and natural killer cells kill abnormal host cells, while neutrophils are phagocytes; these are not the main antibody-secreting cells.",
+        "“Natural killer cells” is not the best answer here. Activated B cells differentiate into plasma cells that secrete antibodies. Cytotoxic T cells and natural killer cells kill abnormal host cells, while neutrophils are phagocytes; these are not the main antibody-secreting cells.",
+        "“Neutrophils” is not the best answer here. Activated B cells differentiate into plasma cells that secrete antibodies. Cytotoxic T cells and natural killer cells kill abnormal host cells, while neutrophils are phagocytes; these are not the main antibody-secreting cells.",
+        "Activated B cells differentiate into plasma cells that secrete antibodies. Cytotoxic T cells and natural killer cells kill abnormal host cells, while neutrophils are phagocytes; these are not the main antibody-secreting cells."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 2
+        },
+        {
+          "source": "source-25",
+          "page": 939
+        }
+      ]
+    },
+    {
+      "id": "immune-05",
+      "unit": "immune",
+      "objective": "Compare innate and adaptive defenses.",
+      "prompt": "What distinguishes adaptive immunity from a purely innate response?",
+      "choices": [
+        "Antigen specificity and memory",
+        "A response limited to physical barriers",
+        "A response that never changes after repeat exposure",
+        "Direct recognition only by red blood cells"
+      ],
+      "correct": 0,
+      "explanation": "Adaptive B- and T-cell responses are antigen-specific and generate memory. Innate barriers and cells act earlier without that same clonal specificity.",
+      "rationales": [
+        "Adaptive B- and T-cell responses are antigen-specific and generate memory. Innate barriers and cells act earlier without that same clonal specificity.",
+        "“A response limited to physical barriers” is not the best answer here. Adaptive B- and T-cell responses are antigen-specific and generate memory. Innate barriers and cells act earlier without that same clonal specificity.",
+        "“A response that never changes after repeat exposure” is not the best answer here. Adaptive B- and T-cell responses are antigen-specific and generate memory. Innate barriers and cells act earlier without that same clonal specificity.",
+        "“Direct recognition only by red blood cells” is not the best answer here. Adaptive B- and T-cell responses are antigen-specific and generate memory. Innate barriers and cells act earlier without that same clonal specificity."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "immune-06",
+      "unit": "immune",
+      "objective": "Explain antigen specificity, vaccination, and autoimmunity.",
+      "prompt": "Why can vaccination improve a later response to a pathogen?",
+      "choices": [
+        "It replaces the need for innate defenses",
+        "It establishes antigen-specific memory",
+        "It guarantees no future exposure to the organism",
+        "It requires continuous symptomatic infection"
+      ],
+      "correct": 1,
+      "explanation": "Vaccination can prime adaptive memory for faster later responses. It does not universally prevent exposure or eliminate the need for immune activity.",
+      "rationales": [
+        "“It replaces the need for innate defenses” is not the best answer here. Vaccination can prime adaptive memory for faster later responses. It does not universally prevent exposure or eliminate the need for immune activity.",
+        "Vaccination can prime adaptive memory for faster later responses. It does not universally prevent exposure or eliminate the need for immune activity.",
+        "“It guarantees no future exposure to the organism” is not the best answer here. Vaccination can prime adaptive memory for faster later responses. It does not universally prevent exposure or eliminate the need for immune activity.",
+        "“It requires continuous symptomatic infection” is not the best answer here. Vaccination can prime adaptive memory for faster later responses. It does not universally prevent exposure or eliminate the need for immune activity."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "immune-07",
+      "unit": "immune",
+      "objective": "Compare innate and adaptive defenses.",
+      "prompt": "Which pairing best distinguishes phagocytes and natural killer cells?",
+      "choices": [
+        "Both primarily secrete antigen-specific antibodies",
+        "NK cells engulf bacteria while phagocytes kill only host cells",
+        "Phagocytes engulf targets; NK cells kill abnormal host cells",
+        "Phagocytes are adaptive B cells and NK cells are plasma cells"
+      ],
+      "correct": 2,
+      "explanation": "Phagocytes engulf and digest targets. Natural killer cells trigger death in abnormal host cells without being antibody-secreting plasma cells. Both participate in innate defenses, rather than representing adaptive B-cell differentiation.",
+      "rationales": [
+        "“Both primarily secrete antigen-specific antibodies” is not the best answer here. Phagocytes engulf and digest targets. Natural killer cells trigger death in abnormal host cells without being antibody-secreting plasma cells. Both participate in innate defenses, rather than representing adaptive B-cell differentiation.",
+        "“NK cells engulf bacteria while phagocytes kill only host cells” is not the best answer here. Phagocytes engulf and digest targets. Natural killer cells trigger death in abnormal host cells without being antibody-secreting plasma cells. Both participate in innate defenses, rather than representing adaptive B-cell differentiation.",
+        "Phagocytes engulf and digest targets. Natural killer cells trigger death in abnormal host cells without being antibody-secreting plasma cells. Both participate in innate defenses, rather than representing adaptive B-cell differentiation.",
+        "“Phagocytes are adaptive B cells and NK cells are plasma cells” is not the best answer here. Phagocytes engulf and digest targets. Natural killer cells trigger death in abnormal host cells without being antibody-secreting plasma cells. Both participate in innate defenses, rather than representing adaptive B-cell differentiation."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 36
+        }
+      ]
+    },
+    {
+      "id": "immune-08",
+      "unit": "immune",
+      "objective": "Trace lymph return and identify lymphatic organ functions.",
+      "prompt": "Why can lymph nodes enlarge during an immune response?",
+      "choices": [
+        "Stored bile expands the node capsule",
+        "All lymphocytes leave the node permanently",
+        "The nodes become the primary site of red-cell oxygen exchange",
+        "Immune activation and cell accumulation occur there"
+      ],
+      "correct": 3,
+      "explanation": "Nodes organize immune responses, and increased cells/inflammation can cause enlargement. Enlargement alone does not establish one particular cause.",
+      "rationales": [
+        "“Stored bile expands the node capsule” is not the best answer here. Nodes organize immune responses, and increased cells/inflammation can cause enlargement. Enlargement alone does not establish one particular cause.",
+        "“All lymphocytes leave the node permanently” is not the best answer here. Nodes organize immune responses, and increased cells/inflammation can cause enlargement. Enlargement alone does not establish one particular cause.",
+        "“The nodes become the primary site of red-cell oxygen exchange” is not the best answer here. Nodes organize immune responses, and increased cells/inflammation can cause enlargement. Enlargement alone does not establish one particular cause.",
+        "Nodes organize immune responses, and increased cells/inflammation can cause enlargement. Enlargement alone does not establish one particular cause."
+      ],
+      "refs": [
+        {
+          "source": "source-06",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "immune-09",
+      "unit": "immune",
+      "objective": "Explain antigen specificity, vaccination, and autoimmunity.",
+      "prompt": "What is autoimmunity?",
+      "choices": [
+        "An immune response directed against self components",
+        "An appropriate response to a foreign pathogen",
+        "A response limited to a harmless environmental antigen",
+        "The normal generation of vaccine-specific memory"
+      ],
+      "correct": 0,
+      "explanation": "Autoimmunity involves loss of appropriate self-tolerance. Infection and vaccine responses are not inherently autoimmune.",
+      "rationales": [
+        "Autoimmunity involves loss of appropriate self-tolerance. Infection and vaccine responses are not inherently autoimmune.",
+        "“An appropriate response to a foreign pathogen” is not the best answer here. Autoimmunity involves loss of appropriate self-tolerance. Infection and vaccine responses are not inherently autoimmune.",
+        "“A response limited to a harmless environmental antigen” is not the best answer here. Autoimmunity involves loss of appropriate self-tolerance. Infection and vaccine responses are not inherently autoimmune.",
+        "“The normal generation of vaccine-specific memory” is not the best answer here. Autoimmunity involves loss of appropriate self-tolerance. Infection and vaccine responses are not inherently autoimmune."
+      ],
+      "refs": [
+        {
+          "source": "source-16",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "immune-10",
+      "unit": "immune",
+      "objective": "Compare innate and adaptive defenses.",
+      "prompt": "How does handwashing support innate defense?",
+      "choices": [
+        "It directly produces antigen-specific memory B cells",
+        "It reduces microbes and material on a body surface",
+        "It increases antibody diversity in the soap",
+        "It substitutes for all subsequent immune responses"
+      ],
+      "correct": 1,
+      "explanation": "Handwashing reduces surface contamination and transmission opportunities. It is not antibody synthesis or permanent whole-body sterilization.",
+      "rationales": [
+        "“It directly produces antigen-specific memory B cells” is not the best answer here. Handwashing reduces surface contamination and transmission opportunities. It is not antibody synthesis or permanent whole-body sterilization.",
+        "Handwashing reduces surface contamination and transmission opportunities. It is not antibody synthesis or permanent whole-body sterilization.",
+        "“It increases antibody diversity in the soap” is not the best answer here. Handwashing reduces surface contamination and transmission opportunities. It is not antibody synthesis or permanent whole-body sterilization.",
+        "“It substitutes for all subsequent immune responses” is not the best answer here. Handwashing reduces surface contamination and transmission opportunities. It is not antibody synthesis or permanent whole-body sterilization."
+      ],
+      "refs": [
+        {
+          "source": "source-17",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "reproduction-01",
+      "unit": "reproduction",
+      "objective": "Relate hormone feedback to ovulation and contraception.",
+      "prompt": "Using the ovarian feedback figure, which event is associated with the midcycle LH surge?",
+      "choices": [
+        "Ovulation",
+        "Menstruation as the immediate direct trigger",
+        "Implantation of an embryo into the ovary",
+        "Completion of pregnancy"
+      ],
+      "correct": 0,
+      "explanation": "The midcycle LH surge triggers follicle changes leading to ovulation and formation of the corpus luteum. Menstruation follows a later fall in ovarian hormones when pregnancy does not occur; normal implantation is in the uterus, not the ovary.",
+      "rationales": [
+        "The midcycle LH surge triggers follicle changes leading to ovulation and formation of the corpus luteum. Menstruation follows a later fall in ovarian hormones when pregnancy does not occur; normal implantation is in the uterus, not the ovary.",
+        "“Menstruation as the immediate direct trigger” is not the best answer here. The midcycle LH surge triggers follicle changes leading to ovulation and formation of the corpus luteum. Menstruation follows a later fall in ovarian hormones when pregnancy does not occur; normal implantation is in the uterus, not the ovary.",
+        "“Implantation of an embryo into the ovary” is not the best answer here. The midcycle LH surge triggers follicle changes leading to ovulation and formation of the corpus luteum. Menstruation follows a later fall in ovarian hormones when pregnancy does not occur; normal implantation is in the uterus, not the ovary.",
+        "“Completion of pregnancy” is not the best answer here. The midcycle LH surge triggers follicle changes leading to ovulation and formation of the corpus luteum. Menstruation follows a later fall in ovarian hormones when pregnancy does not occur; normal implantation is in the uterus, not the ovary."
+      ],
+      "refs": [
+        {
+          "source": "source-25",
+          "page": 1250
+        }
+      ],
+      "image": "figures/reproduction.png",
+      "imageAlt": "Supplied OpenStax reproduction figure, available full-size. Labels are retained for interpretation."
+    },
+    {
+      "id": "reproduction-02",
+      "unit": "reproduction",
+      "objective": "Explain gamete production and transport.",
+      "prompt": "Where does spermatogenesis occur?",
+      "choices": [
+        "Epididymis",
+        "Seminiferous tubules",
+        "Prostate gland",
+        "Seminal vesicles"
+      ],
+      "correct": 1,
+      "explanation": "Spermatogenesis occurs in seminiferous tubules. Sperm subsequently mature and are stored in the epididymis. The prostate and seminal vesicles contribute secretions to semen rather than producing sperm.",
+      "rationales": [
+        "“Epididymis” is not the best answer here. Spermatogenesis occurs in seminiferous tubules. Sperm subsequently mature and are stored in the epididymis. The prostate and seminal vesicles contribute secretions to semen rather than producing sperm.",
+        "Spermatogenesis occurs in seminiferous tubules. Sperm subsequently mature and are stored in the epididymis. The prostate and seminal vesicles contribute secretions to semen rather than producing sperm.",
+        "“Prostate gland” is not the best answer here. Spermatogenesis occurs in seminiferous tubules. Sperm subsequently mature and are stored in the epididymis. The prostate and seminal vesicles contribute secretions to semen rather than producing sperm.",
+        "“Seminal vesicles” is not the best answer here. Spermatogenesis occurs in seminiferous tubules. Sperm subsequently mature and are stored in the epididymis. The prostate and seminal vesicles contribute secretions to semen rather than producing sperm."
+      ],
+      "refs": [
+        {
+          "source": "source-05",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "reproduction-03",
+      "unit": "reproduction",
+      "objective": "Explain gamete production and transport.",
+      "prompt": "Which cells support germ cells and help form the blood–testis barrier?",
+      "choices": [
+        "Leydig cells",
+        "Spermatids",
+        "Sertoli (nurse) cells",
+        "Vascular red blood cells"
+      ],
+      "correct": 2,
+      "explanation": "Sertoli cells support developing germ cells, and junctions between Sertoli cells help form the blood–testis barrier. Leydig cells produce testosterone; spermatids are developing germ cells, and red blood cells transport gases.",
+      "rationales": [
+        "“Leydig cells” is not the best answer here. Sertoli cells support developing germ cells, and junctions between Sertoli cells help form the blood–testis barrier. Leydig cells produce testosterone; spermatids are developing germ cells, and red blood cells transport gases.",
+        "“Spermatids” is not the best answer here. Sertoli cells support developing germ cells, and junctions between Sertoli cells help form the blood–testis barrier. Leydig cells produce testosterone; spermatids are developing germ cells, and red blood cells transport gases.",
+        "Sertoli cells support developing germ cells, and junctions between Sertoli cells help form the blood–testis barrier. Leydig cells produce testosterone; spermatids are developing germ cells, and red blood cells transport gases.",
+        "“Vascular red blood cells” is not the best answer here. Sertoli cells support developing germ cells, and junctions between Sertoli cells help form the blood–testis barrier. Leydig cells produce testosterone; spermatids are developing germ cells, and red blood cells transport gases."
+      ],
+      "refs": [
+        {
+          "source": "source-15",
+          "page": 24
+        },
+        {
+          "source": "source-25",
+          "page": 1235
+        }
+      ]
+    },
+    {
+      "id": "reproduction-04",
+      "unit": "reproduction",
+      "objective": "Explain gamete production and transport.",
+      "prompt": "Why might damage to the blood–testis barrier impair fertility?",
+      "choices": [
+        "It prevents sperm from entering the epididymis by closing the vas deferens",
+        "It guarantees increased testosterone production",
+        "It removes the need for Sertoli-cell support",
+        "It can expose normally separated germ-cell antigens to immune responses"
+      ],
+      "correct": 3,
+      "explanation": "Barrier disruption can expose normally separated germ-cell antigens to immune activity and impair the environment for spermatogenesis. It does not automatically close the vas deferens or guarantee higher testosterone, and Sertoli-cell support remains necessary.",
+      "rationales": [
+        "“It prevents sperm from entering the epididymis by closing the vas deferens” is not the best answer here. Barrier disruption can expose normally separated germ-cell antigens to immune activity and impair the environment for spermatogenesis. It does not automatically close the vas deferens or guarantee higher testosterone, and Sertoli-cell support remains necessary.",
+        "“It guarantees increased testosterone production” is not the best answer here. Barrier disruption can expose normally separated germ-cell antigens to immune activity and impair the environment for spermatogenesis. It does not automatically close the vas deferens or guarantee higher testosterone, and Sertoli-cell support remains necessary.",
+        "“It removes the need for Sertoli-cell support” is not the best answer here. Barrier disruption can expose normally separated germ-cell antigens to immune activity and impair the environment for spermatogenesis. It does not automatically close the vas deferens or guarantee higher testosterone, and Sertoli-cell support remains necessary.",
+        "Barrier disruption can expose normally separated germ-cell antigens to immune activity and impair the environment for spermatogenesis. It does not automatically close the vas deferens or guarantee higher testosterone, and Sertoli-cell support remains necessary."
+      ],
+      "refs": [
+        {
+          "source": "source-14",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "id": "reproduction-05",
+      "unit": "reproduction",
+      "objective": "Relate hormone feedback to ovulation and contraception.",
+      "prompt": "Which pituitary hormone supports ovarian follicle growth?",
+      "choices": [
+        "FSH",
+        "LH as the sole direct stimulus for early follicle recruitment",
+        "Progesterone from the corpus luteum",
+        "Oxytocin from the posterior pituitary"
+      ],
+      "correct": 0,
+      "explanation": "FSH stimulates granulosa-cell activity and follicular growth. LH also contributes to ovarian physiology, including the ovulatory surge, but is not the sole stimulus described. Progesterone is an ovarian steroid; oxytocin mainly supports uterine contraction and milk ejection.",
+      "rationales": [
+        "FSH stimulates granulosa-cell activity and follicular growth. LH also contributes to ovarian physiology, including the ovulatory surge, but is not the sole stimulus described. Progesterone is an ovarian steroid; oxytocin mainly supports uterine contraction and milk ejection.",
+        "“LH as the sole direct stimulus for early follicle recruitment” is not the best answer here. FSH stimulates granulosa-cell activity and follicular growth. LH also contributes to ovarian physiology, including the ovulatory surge, but is not the sole stimulus described. Progesterone is an ovarian steroid; oxytocin mainly supports uterine contraction and milk ejection.",
+        "“Progesterone from the corpus luteum” is not the best answer here. FSH stimulates granulosa-cell activity and follicular growth. LH also contributes to ovarian physiology, including the ovulatory surge, but is not the sole stimulus described. Progesterone is an ovarian steroid; oxytocin mainly supports uterine contraction and milk ejection.",
+        "“Oxytocin from the posterior pituitary” is not the best answer here. FSH stimulates granulosa-cell activity and follicular growth. LH also contributes to ovarian physiology, including the ovulatory surge, but is not the sole stimulus described. Progesterone is an ovarian steroid; oxytocin mainly supports uterine contraction and milk ejection."
+      ],
+      "refs": [
+        {
+          "source": "source-14",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "id": "reproduction-06",
+      "unit": "reproduction",
+      "objective": "Relate hormone feedback to ovulation and contraception.",
+      "prompt": "Why can low ovarian feedback be associated with elevated FSH?",
+      "choices": [
+        "FSH is synthesized by the remaining oocytes",
+        "Reduced inhibition permits greater pituitary stimulation",
+        "Reduced feedback directly suppresses all pituitary activity",
+        "FSH must fall whenever ovarian hormone production falls"
+      ],
+      "correct": 1,
+      "explanation": "Reduced ovarian negative feedback permits greater pituitary FSH secretion. FSH comes from the anterior pituitary, not oocytes; removing inhibition can increase rather than suppress its release.",
+      "rationales": [
+        "“FSH is synthesized by the remaining oocytes” is not the best answer here. Reduced ovarian negative feedback permits greater pituitary FSH secretion. FSH comes from the anterior pituitary, not oocytes; removing inhibition can increase rather than suppress its release.",
+        "Reduced ovarian negative feedback permits greater pituitary FSH secretion. FSH comes from the anterior pituitary, not oocytes; removing inhibition can increase rather than suppress its release.",
+        "“Reduced feedback directly suppresses all pituitary activity” is not the best answer here. Reduced ovarian negative feedback permits greater pituitary FSH secretion. FSH comes from the anterior pituitary, not oocytes; removing inhibition can increase rather than suppress its release.",
+        "“FSH must fall whenever ovarian hormone production falls” is not the best answer here. Reduced ovarian negative feedback permits greater pituitary FSH secretion. FSH comes from the anterior pituitary, not oocytes; removing inhibition can increase rather than suppress its release."
+      ],
+      "refs": [
+        {
+          "source": "source-14",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "reproduction-07",
+      "unit": "reproduction",
+      "objective": "Relate hormone feedback to ovulation and contraception.",
+      "prompt": "What does AMH production by early follicles help indicate in the IVF discussion?",
+      "choices": [
+        "A guarantee that a particular embryo will implant",
+        "The exact number of eggs that will fertilize successfully",
+        "The population of developing early follicles",
+        "The timing of the LH surge in every cycle"
+      ],
+      "correct": 2,
+      "explanation": "AMH is produced by granulosa cells of developing early follicles and can help assess ovarian reserve. It does not guarantee fertilization or implantation, nor does it specify the timing of every LH surge.",
+      "rationales": [
+        "“A guarantee that a particular embryo will implant” is not the best answer here. AMH is produced by granulosa cells of developing early follicles and can help assess ovarian reserve. It does not guarantee fertilization or implantation, nor does it specify the timing of every LH surge.",
+        "“The exact number of eggs that will fertilize successfully” is not the best answer here. AMH is produced by granulosa cells of developing early follicles and can help assess ovarian reserve. It does not guarantee fertilization or implantation, nor does it specify the timing of every LH surge.",
+        "AMH is produced by granulosa cells of developing early follicles and can help assess ovarian reserve. It does not guarantee fertilization or implantation, nor does it specify the timing of every LH surge.",
+        "“The timing of the LH surge in every cycle” is not the best answer here. AMH is produced by granulosa cells of developing early follicles and can help assess ovarian reserve. It does not guarantee fertilization or implantation, nor does it specify the timing of every LH surge."
+      ],
+      "refs": [
+        {
+          "source": "source-14",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "reproduction-08",
+      "unit": "reproduction",
+      "objective": "Relate hormone feedback to ovulation and contraception.",
+      "prompt": "What is a major hormonal role of the corpus luteum?",
+      "choices": [
+        "Release FSH directly into the ovarian follicle",
+        "Maintain maximum LH secretion through continuous positive feedback",
+        "Produce the next cohort of oocytes by mitosis",
+        "Produce progesterone supporting the endometrium"
+      ],
+      "correct": 3,
+      "explanation": "The corpus luteum forms after ovulation and produces progesterone and estrogen that support the endometrium. It is not the source of pituitary FSH, does not sustain an LH surge, and does not produce new oocytes by mitosis.",
+      "rationales": [
+        "“Release FSH directly into the ovarian follicle” is not the best answer here. The corpus luteum forms after ovulation and produces progesterone and estrogen that support the endometrium. It is not the source of pituitary FSH, does not sustain an LH surge, and does not produce new oocytes by mitosis.",
+        "“Maintain maximum LH secretion through continuous positive feedback” is not the best answer here. The corpus luteum forms after ovulation and produces progesterone and estrogen that support the endometrium. It is not the source of pituitary FSH, does not sustain an LH surge, and does not produce new oocytes by mitosis.",
+        "“Produce the next cohort of oocytes by mitosis” is not the best answer here. The corpus luteum forms after ovulation and produces progesterone and estrogen that support the endometrium. It is not the source of pituitary FSH, does not sustain an LH surge, and does not produce new oocytes by mitosis.",
+        "The corpus luteum forms after ovulation and produces progesterone and estrogen that support the endometrium. It is not the source of pituitary FSH, does not sustain an LH surge, and does not produce new oocytes by mitosis."
+      ],
+      "refs": [
+        {
+          "source": "source-25",
+          "page": 1250
+        }
+      ]
+    },
+    {
+      "id": "reproduction-09",
+      "unit": "reproduction",
+      "objective": "Explain fertilization, early development, and childbirth feedback.",
+      "prompt": "How does oxytocin participate in positive feedback during labor?",
+      "choices": [
+        "Contractions increase stretch signals that promote further oxytocin release",
+        "Contractions inhibit all further oxytocin release",
+        "Oxytocin suppresses stretch signals as labor progresses",
+        "Oxytocin replaces the need for uterine muscle contraction"
+      ],
+      "correct": 0,
+      "explanation": "Stretch promotes oxytocin release and oxytocin strengthens contractions, reinforcing the stimulus until delivery interrupts the loop.",
+      "rationales": [
+        "Stretch promotes oxytocin release and oxytocin strengthens contractions, reinforcing the stimulus until delivery interrupts the loop.",
+        "“Contractions inhibit all further oxytocin release” is not the best answer here. Stretch promotes oxytocin release and oxytocin strengthens contractions, reinforcing the stimulus until delivery interrupts the loop.",
+        "“Oxytocin suppresses stretch signals as labor progresses” is not the best answer here. Stretch promotes oxytocin release and oxytocin strengthens contractions, reinforcing the stimulus until delivery interrupts the loop.",
+        "“Oxytocin replaces the need for uterine muscle contraction” is not the best answer here. Stretch promotes oxytocin release and oxytocin strengthens contractions, reinforcing the stimulus until delivery interrupts the loop."
+      ],
+      "refs": [
+        {
+          "source": "source-14",
+          "page": 21
+        },
+        {
+          "source": "source-25",
+          "page": 1294
+        }
+      ]
+    },
+    {
+      "id": "reproduction-10",
+      "unit": "reproduction",
+      "objective": "Explain fertilization, early development, and childbirth feedback.",
+      "prompt": "In the fertilization lab, why compare an experimental condition with normal seawater conditions?",
+      "choices": [
+        "To assume the treatment must inhibit fertilization",
+        "To interpret fertilization and motility relative to a baseline",
+        "To infer that one egg represents all biological variability",
+        "To establish human contraceptive safety from sea-urchin results alone"
+      ],
+      "correct": 1,
+      "explanation": "A normal-condition control supports comparison of fertilization rates and sperm motility. It does not guarantee success or establish human clinical safety.",
+      "rationales": [
+        "“To assume the treatment must inhibit fertilization” is not the best answer here. A normal-condition control supports comparison of fertilization rates and sperm motility. It does not guarantee success or establish human clinical safety.",
+        "A normal-condition control supports comparison of fertilization rates and sperm motility. It does not guarantee success or establish human clinical safety.",
+        "“To infer that one egg represents all biological variability” is not the best answer here. A normal-condition control supports comparison of fertilization rates and sperm motility. It does not guarantee success or establish human clinical safety.",
+        "“To establish human contraceptive safety from sea-urchin results alone” is not the best answer here. A normal-condition control supports comparison of fertilization rates and sperm motility. It does not guarantee success or establish human clinical safety."
+      ],
+      "refs": [
+        {
+          "source": "source-04",
+          "page": 4
+        }
+      ]
+    }
+  ],
+  "figurePages": {
+    "digestion": 1049,
+    "urinary": 1167,
+    "balance": 1204,
+    "endocrine": 701,
+    "immune": 935,
+    "reproduction": 1250
+  }
+}

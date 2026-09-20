@@ -1,0 +1,22 @@
+:root { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; --green:#9adbc2; --muted:#b4c4bc; --line:#42574d; --paper:#202e28; color:#edf4ef; background:#15211b; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme:dark; --green:#9adbc2; --muted:#b4c4bc; --line:#42574d; --paper:#202e28; color:#edf4ef; background:#15211b; }
+}
+:root[data-dark="true"] a, :root[data-dark="true"] summary { color:#a4dfc7; }
+:root[data-dark="true"] .sidebar { background:#1b2922; }
+:root[data-dark="true"] :is(label,nav a,.sidebar-note,.badge,.eyebrow,.empty h3) { color:#bed0c4; }
+:root[data-dark="true"] :is(nav a[aria-current],button.quiet,.unit-symbol,.feedback) { background:#30483c; color:#e2f4e9; }
+:root[data-dark="true"] button { background:#9adbc2; color:#112b20; }
+:root[data-dark="true"] .unit-card { background:var(--paper); color:var(--green); }
+:root[data-dark="true"] :is(input,select,textarea,.choices button) { background:#18261f; color:#edf4ef; border-color:#627a6b; }
+:root[data-dark="true"] .choices button span { background:#30483c; color:#edf4ef; }
+:root[data-dark="true"] .choices .right { background:#244d38; color:#e5ffed; border-color:#8bdbac; }
+:root[data-dark="true"] .choices .wrong { background:#592e32; color:#ffe3e3; border-color:#ecaaaa; }
+:root[data-dark="true"] :is(pre,.result) { background:#30483c; color:#edf4ef; }
+:root[data-dark="true"] .notice { background:#453d23; color:#fff0c4; border-color:#9e894e; }
+:root[data-dark="true"] :is(th,thead) { background:#304037; color:#e5eee8; }
+:root[data-dark="true"] .hero { background:#214d3e; }
+:root[data-dark="true"] .brandmark { background:#315744; }
+.appearance-control { display:block; margin:18px 0; font-size:14px; }
+.appearance-control select { margin-top:5px; width:100%; }

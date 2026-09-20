@@ -1,0 +1,16 @@
+{
+  "source": "Anatomy and Physiology 2e, supplied 2026 OpenStax PDF",
+  "credit": "Access for free at openstax.org.",
+  "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+  "license": "CC BY-NC-SA 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "adaptation": "Page renderings; no content modifications.",
+  "pages": {
+    "digestion": 1049,
+    "urinary": 1167,
+    "balance": 1204,
+    "endocrine": 701,
+    "immune": 935,
+    "reproduction": 1250
+  }
+}
