@@ -1,0 +1,13 @@
+.study-source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;margin-block:1rem 2rem}
+.study-source{padding:1.1rem;border:1px solid var(--line,#8a998d);border-radius:14px;min-width:0}
+.study-source h3{margin-block:.5rem}.study-source details{margin-top:1rem}
+.study-workspace{margin-block:1.5rem}.study-workspace>.eyebrow{display:block;margin-top:1rem}
+.study-stop{padding-block:1.5rem;border-top:1px solid var(--line,#8a998d);margin-top:1rem}
+.study-stop textarea{min-height:120px}.study-stop fieldset{border:1px solid var(--line,#8a998d);border-radius:10px;padding:1rem;margin-block:1rem;min-width:0}
+.study-stop fieldset label{display:flex;align-items:center;gap:.75rem;min-height:44px;cursor:pointer}
+.study-stop input[type=radio]{width:22px;height:22px;flex:0 0 22px;margin:0}
+.study-stop .feedback{margin-block:1rem}.study-workspace button{min-height:44px}
+.study-workspace :is(input,textarea,select){max-width:100%;box-sizing:border-box}
+.study-source :is(a,button),.study-workspace :is(a,button){overflow-wrap:anywhere}
+#study-save-status{min-height:1.5em}
+.study-original{margin:1rem 0}.study-original img{display:block;width:100%;height:auto;background:white;border-radius:8px}.study-original figcaption{margin-top:.5rem;font-size:.9em}

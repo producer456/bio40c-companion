@@ -27,3 +27,8 @@ The six textbook page images are from OpenStax Anatomy & Physiology 2e, licensed
 GitHub Pages serves the main branch root. `.nojekyll` disables Jekyll processing. All asset URLs are relative, so project-path hosting works. Updates are built from an explicit public-file allowlist in the private working project's `tools/export-public-site.mjs`; never copy the whole private repository here.
 
 For local preview: `python3 -m http.server 8000` in this folder, then open http://localhost:8000. No build dependencies.
+# Lecture-first study sessions
+
+Course library groups 10 lecture-slide sessions and 13 lab/recap sessions by topic, with 52 optional source-specific checkpoints. Read the cited original page, try a prediction or explanation, reveal companion-written feedback and mark anything to revisit. Eight original slide pages are also rendered inline without changing their content; `study-pages/manifest.json` records their source pages and original hashes.
+
+These are selected guided checkpoints, not a question for every slide, an official answer key or confirmed exam coverage. Free-text work is self-assessed, not automatically graded. The older 60-question bank remains separately labeled mixed-source practice. An optional personal class date does not establish the instructor's lecture order. New responses stay in local course storage and course backups; no progress reset is required.

@@ -2,6 +2,7 @@ import { validateClarifications, clarificationPage, bindClarifications, gradingC
 import { scheduleCard, registrationState } from './schedule.js';
 import { lecturePreview, lecturePage, bindLecturePrep, validateLecturePrep, lectureQuiz, quizCard } from './lecture-prep.js';
 import {sourceLink,sourceLibrary} from './source-files.js';
+import {validateSourceStudy,sourceStudyCatalog,sourceStudyPanel,bindSourceStudy} from './source-study.js';
 let quizTitle = '';
 const systemAppearance = matchMedia('(prefers-color-scheme: dark)');
 function applyAppearance() {
@@ -225,6 +226,7 @@ function a(e) {
     throw Error(`Invalid settings.`);
   validateClarifications(n);
   validateLecturePrep(n);
+  validateSourceStudy(n);
   return registrationState(structuredClone(n), f?.schedule);
 }
 function o(e) {
@@ -508,7 +510,7 @@ function L() {
   return (
     `<p class="lede">Lecture objectives first. Textbook explanations and figures alongside them.</p><div class="unit-grid">` +
     f.units.map(I).join(``) +
-    `</div>` + sourceLibrary(f,d) + `<section class="card unit-detail"><div><span class="eyebrow">CHAPTERS ` +
+    `</div>` + sourceStudyPanel(f,p,d) + sourceStudyCatalog(f,p,_,d) + sourceLibrary(f,d) + `<section class="card unit-detail"><div><span class="eyebrow">TEXTBOOK SUPPORT · CHAPTERS ` +
     e.chapters +
     `</span><h2>` +
     T(e.title) +
@@ -616,7 +618,7 @@ function R() {
         D(`Retry missed questions`, `retry-session`) +
         `</section>`
       : ``) +
-    `<p class="lede">Answer, understand, try again. Every question includes immediate feedback and a source reference.</p><p><a href="#lecture">Quiz by lecture date and topic →</a> Choose a topic and optionally filter by a cited lecture source.</p><div class="practice-grid"><section class="card"><span class="eyebrow">10 QUESTIONS</span><h2>One topic at a time</h2><label>Choose a unit<select id="practice-unit">` +
+    `<p class="lede">Mixed-source practice: lecture slides, lab handouts and textbook support. Every question includes feedback and references.</p><p>For document-specific guided checks, open <a href="#course">Course library → Study this lecture</a>.</p><p><a href="#lecture">Quiz by lecture date and topic →</a> Choose a topic and optionally filter by a cited lecture source.</p><div class="practice-grid"><section class="card"><span class="eyebrow">10 QUESTIONS</span><h2>One topic at a time</h2><label>Choose a unit<select id="practice-unit">` +
     f.units
       .map(
         (e) =>
@@ -835,7 +837,7 @@ function U() {
   if (m === 'clarifications') { P(clarificationPage(p, f.schedule)); return; }
   if (m === 'lecture') {
     const opened=[...document.querySelectorAll('#learning-activities details')].map(el=>el.open);
-    P(lecturePage(f,p) + quizCard(f,p));
+    P(lecturePage(f,p) + '<section class="card"><h2>Study the actual lecture</h2><p>Open <a href="#course">Course library</a>, choose your topic, then Study this lecture. Each document has its own guided checkpoints and source pages. Save an optional class date there to associate it with your meeting.</p></section>' + quizCard(f,p));
     document.querySelectorAll('#learning-activities details').forEach((el,i)=>el.open=opened[i]??false);
     return;
   }
@@ -894,6 +896,13 @@ function q(e, t = {}) {
     }));
 }
 function J() {
+  bindSourceStudy(p,next=>{
+    if(w)throw Error('Restore a valid backup before saving study responses.');
+    const valid=a(next);
+    if(!d)localStorage.setItem(u,JSON.stringify(valid));
+    else window.webkit.messageHandlers.companion.postMessage({action:'save',state:valid});
+    p=valid;
+  },U);
   document.querySelector('.skip-content')?.addEventListener('click',event=>{event.preventDefault();const main=document.querySelector('main');main.focus();main.scrollIntoView({block:'start'});});
   document.querySelector('#appearance')?.addEventListener('change',event=>{p.theme=event.target.value;j();applyAppearance();});
   document.querySelectorAll('[data-lecture-quiz]').forEach(button=>button.onclick=()=>{const quiz=lectureQuiz(f,p,button.dataset.lectureQuiz);W(quiz.questions,quiz.questions.length,quiz.title);});
