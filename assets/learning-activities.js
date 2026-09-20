@@ -72,8 +72,11 @@ export function bindLearning(record,save,rerender) {
       const learning=collectLearning(record)??{open:false,units:{}};
       change(learning);
       const open=[...root.querySelectorAll('details')].map(el=>el.open);
+      const active=document.activeElement;
+      const focusSelector=active?.dataset.check ? `[data-check="${CSS.escape(active.dataset.check)}"]` : active?.hasAttribute('data-verdict') ? `[data-recall="${CSS.escape(active.closest('[data-recall]').dataset.recall)}"] [data-verdict]` : active?.type==='submit' ? '#learning-form button[type="submit"]' : null;
       save({learning});record={...record,learning};
       if(refresh){rerender();document.querySelectorAll('#learning-activities details').forEach((el,i)=>el.open=open[i]??false);}
+      if(focusSelector)document.querySelector(focusSelector)?.focus({preventScroll:true});
       const live=document.querySelector('#learning-status');if(live)live.textContent='Activities saved. These do not affect your grade.';
     }catch(error){status(error.message);}
   };

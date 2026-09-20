@@ -4,6 +4,8 @@ Unofficial student-built Human Anatomy & Physiology III study companion. Not aff
 
 Includes course guides, source-referenced practice, optional lecture preparation, personal grade planning, instructor clarification notes, larger tablet text and System/Light/Dark appearance.
 
+The responsive interface provides visible small-screen navigation, larger touch targets, keyboard skip-to-content and expandable optional activities. On phones, Privacy & storage is available below the page footer so it does not cover forms.
+
 Lecture prep also offers optional recall with cited feedback, confidence/self-checks, prediction/reflection, teach-back and earlier-concept review. Activities start hidden, are ungraded, require no recording and can be skipped. Saved responses remain in local course data and backups. Choose lecture topics yourself; earlier reviews use those choices rather than assuming the instructor's order.
 
 ## Privacy

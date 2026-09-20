@@ -379,7 +379,7 @@ function N(e) {
 function P(e) {
   applyAppearance();
   ((l.innerHTML =
-    `<aside class="sidebar"><a class="brand" href="#today"><span class="brandmark">40<span>C</span></span><span>BIOLOGY<br><small>COURSE COMPANION</small></span></a><div class="term">ANATOMY & PHYSIOLOGY III</div><nav aria-label="Main navigation">` +
+    `<a class="skip-content" href="#main-content">Skip to content</a><aside class="sidebar"><a class="brand" href="#today"><span class="brandmark">40<span>C</span></span><span>BIOLOGY<br><small>COURSE COMPANION</small></span></a><div class="term">ANATOMY & PHYSIOLOGY III</div><nav aria-label="Main navigation">` +
     [
       [`today`, `◷`, `Today`],
       [`course`, `◎`, `Course library`],
@@ -409,7 +409,7 @@ function P(e) {
     (d
       ? `Coursework syncs through your private Mac.`
       : `Progress stays in this browser. Export a backup to keep it safe.`) +
-    `</p></div></aside><div class="workspace"><header><span>FOOTHILL · BIO 40C</span><span class="badge">STUDENT-BUILT · PREVIEW</span></header><main tabindex="-1"><div class="eyebrow">` +
+    `</p></div></aside><div class="workspace"><header><span>FOOTHILL · BIO 40C</span><span class="badge">STUDENT-BUILT · PREVIEW</span></header><main id="main-content" tabindex="-1"><div class="eyebrow">` +
     (d ? `PERSONAL STUDY SPACE` : `A LITTLE STRUCTURE. A LOT OF LEARNING.`) +
     `</div><h1>` +
     {
@@ -902,6 +902,7 @@ function q(e, t = {}) {
     }));
 }
 function J() {
+  document.querySelector('.skip-content')?.addEventListener('click',event=>{event.preventDefault();const main=document.querySelector('main');main.focus();main.scrollIntoView({block:'start'});});
   document.querySelector('#appearance')?.addEventListener('change',event=>{p.theme=event.target.value;j();applyAppearance();});
   document.querySelectorAll('[data-lecture-quiz]').forEach(button=>button.onclick=()=>{const quiz=lectureQuiz(f,p,button.dataset.lectureQuiz);W(quiz.questions,quiz.questions.length,quiz.title);});
   bindLecturePrep(f,p,next=>{
