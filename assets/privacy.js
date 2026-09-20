@@ -12,7 +12,7 @@ dialog.innerHTML = `<h2 id="privacy-title">Your work stays with you</h2>
 <li><strong>Keep a backup.</strong> Clearing browser data can erase your work. Use <strong>Settings &amp; backup → Export backup</strong> to save a private copy or move it to another device.</li>
 </ul>
 <details><summary>More about storage, backups and website hosting</summary>
-<p>Private browsing may discard your work when the session ends. Browser storage can also be cleared, evicted or blocked. Backup files contain your data, so keep them private and do not post them as GitHub issues.</p>
+<p>Private browsing may discard your work when the session ends. Browser storage can also be cleared, evicted or blocked.</p>
 <p>GitHub Pages receives normal website requests and logs visitors’ IP addresses for security. That is separate from your study data, which this site does not upload. This site adds no analytics, advertising, tracking cookies or remote fonts. External links have their own privacy practices.</p>
 <p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">About GitHub Pages hosting</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub privacy statement</a></p>
 </details>
