@@ -1,4 +1,5 @@
 import { lectureGuides } from "./lecture-guides.js";
+import { validateLearning, learningCard, collectLearning, bindLearning } from './learning-activities.js';
 const escape = (value) =>
   String(value ?? "").replace(
     /[&<>"']/g,
@@ -80,6 +81,7 @@ export function validateLecturePrep(state) {
   )
     throw Error("Invalid lecture preparation.");
   for (const [day, record] of Object.entries(state.lecturePrep)) {
+    validateLearning(record?.learning);
     if (
       !/^\d{4}-\d{2}-\d{2}$/.test(day) ||
       !Number.isFinite(Date.parse(day)) ||
@@ -146,7 +148,7 @@ export function lecturePage(course, state) {
   const record = state.lecturePrep?.[selectedDate];
   const unit = course.units.find((u) => u.id === record?.unit);
   const guide = unit && lectureGuides[unit.id];
-  return `<p class="lede">An optional way to prepare a conversation with your teacher. Pick the actual topic for this lecture; the registration schedule does not assign topics to dates.</p><section class="card"><div class="form-grid"><label>Lecture date<select id="prep-date">${dates.map((day) => `<option value="${day}" ${day === selectedDate ? "selected" : ""}>${escape(label(day))}</option>`).join("")}</select></label><label>Topic for this lecture<select id="prep-unit"><option value="">Choose the topic Woods has assigned…</option>${course.units.map((u) => `<option value="${u.id}" ${u.id === unit?.id ? "selected" : ""}>${escape(u.title)}</option>`).join("")}</select></label></div><p><strong>${lecturePhase(schedule, selectedDate)}</strong> · ${escape(label(selectedDate))} · 9:00–10:50 AM · Room 8403</p><p class="muted">Regular Tuesday/Thursday registration slots, in Pacific time. Check announcements for holidays and schedule changes. This panel does not send notifications.</p><p role="status" id="prep-status"></p></section>${guide ? `<section class="card"><h2>Before class: find your uncertain step</h2><ul>${guide.before.map((text) => `<li>${escape(text)}</li>`).join("")}</ul><p>Try: “I think ___ because ___. The step I’m unsure about is ___.” Bring that reasoning, even if it is incomplete.</p><button class="quiet" data-unit="${unit.id}">Review ${escape(unit.title)}</button></section><h2>During class: listen, predict, ask</h2><p>These are suggested discussion areas, not the instructor’s confirmed slide order. Choose a question when it matches what is being taught.</p>${guide.sections.map((section, i) => `<section class="card"><h3>${escape(section.title)}</h3><p><strong>Pay attention to:</strong> ${escape(section.listen)}</p><p><strong>Ask for a live explanation:</strong> ${escape(section.ask)}</p><details><summary>If it still feels unclear</summary><p>${escape(section.followup)}</p><p>After the explanation, try the reasoning again on a new example. Ask the teacher to check the step you changed.</p></details><label class="checkbox"><input type="checkbox" data-discussed="${unit.id}-${i}" ${record.discussed.includes(unit.id + "-" + i) ? "checked" : ""}> Asked or discussed</label></section>`).join("")}<section class="card"><h2>Your question or takeaway</h2><label>Keep the reasoning you want checked, or what clicked in class<textarea id="prep-notes" rows="4" maxlength="4000" placeholder="I thought… The teacher pointed out… On the next example I’ll look for…">${escape(record.notes)}</textarea></label><button id="prep-save">Save lecture notes</button><p role="status" id="prep-notes-status"></p><p class="muted">Based on the ${escape(unit.title)} guide and its source references. These questions are study prompts, not predictions of exam content. Your notes stay in your own course data.</p></section>` : '<section class="card"><h2>Choose this lecture’s topic above</h2><p>Then see what to review beforehand, what to listen for, and questions that invite the teacher to check your reasoning.</p></section>'}`;
+  return `<p class="lede">An optional way to prepare a conversation with your teacher. Pick the actual topic for this lecture; the registration schedule does not assign topics to dates.</p><section class="card"><div class="form-grid"><label>Lecture date<select id="prep-date">${dates.map((day) => `<option value="${day}" ${day === selectedDate ? "selected" : ""}>${escape(label(day))}</option>`).join("")}</select></label><label>Topic for this lecture<select id="prep-unit"><option value="">Choose the topic Woods has assigned…</option>${course.units.map((u) => `<option value="${u.id}" ${u.id === unit?.id ? "selected" : ""}>${escape(u.title)}</option>`).join("")}</select></label></div><p><strong>${lecturePhase(schedule, selectedDate)}</strong> · ${escape(label(selectedDate))} · 9:00–10:50 AM · Room 8403</p><p class="muted">Regular Tuesday/Thursday registration slots, in Pacific time. Check announcements for holidays and schedule changes. This panel does not send notifications.</p><p role="status" id="prep-status"></p></section>${learningCard(course,state,selectedDate)}${guide ? `<section class="card"><h2>Before class: find your uncertain step</h2><ul>${guide.before.map((text) => `<li>${escape(text)}</li>`).join("")}</ul><p>Try: “I think ___ because ___. The step I’m unsure about is ___.” Bring that reasoning, even if it is incomplete.</p><button class="quiet" data-unit="${unit.id}">Review ${escape(unit.title)}</button></section><h2>During class: listen, predict, ask</h2><p>These are suggested discussion areas, not the instructor’s confirmed slide order. Choose a question when it matches what is being taught.</p>${guide.sections.map((section, i) => `<section class="card"><h3>${escape(section.title)}</h3><p><strong>Pay attention to:</strong> ${escape(section.listen)}</p><p><strong>Ask for a live explanation:</strong> ${escape(section.ask)}</p><details><summary>If it still feels unclear</summary><p>${escape(section.followup)}</p><p>After the explanation, try the reasoning again on a new example. Ask the teacher to check the step you changed.</p></details><label class="checkbox"><input type="checkbox" data-discussed="${unit.id}-${i}" ${record.discussed.includes(unit.id + "-" + i) ? "checked" : ""}> Asked or discussed</label></section>`).join("")}<section class="card"><h2>Your question or takeaway</h2><label>Keep the reasoning you want checked, or what clicked in class<textarea id="prep-notes" rows="4" maxlength="4000" placeholder="I thought… The teacher pointed out… On the next example I’ll look for…">${escape(record.notes)}</textarea></label><button id="prep-save">Save lecture notes</button><p role="status" id="prep-notes-status"></p><p class="muted">Based on the ${escape(unit.title)} guide and its source references. These questions are study prompts, not predictions of exam content. Your notes stay in your own course data.</p></section>` : '<section class="card"><h2>Choose this lecture’s topic above</h2><p>Then see what to review beforehand, what to listen for, and questions that invite the teacher to check your reasoning.</p></section>'}`;
 }
 export function bindLecturePrep(course, state, commit, rerender) {
   const date = document.querySelector("#prep-date"),
@@ -159,12 +161,14 @@ export function bindLecturePrep(course, state, commit, rerender) {
     const next = saveLecturePrep(state, course.schedule, selectedDate, {
       ...previous,
       notes: notes?.value ?? previous.notes,
+      ...(previous.learning || document.querySelector('#learning-form') ? {learning:collectLearning(previous)} : {}),
       ...patch,
     });
     commit(next);
     state = next;
     if (refresh) rerender();
   };
+  if(record())bindLearning(record(),save,rerender);
   unit.onchange = () => {
     if (!unit.value) {
       unit.value = record()?.unit ?? "";
@@ -187,7 +191,7 @@ export function bindLecturePrep(course, state, commit, rerender) {
     };
   date.onchange = () => {
     try {
-      if (notes && record() && notes.value !== record().notes) save({});
+      if (record() && (document.querySelector('#learning-form') || notes && notes.value !== record().notes)) save({});
       selectedDate = date.value;
       rerender();
     } catch (error) {

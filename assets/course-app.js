@@ -841,7 +841,12 @@ function H() {
 }
 function U() {
   if (m === 'clarifications') { P(clarificationPage(p, f.schedule)); return; }
-  if (m === 'lecture') { P(lecturePage(f, p) + quizCard(f,p)); return; }
+  if (m === 'lecture') {
+    const opened=[...document.querySelectorAll('#learning-activities details')].map(el=>el.open);
+    P(lecturePage(f,p) + quizCard(f,p));
+    document.querySelectorAll('#learning-activities details').forEach((el,i)=>el.open=opened[i]??false);
+    return;
+  }
   P(
     m === `today`
       ? F()
