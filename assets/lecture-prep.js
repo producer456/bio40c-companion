@@ -150,7 +150,7 @@ export function lectureBriefing(course, source, native = false) {
   const link = page => native
     ? `<button class="quiet" data-source="${escape(source)}" data-page="${page}">Open slide</button>`
     : `<a href="${escape(sourceURL(source, page, course.originalFilesHosted === true))}" target="_blank" rel="noopener noreferrer">Open slide</a>`;
-  return `<section class="card lecture-briefing" id="lecture-briefing" data-topic="${escape(session.unit)}" aria-labelledby="briefing-title"><span class="eyebrow">SUPPLIED SLIDES · COMPANION BRIEFING</span><h2 id="briefing-title">Lecture summary: ${escape(session.title)}</h2><p>${escape(briefing.summary)}</p><h3>Likely learning goal</h3><p>${escape(briefing.focus)}</p><h3>Key points to watch for</h3><ul>${briefing.highlights.map(point => `<li><strong>PDF p. ${point.page}:</strong> ${escape(point.text)} ${link(point.page)}</li>`).join('')}</ul><h3>Good moments to engage with your teacher</h3><ul>${session.stops.map(stop => `<li><strong>PDF p. ${stop.page} · ${escape(stop.title)}:</strong> ${escape(stop.prompt)}</li>`).join('')}</ul><h3>Questions worth asking</h3><ol>${session.stops.map(stop => `<li>${escape(stop.ask)} <span class="muted">PDF p. ${stop.page}</span></li>`).join('')}</ol><p class="muted">This is a selected study summary of the supplied slides, not a transcript, full slide-by-slide summary or confirmation of what your teacher will emphasize. Choose the deck assigned for this class date.</p></section>`;
+  return `<section class="card lecture-briefing" id="lecture-briefing" data-topic="${escape(session.unit)}" aria-labelledby="briefing-title"><span class="eyebrow">SUPPLIED SLIDES · COMPANION BRIEFING</span><h2 id="briefing-title" tabindex="-1">Lecture summary: ${escape(session.title)}</h2><p>${escape(briefing.summary)}</p><h3>Likely learning goal</h3><p>${escape(briefing.focus)}</p><h3>Key points to watch for</h3><ul>${briefing.highlights.map(point => `<li><strong>PDF p. ${point.page}:</strong> ${escape(point.text)} ${link(point.page)}</li>`).join('')}</ul><h3>Good moments to engage with your teacher</h3><ul>${session.stops.map(stop => `<li><strong>PDF p. ${stop.page} · ${escape(stop.title)}:</strong> ${escape(stop.prompt)}</li>`).join('')}</ul><h3>Questions worth asking</h3><ol>${session.stops.map(stop => `<li>${escape(stop.ask)} <span class="muted">PDF p. ${stop.page}</span></li>`).join('')}</ol><p class="muted">This is a selected study summary of the supplied slides, not a transcript, full slide-by-slide summary or confirmation of what your teacher will emphasize. Choose the deck assigned for this class date.</p></section>`;
 }
 export function lecturePage(course, state, native = false) {
   const schedule = course.schedule,
@@ -206,6 +206,7 @@ export function bindLecturePrep(course, state, commit, rerender) {
     if (!selected && !record()) return;
     try {
       save({ unit: selected?.unit ?? unit.value, slideDeck: selected?.source ?? '', quizSource: '' }, true);
+      document.querySelector('#briefing-title')?.focus();
     } catch (error) {
       document.querySelector('#prep-status').textContent = error.message;
     }
