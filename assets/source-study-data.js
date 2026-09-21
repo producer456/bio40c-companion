@@ -102,3 +102,24 @@ export const sourceSessions=[
   stop('controls',5,'Keep two outcomes separate','Why record both fertilization percentage and sperm motility at matching time points for each condition?','They are different outcomes: movement is not itself proof of successful fertilization. Compare positive/negative controls and experimental conditions at the same times. Do not invent measurements or assume the two outcomes always change together.','Could you narrate a hypothetical result where motility and fertilization disagree and show what follow-up observation would help?')
  ])
 ];
+
+// Percent coordinates cover labels on the original 1400 x 1082 slide renders.
+export const diagramPractice={
+ 'source-21/filter':{page:12,title:'Name the three filtration layers',labels:[
+  {box:[7,61.5,27,10],prompt:'A: outer porous layer',answer:'Fenestrations (pores) of the glomerular endothelial cell.'},
+  {box:[7,73,25,6],prompt:'B: middle layer',answer:'Basal lamina of the glomerulus.'},
+  {box:[7,82,25,8],prompt:'C: layer between the pedicels',answer:'Slit membrane between pedicels.'}
+ ]},
+ 'source-18/receptors':{page:18,title:'Identify the signaling structures',labels:[
+  {box:[86.5,36,9,3],prompt:'A: compartment',answer:'Nucleus.'},
+  {box:[86.5,39.2,9,3],prompt:'B: binding structure',answer:'Receptor.'},
+  {box:[86.5,48,7,3.3],prompt:'C: genetic material',answer:'DNA.'}
+ ]},
+ 'source-14/labor':{page:23,title:'Trace the positive-feedback loop',labels:[
+  {box:[8,14.5,20,9.3],prompt:'A: signal leaving the cervix',answer:'Nerve impulses from the cervix are transmitted to the brain.'},
+  {box:[43.5,14.5,22,9.3],prompt:'B: response at the brain and pituitary',answer:'The brain stimulates the pituitary gland to secrete oxytocin.'},
+  {box:[53.5,50,21,9.5],prompt:'C: transport to the target',answer:'Oxytocin is carried in the bloodstream to the uterus.'},
+  {box:[24.5,69.5,21,12],prompt:'D: target response',answer:'Oxytocin stimulates uterine contractions and pushes the baby toward the cervix.'},
+  {box:[1.7,50,14,9.5],prompt:'E: renewed stimulus',answer:'The head of the baby pushes against the cervix.'}
+ ]}
+};
