@@ -115,6 +115,6 @@ export class CourseConnection {
     click('course-disconnect',()=>{this.capture();this.local.enabled=false;this.persist();this.message='Disconnected. Local course data retained.';this.render();});
     click('keep-local',()=>{for(const conflict of this.local.conflicts??[]){const op=this.local.pending.find(o=>o.id===conflict.id);if(op){op.base=conflict.revision;op.id=crypto.randomUUID();}}this.local.conflicts=[];this.persist();this.sync();});
     click('use-remote',()=>{const ids=new Set((this.local.conflicts??[]).map(c=>c.id));this.local.pending=this.local.pending.filter(o=>!ids.has(o.id));this.local.conflicts=[];this.persist();this.sync();});
-    click('connection-backup',()=>{const data=localStorage.getItem('bio40c-before-connection');if(!data){this.message='No pre-connection backup yet.';this.render();return;}const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='bio40c-before-connection.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+    click('connection-backup',()=>{const data=localStorage.getItem('bio40c-before-connection');if(!data){this.message='No pre-connection backup yet.';this.render();return;}if(this.native){window.webkit.messageHandlers.companion.postMessage({action:'export',contents:data});return;}const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='bio40c-before-connection.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
   }
 }

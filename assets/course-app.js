@@ -1249,6 +1249,7 @@ async function X() {
       (h = `Saved data could not be read. It has not been overwritten. Recover the original browser data or restore a valid backup before making changes.`));
   }
   connection = new CourseConnection({get:()=>p,set:next=>{p=a(next);j();},render:()=>{if(!document.querySelector('textarea:focus,input:focus'))U();},native:d});
+  if(w)connection.local.enabled=false;
   window.bio40Connection=connection;
   setTimeout(()=>connection.sync(),1500);
   let t = location.hash.slice(1);
