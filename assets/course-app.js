@@ -1,3 +1,6 @@
+import {CourseConnection} from './course-connection.js';
+import {validateHub,timeline,reviewCard,questionsCard,bindHub} from './learning-theme.js';
+let connection;
 import { validateClarifications, clarificationPage, bindClarifications, gradingConfirmed, pointsGrade, pointsTarget } from './clarifications.js';
 import { scheduleCard, registrationState } from './schedule.js';
 import { lecturePreview, lecturePage, bindLecturePrep, validateLecturePrep, lectureQuiz, quizCard } from './lecture-prep.js';
@@ -6,6 +9,7 @@ import {validateSourceStudy,sourceStudyCatalog,sourceStudyPanel,bindSourceStudy}
 let quizTitle = '';
 const systemAppearance = matchMedia('(prefers-color-scheme: dark)');
 function applyAppearance() {
+  document.documentElement.dataset.learning=String(p.learningTheme??false);
   const theme=p.theme ?? 'system';
   document.documentElement.dataset.theme=theme;
   document.documentElement.dataset.dark=String(theme==='dark' || theme==='dim' || theme==='system' && systemAppearance.matches);
@@ -133,6 +137,7 @@ function i(e, t, n) {
   };
 }
 function a(e) {
+  validateHub(e);
   if (!e || typeof e != `object`) throw Error(`Not a course backup.`);
   if(e.theme!==undefined && !['system','light','dim','dark'].includes(e.theme)) throw Error('Invalid appearance setting.');
   let n = e;
@@ -409,7 +414,7 @@ function P(e) {
           `</a>`,
       )
       .join(``) +
-    `</nav><label class="appearance-control">Appearance<select id="appearance">${['system','light','dim','dark'].map(theme=>`<option value="${theme}" ${(p.theme ?? 'system')===theme?'selected':''}>${theme[0].toUpperCase()+theme.slice(1)}</option>`).join('')}</select></label><div class="sidebar-note"><span class="dot"></span> ` +
+    `</nav><label class="appearance-control">Presentation<select id="learning-theme"><option value="standard" ${!p.learningTheme?'selected':''}>Standard</option><option value="learning" ${p.learningTheme?'selected':''}>Learning</option></select></label><label class="appearance-control">Appearance<select id="appearance">${['system','light','dim','dark'].map(theme=>`<option value="${theme}" ${(p.theme ?? 'system')===theme?'selected':''}>${theme[0].toUpperCase()+theme.slice(1)}</option>`).join('')}</select></label><div class="sidebar-note"><span class="dot"></span> ` +
     (d ? `Your private companion` : `No account needed`) +
     `<p>` +
     (d
@@ -422,7 +427,7 @@ function P(e) {
         D(`Dismiss`, `dismiss`, `class="quiet"`) +
         `</div>`
       : ``) +
-    `<div class="feature-body">` + e +
+    `<div class="feature-body">` + (['today','assignments'].includes(m)?timeline(p,connection,m==='assignments'):'') + e + (m==='settings'?(connection?.panel()??''):'') + (['lecture','today'].includes(m)?reviewCard(f,p,d):'') + (m==='lecture'?questionsCard(p):'') +
     `</div></main><footer>Built for learning together. Unofficial course companion · Content ` +
     T(f.version) +
     `<br>Original practice questions, not official exam questions. Diagrams: OpenStax · Access for free at openstax.org. · CC BY-NC-SA 4.0.</footer></div>`),
@@ -832,6 +837,7 @@ function H() {
   );
 }
 function U() {
+  connection?.capture();
   if (m === 'clarifications') { P(clarificationPage(p, f.schedule)); return; }
   if (m === 'lecture') {
     const opened=[...document.querySelectorAll('#learning-activities details')].map(el=>el.open);
@@ -894,6 +900,9 @@ function q(e, t = {}) {
     }));
 }
 function J() {
+  connection?.bind();
+  bindHub(f,p,next=>{p=a(next);j();},U);
+  document.querySelector('#learning-theme')?.addEventListener('change',event=>{p.learningTheme=event.target.value==='learning';j();U();});
   bindSourceStudy(p,next=>{
     if(w)throw Error('Restore a valid backup before saving study responses.');
     const valid=a(next);
@@ -1239,6 +1248,9 @@ async function X() {
     ((w = !0),
       (h = `Saved data could not be read. It has not been overwritten. Recover the original browser data or restore a valid backup before making changes.`));
   }
+  connection = new CourseConnection({get:()=>p,set:next=>{p=a(next);j();},render:()=>{if(!document.querySelector('textarea:focus,input:focus'))U();},native:d});
+  window.bio40Connection=connection;
+  setTimeout(()=>connection.sync(),1500);
   let t = location.hash.slice(1);
   ([
     `today`,
