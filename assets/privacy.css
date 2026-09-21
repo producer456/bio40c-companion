@@ -1,4 +1,4 @@
-.privacy-dialog { width:min(680px,calc(100% - 28px)); max-height:85dvh; overflow:auto; border:1px solid var(--line); border-radius:16px; padding:26px; background:var(--paper); color:inherit; }
+.privacy-dialog { width:min(680px,calc(100% - 28px)); max-height:85dvh; overflow:auto; border:1px solid var(--line); border-radius:8px; padding:26px; background:var(--paper); color:inherit; }
 .privacy-dialog::backdrop { background:#0009; }
 .privacy-dialog :is(p,li) { font-size:16px; line-height:1.6; }
 .privacy-dialog li { margin-bottom:12px; }

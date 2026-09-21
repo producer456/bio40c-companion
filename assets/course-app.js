@@ -8,7 +8,7 @@ const systemAppearance = matchMedia('(prefers-color-scheme: dark)');
 function applyAppearance() {
   const theme=p.theme ?? 'system';
   document.documentElement.dataset.theme=theme;
-  document.documentElement.dataset.dark=String(theme==='dark' || theme==='system' && systemAppearance.matches);
+  document.documentElement.dataset.dark=String(theme==='dark' || theme==='dim' || theme==='system' && systemAppearance.matches);
 }
 systemAppearance.addEventListener('change',()=>applyAppearance());
 (function () {
@@ -133,7 +133,7 @@ function i(e, t, n) {
 }
 function a(e) {
   if (!e || typeof e != `object`) throw Error(`Not a course backup.`);
-  if(e.theme!==undefined && !['system','light','dark'].includes(e.theme)) throw Error('Invalid appearance setting.');
+  if(e.theme!==undefined && !['system','light','dim','dark'].includes(e.theme)) throw Error('Invalid appearance setting.');
   let n = e;
   if (
     n.version !== 1 ||
@@ -370,7 +370,18 @@ function N(e) {
     ` · <a href="https://openstax.org/details/books/anatomy-and-physiology-2e" target="_blank" rel="noopener">Access for free at openstax.org.</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></figcaption></figure>`
   );
 }
+const featureSpaces={
+ today:{title:'Today',kind:'Daily agenda',symbol:'◷'},
+ course:{title:'Course library',kind:'Reference library',symbol:'◎'},
+ lecture:{title:'Lecture prep',kind:'Lecture notebook',symbol:'◉'},
+ practice:{title:'Practice',kind:'Recall & application',symbol:'✎'},
+ assignments:{title:'Assignments',kind:'Work tracker',symbol:'☷'},
+ grades:{title:'Grades',kind:'Grade calculator',symbol:'↗'},
+ clarifications:{title:'Course details',kind:'Instructor record',symbol:'✓'},
+ settings:{title:'Settings & backup',kind:'Data & preferences',symbol:'⚙'}
+};
 function P(e) {
+  const space=featureSpaces[m]??featureSpaces.settings;
   applyAppearance();
   ((l.innerHTML =
     `<a class="skip-content" href="#main-content">Skip to content</a><aside class="sidebar"><a class="brand" href="#today"><span class="brandmark">40<span>C</span></span><span>BIOLOGY<br><small>COURSE COMPANION</small></span></a><div class="term">ANATOMY & PHYSIOLOGY III</div><nav aria-label="Main navigation">` +
@@ -397,34 +408,21 @@ function P(e) {
           `</a>`,
       )
       .join(``) +
-    `</nav><label class="appearance-control">Appearance<select id="appearance">${['system','light','dark'].map(theme=>`<option value="${theme}" ${(p.theme ?? 'system')===theme?'selected':''}>${theme[0].toUpperCase()+theme.slice(1)}</option>`).join('')}</select></label><div class="sidebar-note"><span class="dot"></span> ` +
+    `</nav><label class="appearance-control">Appearance<select id="appearance">${['system','light','dim','dark'].map(theme=>`<option value="${theme}" ${(p.theme ?? 'system')===theme?'selected':''}>${theme[0].toUpperCase()+theme.slice(1)}</option>`).join('')}</select></label><div class="sidebar-note"><span class="dot"></span> ` +
     (d ? `Your private companion` : `No account needed`) +
     `<p>` +
     (d
       ? `Coursework syncs through your private Mac.`
       : `Progress stays in this browser. Export a backup to keep it safe.`) +
-    `</p></div></aside><div class="workspace"><header><span>FOOTHILL · BIO 40C</span><span class="badge">STUDENT-BUILT · PREVIEW</span></header><main id="main-content" tabindex="-1"><div class="eyebrow">` +
-    (d ? `PERSONAL STUDY SPACE` : `A LITTLE STRUCTURE. A LOT OF LEARNING.`) +
-    `</div><h1>` +
-    {
-      today: `Your course, in view.`,
-      course: `Understand the connections.`,
-      lecture: `Bring your reasoning to class.`,
-      practice: `Practice with purpose.`,
-      assignments: `Make room for the work.`,
-      grades: `Know where you stand.`,
-      clarifications: `Fill in the details.`,
-      settings: `Your data. Your rules.`,
-    }[m] +
-    `</h1>` +
+    `</p></div></aside><div class="workspace space-${m}" data-space="${m}" data-session="${m==='practice'&&v.length&&y<v.length?'active':'idle'}"><header><span>FOOTHILL · BIO 40C <span class="space-breadcrumb">/ ${space.title}</span></span><span class="badge">STUDENT-BUILT · PREVIEW</span></header><main id="main-content" tabindex="-1"><div class="space-heading"><div><div class="eyebrow">${space.kind}</div><h1>${space.title}</h1></div><span class="space-symbol" aria-hidden="true">${space.symbol}</span></div>` +
     (h || S
       ? `<div class="notice" role="status">` +
         T(h || S) +
         D(`Dismiss`, `dismiss`, `class="quiet"`) +
         `</div>`
       : ``) +
-    e +
-    `</main><footer>Built for learning together. Unofficial course companion · Content ` +
+    `<div class="feature-body">` + e +
+    `</div></main><footer>Built for learning together. Unofficial course companion · Content ` +
     T(f.version) +
     `<br>Original practice questions, not official exam questions. Diagrams: OpenStax · Access for free at openstax.org. · CC BY-NC-SA 4.0.</footer></div>`),
     J());
@@ -438,9 +436,7 @@ function F() {
     n = p.attempts.length,
     i = p.attempts.filter((e) => e.correct).length;
   return (
-    scheduleCard(f.schedule, p) +
-    lecturePreview(f.schedule) +
-    `<section class="hero"><div><span class="eyebrow">SMALL STEPS, STRONGER UNDERSTANDING</span><h2>Learn the mechanism.<br>Make the connection.</h2><p>From a morning coffee to a hormone feedback loop: six units, one connected human body.</p><a class="button light" href="#practice">Start a practice session <span>↗</span></a></div><div class="hero-orbit" aria-hidden="true"><span>STRUCTURE</span><strong>⇄</strong><span>FUNCTION</span><small>HOMEOSTASIS</small></div></section><div class="stats"><article><span>Graded work</span><strong>` +
+    `<div class="agenda-layout"><div class="agenda-main"><section class="study-start"><div><span class="eyebrow">BIO 40C / STUDY DESK</span><h2>Ready for a little recall?</h2><p>Digestion, filtration, hormones, immunity and reproduction.</p></div><a class="button" href="#course">Open course library <span aria-hidden="true">↗</span></a></section><div class="stats"><article><span>Graded work</span><strong>` +
     E(t.current) +
     `</strong><small>` + (gradingConfirmed(p) ? 'Confirmed grading method' : 'Provisional grading method · confirm in Course details') + `</small></article><article><span>Practice answers</span><strong>` +
     n +
@@ -468,7 +464,7 @@ function F() {
           )
           .join(``)
       : `<div class="empty"><h3>A clean slate.</h3><p>Add your assignments or import a reviewed list. Old syllabus dates have not been turned into deadlines.</p><a href="#assignments">Add your first assignment →</a></div>`) +
-    `</section><div class="section-heading"><h2>Explore the course</h2><a href="#course">All six units →</a></div><div class="unit-grid">` +
+    `</section></div><aside class="agenda-reference">` + scheduleCard(f.schedule,p) + lecturePreview(f.schedule) + `</aside></div><div class="section-heading"><h2>Explore the course</h2><a href="#course">All six units →</a></div><div class="unit-grid">` +
     f.units.slice(0, 3).map(I).join(``) +
     `</div>` +
     (d
@@ -485,6 +481,7 @@ function I(e) {
   return (
     `<button class="unit-card" data-unit="` +
     e.id +
+    `" data-topic="` + e.id +
     `"><span class="unit-symbol">` +
     {
       digestion: `01`,
@@ -554,7 +551,7 @@ function R() {
       y +
       `" max="` +
       v.length +
-      `" aria-label="Session progress"></progress><section class="card quiz"><span class="eyebrow">` +
+      `" aria-label="Session progress"></progress><section class="card quiz" data-topic="` + e.unit + `"><span class="topic-tag">` + String(f.units.indexOf(t)+1).padStart(2,'0') + ` · ` + T(t.title) + `</span><span class="eyebrow">` +
       T(e.objective) +
       `</span><h2>` +
       T(e.prompt) +
@@ -707,9 +704,9 @@ function z(e) {
 }
 function B() {
   return (
-    `<p class="lede">Your checklist and your gradebook are connected, but completion and scores are separate.</p><section class="card"><h2>Add an assignment</h2><div id="assignment-editor">` +
+    `<p class="lede">Your checklist and your gradebook are connected, but completion and scores are separate.</p><section class="card assignment-create"><h2>Add an assignment</h2><div id="assignment-editor">` +
     z() +
-    `</div></section><section class="card"><div class="section-heading"><h2>Your assignments</h2>` +
+    `</div></section><section class="card assignment-ledger"><div class="section-heading"><h2>Your assignments</h2>` +
     D(`Add syllabus templates`, `templates`, `class="quiet"`) +
     `</div><p class="muted">Templates have no dates and must be checked against Canvas. Unknown points remain blank.</p><div class="table-wrap"><table><thead><tr><th>Assignment</th><th>Due</th><th>Status</th><th>Score</th><th>Actions</th></tr></thead><tbody>` +
     p.assignments
@@ -745,8 +742,8 @@ function B() {
     `</tbody></table></div>` +
     (p.assignments.length
       ? ``
-      : `<p class="empty">Nothing entered yet. Start above or import below.</p>`) +
-    `</section><section class="card"><h2>Import and review</h2><p>Paste CSV or choose a CSV file. Category IDs: ` +
+      : `<p class="empty">Nothing entered yet. Add an assignment or import a reviewed list.</p>`) +
+    `</section><section class="card assignment-import"><h2>Import and review</h2><p>Paste CSV or choose a CSV file. Category IDs: ` +
     t.map((e) => e.id).join(`, `) +
     `.</p><pre>title,category,possible,earned,due,status
 Week 1 module,modules,,,,todo</pre><label>CSV file<input type="file" id="csv-file" accept=".csv,text/csv"></label><label>Assignment CSV<textarea id="csv-input" rows="5" placeholder="Paste structured assignment details here"></textarea></label>` +
@@ -794,7 +791,7 @@ function V() {
     `</small></article><article><span>Ungraded assignments</span><strong>` +
     p.assignments.filter((e) => e.earned === null && e.status !== `excused`)
       .length +
-    `</strong><small>Not silently counted as zeros</small></article><article><span>Grading method</span><strong class="small-number">` + (p.gradingMethod === 'points' ? 'Total points' : 'Weighted') + `</strong><small><a href="#clarifications">Review course details</a></small></article></div><section class="card"><h2>Category breakdown</h2><div class="table-wrap"><table><thead><tr><th>Category</th><th>Weight</th><th>Graded points</th><th>Category grade</th></tr></thead><tbody>` +
+    `</strong><small>Not silently counted as zeros</small></article><article><span>Grading method</span><strong class="small-number">` + (p.gradingMethod === 'points' ? 'Total points' : 'Weighted') + `</strong><small><a href="#clarifications">Review course details</a></small></article></div><section class="card grade-breakdown"><h2>Category breakdown</h2><div class="table-wrap"><table><thead><tr><th>Category</th><th>Weight</th><th>Graded points</th><th>Category grade</th></tr></thead><tbody>` +
     e.categories
       .map(
         (e) =>
@@ -811,7 +808,7 @@ function V() {
           `</td></tr>`,
       )
       .join(``) +
-    `</tbody></table></div><p class="muted">` + (p.gradingMethod === 'points' ? 'Total-points grading combines earned and possible points across categories.' : 'Empty categories are excluded and active weights normalized for the current grade.') + ` Missing work remains ungraded until you explicitly enter zero. Excused work is excluded.</p></section><section class="card"><h2>What do I need next?</h2><label>Target course percentage<input id="target" type="number" min="0" max="100" value="90"></label>` +
+    `</tbody></table></div><p class="muted">` + (p.gradingMethod === 'points' ? 'Total-points grading combines earned and possible points across categories.' : 'Empty categories are excluded and active weights normalized for the current grade.') + ` Missing work remains ungraded until you explicitly enter zero. Excused work is excluded.</p></section><section class="card grade-scenario"><h2>What do I need next?</h2><label>Target course percentage<input id="target" type="number" min="0" max="100" value="90"></label>` +
     D(`Calculate scenario`, `target`) +
     `<div id="target-result" aria-live="polite"></div><p class="muted">Enter all remaining assignments and possible points first. This calculation cannot know about work you haven’t entered.</p></section>`
   );
