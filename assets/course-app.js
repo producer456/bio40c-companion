@@ -9,6 +9,7 @@ function applyAppearance() {
   const theme=p.theme ?? 'system';
   document.documentElement.dataset.theme=theme;
   document.documentElement.dataset.dark=String(theme==='dark' || theme==='dim' || theme==='system' && systemAppearance.matches);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dim'?'#252529':document.documentElement.dataset.dark==='true'?'#000000':'#f5f5f7');
 }
 systemAppearance.addEventListener('change',()=>applyAppearance());
 (function () {

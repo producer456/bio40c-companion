@@ -27,6 +27,10 @@ The six textbook page images are from OpenStax Anatomy & Physiology 2e, licensed
 GitHub Pages serves the main branch root. `.nojekyll` disables Jekyll processing. All asset URLs are relative, so project-path hosting works. Updates are built from an explicit public-file allowlist in the private working project's `tools/export-public-site.mjs`; never copy the whole private repository here.
 
 For local preview: `python3 -m http.server 8000` in this folder, then open http://localhost:8000. No build dependencies.
+
+The default visual design uses iOS-inspired system typography, neutral grouped surfaces,
+rounded controls and blue actions. System, Light, Dim and Dark modes remain available.
+`assets/ios.css` is loaded after the other style sheets; retain it in future exports.
 # Lecture-first study sessions
 
 Course library groups 10 lecture-slide sessions and 13 lab/recap sessions by topic, with 52 optional source-specific checkpoints. Read the cited original page, try a prediction or explanation, reveal companion-written feedback and mark anything to revisit. Eight original slide pages are also rendered inline without changing their content; `study-pages/manifest.json` records their source pages and original hashes.
