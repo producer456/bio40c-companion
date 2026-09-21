@@ -52,7 +52,7 @@
 :root button.quiet { background:var(--soft); color:var(--accent); }
 :root button:active:not(:disabled) { box-shadow:none; }
 :root :is(input,select,textarea) { background:var(--paper); color:var(--ink); border-radius:11px; border-color:var(--line); box-shadow:none; }
-:root .workspace main .unit-grid { background:transparent; padding:0; border-radius:0; box-shadow:none; gap:16px; }
+:root .workspace main .unit-grid { background:transparent; padding:0; border-radius:0; box-shadow:none; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); }
 :root .workspace .unit-card { background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:20px; padding:24px; box-shadow:var(--shadow); }
 :root .workspace .unit-card:hover { box-shadow:0 6px 24px #0071e314; border-color:var(--accent); }
 :root .unit-card[data-topic] { border-top:1px solid var(--line); }
@@ -87,3 +87,4 @@
   :root .space-practice .space-heading { padding:22px; }
 }
 @media(prefers-reduced-motion:reduce) { :root :is(button,.button) { transition:none; } }
+@media(pointer:coarse) { :root :is(input,select,textarea,.appearance-control select) { font-size:max(16px,1em); } }
