@@ -8,6 +8,8 @@ The responsive interface provides visible small-screen navigation, larger touch 
 
 Lecture prep also offers optional recall with cited feedback, confidence/self-checks, prediction/reflection, teach-back and earlier-concept review. Activities start hidden, are ungraded, require no recording and can be skipped. Saved responses remain in local course data and backups. Choose lecture topics yourself; earlier reviews use those choices rather than assuming the instructor's order.
 
+Choose one of the ten supplied lecture slide decks in Lecture prep to see a short slide-based summary, an inferred learning goal, page-linked key points, moments to engage in class and suggested questions for the instructor. The app does not assign decks to class dates or claim to know the instructor's emphasis.
+
 ## Privacy
 
 The creator does not track visitors' study activity and cannot view their saved coursework through this website. There are no activity reports or creator dashboard. The privacy notice leads with device-local storage and explicitly includes both classmates and the creator; technical hosting/storage details are expandable. Exporting or sharing a backup is a user-controlled action.

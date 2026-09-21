@@ -1,4 +1,7 @@
 import { lectureGuides } from "./lecture-guides.js";
+import { lectureBriefings } from './lecture-briefings.js';
+import { sourceSessions } from './source-study-data.js';
+import { sourceURL } from './source-files.js';
 import { validateLearning, learningCard, collectLearning, bindLearning } from './learning-activities.js';
 const escape = (value) =>
   String(value ?? "").replace(
@@ -88,6 +91,7 @@ export function validateLecturePrep(state) {
       new Date(day).toISOString().slice(0, 10) !== day ||
       !record ||
       (record.quizSource !== undefined && (typeof record.quizSource !== 'string' || !/^(source-\d{2})?$/.test(record.quizSource))) ||
+      (record.slideDeck !== undefined && (typeof record.slideDeck !== 'string' || (record.slideDeck !== '' && !sourceSessions.some(session => session.kind === 'lecture' && session.source === record.slideDeck && session.unit === record.unit)))) ||
       !Object.hasOwn(lectureGuides, record.unit) ||
       typeof record.notes !== "string" ||
       record.notes.length > 4000 ||
@@ -139,7 +143,16 @@ export function lecturePreview(schedule) {
   if (!next) return "";
   return `<p class="lecture-preview"><a href="#lecture">Optional lecture prep · ${escape(label(next))} →</a></p>`;
 }
-export function lecturePage(course, state) {
+export function lectureBriefing(course, source, native = false) {
+  const session = sourceSessions.find(item => item.kind === 'lecture' && item.source === source);
+  const briefing = lectureBriefings[source];
+  if (!session || !briefing) return '';
+  const link = page => native
+    ? `<button class="quiet" data-source="${escape(source)}" data-page="${page}">Open slide</button>`
+    : `<a href="${escape(sourceURL(source, page, course.originalFilesHosted === true))}" target="_blank" rel="noopener noreferrer">Open slide</a>`;
+  return `<section class="card lecture-briefing" id="lecture-briefing" data-topic="${escape(session.unit)}" aria-labelledby="briefing-title"><span class="eyebrow">SUPPLIED SLIDES · COMPANION BRIEFING</span><h2 id="briefing-title">Lecture summary: ${escape(session.title)}</h2><p>${escape(briefing.summary)}</p><h3>Likely learning goal</h3><p>${escape(briefing.focus)}</p><h3>Key points to watch for</h3><ul>${briefing.highlights.map(point => `<li><strong>PDF p. ${point.page}:</strong> ${escape(point.text)} ${link(point.page)}</li>`).join('')}</ul><h3>Good moments to engage with your teacher</h3><ul>${session.stops.map(stop => `<li><strong>PDF p. ${stop.page} · ${escape(stop.title)}:</strong> ${escape(stop.prompt)}</li>`).join('')}</ul><h3>Questions worth asking</h3><ol>${session.stops.map(stop => `<li>${escape(stop.ask)} <span class="muted">PDF p. ${stop.page}</span></li>`).join('')}</ol><p class="muted">This is a selected study summary of the supplied slides, not a transcript, full slide-by-slide summary or confirmation of what your teacher will emphasize. Choose the deck assigned for this class date.</p></section>`;
+}
+export function lecturePage(course, state, native = false) {
   const schedule = course.schedule,
     dates = lectureDates(schedule);
   if (!dates.length) return "<p>No lecture schedule is configured.</p>";
@@ -148,11 +161,18 @@ export function lecturePage(course, state) {
   const record = state.lecturePrep?.[selectedDate];
   const unit = course.units.find((u) => u.id === record?.unit);
   const guide = unit && lectureGuides[unit.id];
-  return `<p class="lede">An optional way to prepare a conversation with your teacher. Pick the actual topic for this lecture; the registration schedule does not assign topics to dates.</p><section class="card"><div class="form-grid"><label>Lecture date<select id="prep-date">${dates.map((day) => `<option value="${day}" ${day === selectedDate ? "selected" : ""}>${escape(label(day))}</option>`).join("")}</select></label><label>Topic for this lecture<select id="prep-unit"><option value="">Choose the topic Woods has assigned…</option>${course.units.map((u) => `<option value="${u.id}" ${u.id === unit?.id ? "selected" : ""}>${escape(u.title)}</option>`).join("")}</select></label></div><p><strong>${lecturePhase(schedule, selectedDate)}</strong> · ${escape(label(selectedDate))} · 9:00–10:50 AM · Room 8403</p><p class="muted">Regular Tuesday/Thursday registration slots, in Pacific time. Check announcements for holidays and schedule changes. This panel does not send notifications.</p><p role="status" id="prep-status"></p></section>${learningCard(course,state,selectedDate)}${guide ? `<section class="card"><h2>Before class: find your uncertain step</h2><ul>${guide.before.map((text) => `<li>${escape(text)}</li>`).join("")}</ul><p>Try: “I think ___ because ___. The step I’m unsure about is ___.” Bring that reasoning, even if it is incomplete.</p><button class="quiet" data-unit="${unit.id}">Review ${escape(unit.title)}</button></section><h2>During class: listen, predict, ask</h2><p>These are suggested discussion areas, not the instructor’s confirmed slide order. Choose a question when it matches what is being taught.</p>${guide.sections.map((section, i) => `<section class="card"><h3>${escape(section.title)}</h3><p><strong>Pay attention to:</strong> ${escape(section.listen)}</p><p><strong>Ask for a live explanation:</strong> ${escape(section.ask)}</p><details><summary>If it still feels unclear</summary><p>${escape(section.followup)}</p><p>After the explanation, try the reasoning again on a new example. Ask the teacher to check the step you changed.</p></details><label class="checkbox"><input type="checkbox" data-discussed="${unit.id}-${i}" ${record.discussed.includes(unit.id + "-" + i) ? "checked" : ""}> Asked or discussed</label></section>`).join("")}<section class="card"><h2>Your question or takeaway</h2><label>Keep the reasoning you want checked, or what clicked in class<textarea id="prep-notes" rows="4" maxlength="4000" placeholder="I thought… The teacher pointed out… On the next example I’ll look for…">${escape(record.notes)}</textarea></label><button id="prep-save">Save lecture notes</button><p role="status" id="prep-notes-status"></p><p class="muted">Based on the ${escape(unit.title)} guide and its source references. These questions are study prompts, not predictions of exam content. Your notes stay in your own course data.</p></section>` : '<section class="card"><h2>Choose this lecture’s topic above</h2><p>Then see what to review beforehand, what to listen for, and questions that invite the teacher to check your reasoning.</p></section>'}`;
+  const deckOptions = sourceSessions.filter(session => session.kind === 'lecture').map(session => {
+    const topic = course.units.find(item => item.id === session.unit)?.title ?? session.unit;
+    return `<option value="${escape(session.source)}" ${record?.slideDeck === session.source ? 'selected' : ''}>${escape(topic)} · ${escape(session.title)}</option>`;
+  }).join('');
+  const deckPicker = `<label class="wide">Teacher's lecture slide deck<select id="prep-deck"><option value="">Choose the slides assigned for this class…</option>${deckOptions}</select></label>`;
+  const briefing = record?.slideDeck ? lectureBriefing(course, record.slideDeck, native) : '<section class="card lecture-briefing-prompt"><h2>Lecture summary & questions</h2><p>Choose one of your teacher’s slide decks above to see its summary, key points, likely learning goal, moments to speak up, and questions to ask.</p></section>';
+  return `<p class="lede">An optional way to prepare a conversation with your teacher. Pick the actual topic for this lecture; the registration schedule does not assign topics to dates.</p><section class="card"><div class="form-grid"><label>Lecture date<select id="prep-date">${dates.map((day) => `<option value="${day}" ${day === selectedDate ? "selected" : ""}>${escape(label(day))}</option>`).join("")}</select></label><label>Topic for this lecture<select id="prep-unit"><option value="">Choose the topic Woods has assigned…</option>${course.units.map((u) => `<option value="${u.id}" ${u.id === unit?.id ? "selected" : ""}>${escape(u.title)}</option>`).join("")}</select></label>${deckPicker}</div><p><strong>${lecturePhase(schedule, selectedDate)}</strong> · ${escape(label(selectedDate))} · 9:00–10:50 AM · Room 8403</p><p class="muted">Regular Tuesday/Thursday registration slots, in Pacific time. Check announcements for holidays and schedule changes. This panel does not send notifications.</p><p role="status" id="prep-status"></p></section>${briefing}${learningCard(course,state,selectedDate)}${guide ? `<section class="card"><h2>Before class: find your uncertain step</h2><ul>${guide.before.map((text) => `<li>${escape(text)}</li>`).join("")}</ul><p>Try: “I think ___ because ___. The step I’m unsure about is ___.” Bring that reasoning, even if it is incomplete.</p><button class="quiet" data-unit="${unit.id}">Review ${escape(unit.title)}</button></section><h2>During class: listen, predict, ask</h2><p>These are suggested discussion areas, not the instructor’s confirmed slide order. Choose a question when it matches what is being taught.</p>${guide.sections.map((section, i) => `<section class="card"><h3>${escape(section.title)}</h3><p><strong>Pay attention to:</strong> ${escape(section.listen)}</p><p><strong>Ask for a live explanation:</strong> ${escape(section.ask)}</p><details><summary>If it still feels unclear</summary><p>${escape(section.followup)}</p><p>After the explanation, try the reasoning again on a new example. Ask the teacher to check the step you changed.</p></details><label class="checkbox"><input type="checkbox" data-discussed="${unit.id}-${i}" ${record.discussed.includes(unit.id + "-" + i) ? "checked" : ""}> Asked or discussed</label></section>`).join("")}<section class="card"><h2>Your question or takeaway</h2><label>Keep the reasoning you want checked, or what clicked in class<textarea id="prep-notes" rows="4" maxlength="4000" placeholder="I thought… The teacher pointed out… On the next example I’ll look for…">${escape(record.notes)}</textarea></label><button id="prep-save">Save lecture notes</button><p role="status" id="prep-notes-status"></p><p class="muted">Based on the ${escape(unit.title)} guide and its source references. These questions are study prompts, not predictions of exam content. Your notes stay in your own course data.</p></section>` : '<section class="card"><h2>Choose this lecture’s topic above</h2><p>Then see what to review beforehand, what to listen for, and questions that invite the teacher to check your reasoning.</p></section>'}`;
 }
 export function bindLecturePrep(course, state, commit, rerender) {
   const date = document.querySelector("#prep-date"),
-    unit = document.querySelector("#prep-unit");
+    unit = document.querySelector("#prep-unit"),
+    deck = document.querySelector('#prep-deck');
   if (!date) return;
   let notes = document.querySelector("#prep-notes");
   const record = () => state.lecturePrep?.[selectedDate];
@@ -175,9 +195,19 @@ export function bindLecturePrep(course, state, commit, rerender) {
       return;
     }
     try {
-      save({ unit: unit.value, quizSource: "" }, true);
+      const selected = sourceSessions.find(session => session.source === record()?.slideDeck);
+      save({ unit: unit.value, slideDeck: selected?.unit === unit.value ? selected.source : '', quizSource: "" }, true);
     } catch (error) {
       document.querySelector("#prep-status").textContent = error.message;
+    }
+  };
+  deck.onchange = () => {
+    const selected = sourceSessions.find(session => session.kind === 'lecture' && session.source === deck.value);
+    if (!selected && !record()) return;
+    try {
+      save({ unit: selected?.unit ?? unit.value, slideDeck: selected?.source ?? '', quizSource: '' }, true);
+    } catch (error) {
+      document.querySelector('#prep-status').textContent = error.message;
     }
   };
   const source = document.querySelector("#prep-quiz-source");

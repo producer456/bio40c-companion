@@ -243,3 +243,10 @@ footer{color:var(--muted);margin-inline:32px}.native .workspace{margin:0}.native
 .space-settings .feature-body>.card>h2{grid-column:1;grid-row:1/9;font-size:21px}.space-settings .feature-body>.card>:not(h2){grid-column:2}.space-settings .feature-body>.card>button{justify-self:start}
 @media(max-width:1100px){.agenda-layout{grid-template-columns:1fr}.agenda-reference{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.space-assignments .feature-body,.space-grades .feature-body{display:block}.space-assignments .assignment-create{border-right:0;padding-right:0}}
 @media(max-width:760px){.space-heading{margin-bottom:22px;padding-bottom:18px}.space-symbol{font-size:28px;flex-basis:32px}.space-breadcrumb{display:none}.space-lecture .feature-body{padding-left:14px}.space-practice .space-heading{padding:18px}.space-practice .practice-grid>.card{display:flex;gap:10px;align-items:stretch}.space-practice .practice-grid>.card>button{align-self:flex-start}.space-practice .practice-grid>.card>label{width:100%}.space-settings .feature-body>.card{display:block}.space-settings .feature-body>.card>h2{margin-bottom:20px}.space-clarifications .feature-body>.card{padding-left:16px}.space-grades .stats{padding:8px 16px}.space-grades .stats article{border-color:#4c4f52}.space-grades .grade-scenario{padding:18px}.space-practice[data-session="active"] .quiz h2{font-size:22px}}
+.workspace .lecture-briefing,
+.workspace .lecture-briefing-prompt { border:1px solid var(--line); border-top:4px solid var(--topic,var(--accent)); background:var(--paper); border-radius:8px; padding:clamp(20px,3vw,32px); }
+.lecture-briefing h2 { margin:10px 0 18px; }
+.lecture-briefing h3 { margin:28px 0 10px; }
+.lecture-briefing li { margin:0 0 14px; line-height:1.6; }
+.lecture-briefing li :is(a,button) { margin-left:6px; }
+.lecture-briefing .muted { display:inline-block; }

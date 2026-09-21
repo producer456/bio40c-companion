@@ -835,7 +835,7 @@ function U() {
   if (m === 'clarifications') { P(clarificationPage(p, f.schedule)); return; }
   if (m === 'lecture') {
     const opened=[...document.querySelectorAll('#learning-activities details')].map(el=>el.open);
-    P(lecturePage(f,p) + '<section class="card"><h2>Study the actual lecture</h2><p>Open <a href="#course">Course library</a>, choose your topic, then Study this lecture. Each document has its own guided checkpoints and source pages. Save an optional class date there to associate it with your meeting.</p></section>' + quizCard(f,p));
+    P(lecturePage(f,p,d) + '<section class="card"><h2>Study the full slide deck</h2><p>The briefing above highlights selected pages. Open <a href="#course">Course library</a>, choose the topic, then Study this lecture for guided checkpoints across the supplied slides. Save an optional class date there to associate it with your meeting.</p></section>' + quizCard(f,p));
     document.querySelectorAll('#learning-activities details').forEach((el,i)=>el.open=opened[i]??false);
     return;
   }
