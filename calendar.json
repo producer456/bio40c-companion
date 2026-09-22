@@ -1,8 +1,8 @@
 {
   "version": 1,
   "course": "39756",
-  "lastSuccess": 1790104056.349417,
-  "lastAttempt": 1790104056.349417,
+  "lastSuccess": 1790105860.64889,
+  "lastAttempt": 1790105860.64889,
   "error": "",
   "coverage": "Bio 40C dates from the site owner's Canvas-linked section calendar. Confirm your own dates and extensions in Canvas. Undated work, announcements and submission status are not included.",
   "items": [
@@ -14,7 +14,7 @@
       "due": "2026-09-25T16:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -25,7 +25,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -36,7 +36,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -47,7 +47,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -58,7 +58,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -69,7 +69,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -80,7 +80,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -91,7 +91,7 @@
       "due": "2026-09-27",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -99,55 +99,90 @@
       "course": "39756",
       "title": "Application Question 1",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230688",
-      "due": "2026-09-30",
+      "due": "2026-10-02",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 1",
+          "due": "2026-09-30",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230659",
       "course": "39756",
       "title": "Week 2 - Considering the Colon: Elaborate/Evaluate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230659",
-      "due": "2026-10-07",
+      "due": "2026-10-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 2 - Considering the Colon: Elaborate/Evaluate",
+          "due": "2026-10-07",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230686",
       "course": "39756",
       "title": "Week 2 - Considering the Colon: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230686",
-      "due": "2026-10-07",
+      "due": "2026-10-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 2 - Considering the Colon: Elaborate",
+          "due": "2026-10-07",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230694",
       "course": "39756",
       "title": "Application Question 4",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230694",
-      "due": "2026-10-07",
+      "due": "2026-10-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 4",
+          "due": "2026-10-07",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230699",
       "course": "39756",
       "title": "Scientist Spotlight #2",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230699",
-      "due": "2026-10-07",
+      "due": "2026-10-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Scientist Spotlight #2",
+          "due": "2026-10-07",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230717",
@@ -157,7 +192,7 @@
       "due": "2026-10-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -168,7 +203,7 @@
       "due": "2026-10-09T16:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -176,66 +211,108 @@
       "course": "39756",
       "title": "Week 3 - Introducing Kidney Filtration: Elaborate/Evaluate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230663",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3 - Introducing Kidney Filtration: Elaborate/Evaluate",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230693",
       "course": "39756",
       "title": "Application Question 3",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230693",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 3",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230708",
       "course": "39756",
       "title": "Week 3 - GFR and Kidney Function: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230708",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3 - GFR and Kidney Function: Elaborate",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230709",
       "course": "39756",
       "title": "Week 3 - Introducing the Kidneys: Engage/Explore",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230709",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3 - Introducing the Kidneys: Engage/Explore",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230710",
       "course": "39756",
       "title": "Week 3 - The Importance of Filtration: Engage/Explore",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230710",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3 - The Importance of Filtration: Engage/Explore",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230712",
       "course": "39756",
       "title": "Week 3 Self Evalutation",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230712",
-      "due": "2026-10-14",
+      "due": "2026-10-16",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3 Self Evalutation",
+          "due": "2026-10-14",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230657",
@@ -245,7 +322,7 @@
       "due": "2026-10-16T16:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -253,220 +330,360 @@
       "course": "39756",
       "title": "Week 4 - Reviewing the Glomerulus: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230650",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Glomerulus: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230668",
       "course": "39756",
       "title": "Week 3/4 - Urine Concentration: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230668",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - Urine Concentration: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230670",
       "course": "39756",
       "title": "Week 4 - Reviewing the Descending Loop of Henle: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230670",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Descending Loop of Henle: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230673",
       "course": "39756",
       "title": "Week 4 - Reviewing the Collecting Duct: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230673",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Collecting Duct: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230674",
       "course": "39756",
       "title": "Week 4 - Reviewing the Ascending Loop & Distal Tubule: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230674",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Ascending Loop & Distal Tubule: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230679",
       "course": "39756",
       "title": "Week 4 - Reviewing the Proximal Tubule: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230679",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Proximal Tubule: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230680",
       "course": "39756",
       "title": "Week 3/4 - ACE Inhibitors & Kidney Function",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230680",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - ACE Inhibitors & Kidney Function",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230684",
       "course": "39756",
       "title": "Week 3/4 -  Urine Concentration: Elaborate 2",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230684",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 -  Urine Concentration: Elaborate 2",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230685",
       "course": "39756",
       "title": "Week 3/4 - Urine Concentration: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230685",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - Urine Concentration: Elaborate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230713",
       "course": "39756",
       "title": "Week 3/4 - Urine Concentration: Engage/Explore 1",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230713",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - Urine Concentration: Engage/Explore 1",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230714",
       "course": "39756",
       "title": "Week 3/4 - Urine Concentration: Engage/Explore 2",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230714",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - Urine Concentration: Engage/Explore 2",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230715",
       "course": "39756",
       "title": "Week 3/4 - Urine Concentration: Evaluate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230715",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 - Urine Concentration: Evaluate",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230716",
       "course": "39756",
       "title": "Week 3/4 Application Question 6",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230716",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 3/4 Application Question 6",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230718",
       "course": "39756",
       "title": "Week 4 - Reviewing Nephrons: Engage/Explore",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230718",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing Nephrons: Engage/Explore",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230719",
       "course": "39756",
       "title": "Week 4 - Reviewing the Ascending Loop & Distal Tubule: Explain",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230719",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Ascending Loop & Distal Tubule: Explain",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230720",
       "course": "39756",
       "title": "Week 4 - Reviewing the Collecting Duct: Explain",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230720",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Collecting Duct: Explain",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230721",
       "course": "39756",
       "title": "Week 4 - Reviewing the Descending Loop of Henle: Explain",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230721",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Descending Loop of Henle: Explain",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230722",
       "course": "39756",
       "title": "Week 4 - Reviewing the Glomerulus: Explain",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230722",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Glomerulus: Explain",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230723",
       "course": "39756",
       "title": "Week 4 - Reviewing the Proximal Tubule: Explain",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230723",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 - Reviewing the Proximal Tubule: Explain",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230725",
       "course": "39756",
       "title": "Week 4 Self Evalutation",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230725",
-      "due": "2026-10-21",
+      "due": "2026-10-23",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 4 Self Evalutation",
+          "due": "2026-10-21",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230664",
@@ -476,7 +693,7 @@
       "due": "2026-10-23T16:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -484,77 +701,36 @@
       "course": "39756",
       "title": "Week 5 - Water/Solute Balance: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230662",
-      "due": "2026-10-28",
+      "due": "2026-10-30",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 5 - Water/Solute Balance: Elaborate",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230672",
       "course": "39756",
       "title": "Week 5 - Water/Solute Balance: Elaborate 2",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230672",
-      "due": "2026-10-28",
+      "due": "2026-10-30",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
-    },
-    {
-      "id": "canvas-39756-1230696",
-      "course": "39756",
-      "title": "Application Question 8",
-      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230696",
-      "due": "2026-10-28",
-      "dueKind": "date",
-      "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
-    },
-    {
-      "id": "canvas-39756-1230700",
-      "course": "39756",
-      "title": "Scientist Spotlight #3: Engage",
-      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230700",
-      "due": "2026-10-28",
-      "dueKind": "date",
-      "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
-    },
-    {
-      "id": "canvas-39756-1230726",
-      "course": "39756",
-      "title": "Week 5 - Water/Solute Balance: Engage/Explore",
-      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230726",
-      "due": "2026-10-28",
-      "dueKind": "date",
-      "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
-    },
-    {
-      "id": "canvas-39756-1230727",
-      "course": "39756",
-      "title": "Week 5 - Water/Solute Balance: Evaluate",
-      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230727",
-      "due": "2026-10-28",
-      "dueKind": "date",
-      "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
-    },
-    {
-      "id": "canvas-39756-1230728",
-      "course": "39756",
-      "title": "Week 5 - Water/Solute Balance: Explore",
-      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230728",
-      "due": "2026-10-28",
-      "dueKind": "date",
-      "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 5 - Water/Solute Balance: Elaborate 2",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230695",
@@ -564,8 +740,98 @@
       "due": "2026-10-30",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
+    },
+    {
+      "id": "canvas-39756-1230696",
+      "course": "39756",
+      "title": "Application Question 8",
+      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230696",
+      "due": "2026-10-30",
+      "dueKind": "date",
+      "cancelled": false,
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 8",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "canvas-39756-1230700",
+      "course": "39756",
+      "title": "Scientist Spotlight #3: Engage",
+      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230700",
+      "due": "2026-10-30",
+      "dueKind": "date",
+      "cancelled": false,
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Scientist Spotlight #3: Engage",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "canvas-39756-1230726",
+      "course": "39756",
+      "title": "Week 5 - Water/Solute Balance: Engage/Explore",
+      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230726",
+      "due": "2026-10-30",
+      "dueKind": "date",
+      "cancelled": false,
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 5 - Water/Solute Balance: Engage/Explore",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "canvas-39756-1230727",
+      "course": "39756",
+      "title": "Week 5 - Water/Solute Balance: Evaluate",
+      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230727",
+      "due": "2026-10-30",
+      "dueKind": "date",
+      "cancelled": false,
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 5 - Water/Solute Balance: Evaluate",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "canvas-39756-1230728",
+      "course": "39756",
+      "title": "Week 5 - Water/Solute Balance: Explore",
+      "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230728",
+      "due": "2026-10-30",
+      "dueKind": "date",
+      "cancelled": false,
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 5 - Water/Solute Balance: Explore",
+          "due": "2026-10-28",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230730",
@@ -575,7 +841,7 @@
       "due": "2026-10-30",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -586,7 +852,7 @@
       "due": "2026-10-30T16:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -594,77 +860,126 @@
       "course": "39756",
       "title": "Week 6 - Hormones: Elaborate 2",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230656",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 6 - Hormones: Elaborate 2",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230666",
       "course": "39756",
       "title": "Week 6 - Hormones: Elaborate",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230666",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 6 - Hormones: Elaborate",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230678",
       "course": "39756",
       "title": "Week 6 - Hormones: Elaborate 3",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230678",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 6 - Hormones: Elaborate 3",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230682",
       "course": "39756",
       "title": "Week 6 - Hormones: Another Mystery Hormone",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230682",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 6 - Hormones: Another Mystery Hormone",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230683",
       "course": "39756",
       "title": "Week 6 - Reviewing Hormone Mechanisms",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230683",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 6 - Reviewing Hormone Mechanisms",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230689",
       "course": "39756",
       "title": "Application Question 10",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230689",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 10",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230701",
       "course": "39756",
       "title": "Scientist Spotlight #4: Engage",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230701",
-      "due": "2026-11-04",
+      "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Scientist Spotlight #4: Engage",
+          "due": "2026-11-04",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230735",
@@ -674,7 +989,7 @@
       "due": "2026-11-06",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -685,7 +1000,7 @@
       "due": "2026-11-06T17:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -693,77 +1008,126 @@
       "course": "39756",
       "title": "Week 7 - Hormone Case 1: Checking Understanding",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230661",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 - Hormone Case 1: Checking Understanding",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230677",
       "course": "39756",
       "title": "Week 7 - Hormone Case 2: Checking Understanding",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230677",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 - Hormone Case 2: Checking Understanding",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230681",
       "course": "39756",
       "title": "Week 7 - Hormone Case 1: Interpreting Test Results",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230681",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 - Hormone Case 1: Interpreting Test Results",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230690",
       "course": "39756",
       "title": "Application Question 11",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230690",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 11",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230731",
       "course": "39756",
       "title": "Week 7 - Hormone Case 1: Patient Introduction",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230731",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 - Hormone Case 1: Patient Introduction",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230732",
       "course": "39756",
       "title": "Week 7 - Hormone Case 2: Patient Introduction",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230732",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 - Hormone Case 2: Patient Introduction",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230734",
       "course": "39756",
       "title": "Week 7 Self Evalutation",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230734",
-      "due": "2026-11-11",
+      "due": "2026-11-13",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 7 Self Evalutation",
+          "due": "2026-11-11",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230669",
@@ -773,7 +1137,7 @@
       "due": "2026-11-13T17:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -781,44 +1145,72 @@
       "course": "39756",
       "title": "Week 8 - Male Reproductive System",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230651",
-      "due": "2026-11-18",
+      "due": "2026-11-20",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 8 - Male Reproductive System",
+          "due": "2026-11-18",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230653",
       "course": "39756",
       "title": "Week 8 - Female Reproductive System",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230653",
-      "due": "2026-11-18",
+      "due": "2026-11-20",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 8 - Female Reproductive System",
+          "due": "2026-11-18",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230691",
       "course": "39756",
       "title": "Application Question 12",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230691",
-      "due": "2026-11-18",
+      "due": "2026-11-20",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Application Question 12",
+          "due": "2026-11-18",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230737",
       "course": "39756",
       "title": "Week 8 Self Evalutation",
       "url": "https://foothillcollege.instructure.com/courses/39756/assignments/1230737",
-      "due": "2026-11-18",
+      "due": "2026-11-20",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
-      "history": []
+      "lastSeen": 1790105860.64889,
+      "history": [
+        {
+          "at": 1790105860.64889,
+          "title": "Week 8 Self Evalutation",
+          "due": "2026-11-18",
+          "cancelled": false
+        }
+      ]
     },
     {
       "id": "canvas-39756-1230738",
@@ -828,7 +1220,7 @@
       "due": "2026-12-04",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -839,7 +1231,7 @@
       "due": "2026-12-04",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -850,7 +1242,7 @@
       "due": "2026-12-04T17:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -861,7 +1253,7 @@
       "due": "2026-12-09",
       "dueKind": "date",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     },
     {
@@ -872,7 +1264,7 @@
       "due": "2026-12-10T21:00:00+00:00",
       "dueKind": "instant",
       "cancelled": false,
-      "lastSeen": 1790104056.349417,
+      "lastSeen": 1790105860.64889,
       "history": []
     }
   ]
