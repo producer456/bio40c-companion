@@ -130,6 +130,7 @@ export function collectSourceStudy(state,root,source,reveal) {
   return next;
 }
 export function bindSourceStudy(state,commit,render) {
+  const current=typeof state==='function'?state:()=>state;
   document.querySelectorAll('.diagram-response input').forEach(input=>{
     const label=input.closest('[data-cue]'),panel=input.closest('[data-diagram]');
     const highlight=active=>panel.querySelectorAll('[data-cue]').forEach(element=>element.classList.toggle('cue-active',active&&element.dataset.cue===label.dataset.cue));
@@ -159,19 +160,19 @@ export function bindSourceStudy(state,commit,render) {
     reviewDraft={text:form.querySelector('[name="review-text"]').value,choice:selected?Number(selected.value):null,confidence:form.querySelector('[name="review-confidence"]').value};
     render();document.querySelector('[data-review-rate]')?.focus();
   });
-  document.querySelectorAll('[data-review-rate]').forEach(button=>button.onclick=()=>{
+  document.querySelectorAll('[data-review-rate]').forEach(button=>button.onclick=async()=>{
     try{
       const [source,id]=reviewActive.split('/');
-      commit(recordReview(state,source,id,reviewDraft,button.dataset.reviewRate));
+      await commit(recordReview(current(),source,id,reviewDraft,button.dataset.reviewRate));
       reviewActive=null;reviewDraft=null;render();
       document.querySelector('.study-review h2')?.scrollIntoView({block:'start'});
     }catch(error){document.querySelector('#review-status').textContent=`Could not save: ${error.message}. Your response is still here.`;}
   });
   document.querySelectorAll('[data-study-open]').forEach(button=>button.onclick=()=>{active=button.dataset.studyOpen;reviewActive=null;reviewDraft=null;render();document.querySelector('#study-title')?.focus();document.querySelector('#source-study')?.scrollIntoView({block:'start'});});
   document.querySelector('[data-study-close]')?.addEventListener('click',()=>{active=null;render();document.querySelector('.source-study-catalog h2')?.scrollIntoView({block:'start'});});
-  const save=reveal=>{
+  const save=async reveal=>{
     try {
-      commit(collectSourceStudy(state,document,active,reveal));
+      await commit(collectSourceStudy(current(),document,active,reveal));
       render();
       const status=document.querySelector('#study-save-status');
       if(status)status.textContent=window.webkit?.messageHandlers?.companion?'Save requested in the app.':'Study responses saved in this browser.';

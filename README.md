@@ -75,3 +75,12 @@ not directly query Canvas.
 The public website uses a separate calendar-only cache, never reads the former
 private connection settings, and permits only same-origin data requests. Private
 client apps retain their existing Tailscale sync. Website progress sync is not provided.
+
+## Saving and multiple tabs
+
+Panels save against the current course state. Browser saves use Web Locks to
+coordinate tabs and merge independent edits. Conflicting edits pause saving with
+an explicit message; export the affected tab's backup before reloading to review
+the other tab's version. The existing course storage key and backup format remain
+compatible. Current browsers with Web Locks are required for website saves.
+Background calendar refreshes defer redraws while forms contain unfinished entries.

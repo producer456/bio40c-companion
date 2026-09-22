@@ -170,42 +170,43 @@ export function lecturePage(course, state, native = false) {
   return `<p class="lede">An optional way to prepare a conversation with your teacher. Pick the actual topic for this lecture; the registration schedule does not assign topics to dates.</p><section class="card"><div class="form-grid"><label>Lecture date<select id="prep-date">${dates.map((day) => `<option value="${day}" ${day === selectedDate ? "selected" : ""}>${escape(label(day))}</option>`).join("")}</select></label><label>Topic for this lecture<select id="prep-unit"><option value="">Choose the topic Woods has assigned…</option>${course.units.map((u) => `<option value="${u.id}" ${u.id === unit?.id ? "selected" : ""}>${escape(u.title)}</option>`).join("")}</select></label>${deckPicker}</div><p><strong>${lecturePhase(schedule, selectedDate)}</strong> · ${escape(label(selectedDate))} · 9:00–10:50 AM · Room 8403</p><p class="muted">Regular Tuesday/Thursday registration slots, in Pacific time. Check announcements for holidays and schedule changes. This panel does not send notifications.</p><p role="status" id="prep-status"></p></section>${briefing}${learningCard(course,state,selectedDate)}${guide ? `<section class="card"><h2>Before class: find your uncertain step</h2><ul>${guide.before.map((text) => `<li>${escape(text)}</li>`).join("")}</ul><p>Try: “I think ___ because ___. The step I’m unsure about is ___.” Bring that reasoning, even if it is incomplete.</p><button class="quiet" data-unit="${unit.id}">Review ${escape(unit.title)}</button></section><h2>During class: listen, predict, ask</h2><p>These are suggested discussion areas, not the instructor’s confirmed slide order. Choose a question when it matches what is being taught.</p>${guide.sections.map((section, i) => `<section class="card"><h3>${escape(section.title)}</h3><p><strong>Pay attention to:</strong> ${escape(section.listen)}</p><p><strong>Ask for a live explanation:</strong> ${escape(section.ask)}</p><details><summary>If it still feels unclear</summary><p>${escape(section.followup)}</p><p>After the explanation, try the reasoning again on a new example. Ask the teacher to check the step you changed.</p></details><label class="checkbox"><input type="checkbox" data-discussed="${unit.id}-${i}" ${record.discussed.includes(unit.id + "-" + i) ? "checked" : ""}> Asked or discussed</label></section>`).join("")}<section class="card"><h2>Your question or takeaway</h2><label>Keep the reasoning you want checked, or what clicked in class<textarea id="prep-notes" rows="4" maxlength="4000" placeholder="I thought… The teacher pointed out… On the next example I’ll look for…">${escape(record.notes)}</textarea></label><button id="prep-save">Save lecture notes</button><p role="status" id="prep-notes-status"></p><p class="muted">Based on the ${escape(unit.title)} guide and its source references. These questions are study prompts, not predictions of exam content. Your notes stay in your own course data.</p></section>` : '<section class="card"><h2>Choose this lecture’s topic above</h2><p>Then see what to review beforehand, what to listen for, and questions that invite the teacher to check your reasoning.</p></section>'}`;
 }
 export function bindLecturePrep(course, state, commit, rerender) {
+  const current=typeof state==='function'?state:()=>state;
   const date = document.querySelector("#prep-date"),
     unit = document.querySelector("#prep-unit"),
     deck = document.querySelector('#prep-deck');
   if (!date) return;
   let notes = document.querySelector("#prep-notes");
-  const record = () => state.lecturePrep?.[selectedDate];
-  const save = (patch, refresh = false) => {
+  const record = () => current().lecturePrep?.[selectedDate];
+  const save = async (patch, refresh = false) => {
     const previous = record() ?? { unit: unit.value, notes: "", discussed: [] };
-    const next = saveLecturePrep(state, course.schedule, selectedDate, {
+    const next = saveLecturePrep(current(), course.schedule, selectedDate, {
       ...previous,
       notes: notes?.value ?? previous.notes,
       ...(previous.learning || document.querySelector('#learning-form') ? {learning:collectLearning(previous)} : {}),
       ...patch,
     });
-    commit(next);
-    state = next;
+    await commit(next);
+    if(typeof state!=='function')state = next;
     if (refresh) rerender();
   };
   if(record())bindLearning(record(),save,rerender);
-  unit.onchange = () => {
+  unit.onchange = async () => {
     if (!unit.value) {
       unit.value = record()?.unit ?? "";
       return;
     }
     try {
       const selected = sourceSessions.find(session => session.source === record()?.slideDeck);
-      save({ unit: unit.value, slideDeck: selected?.unit === unit.value ? selected.source : '', quizSource: "" }, true);
+      await save({ unit: unit.value, slideDeck: selected?.unit === unit.value ? selected.source : '', quizSource: "" }, true);
     } catch (error) {
       document.querySelector("#prep-status").textContent = error.message;
     }
   };
-  deck.onchange = () => {
+  deck.onchange = async () => {
     const selected = sourceSessions.find(session => session.kind === 'lecture' && session.source === deck.value);
     if (!selected && !record()) return;
     try {
-      save({ unit: selected?.unit ?? unit.value, slideDeck: selected?.source ?? '', quizSource: '' }, true);
+      await save({ unit: selected?.unit ?? unit.value, slideDeck: selected?.source ?? '', quizSource: '' }, true);
       document.querySelector('#briefing-title')?.focus();
     } catch (error) {
       document.querySelector('#prep-status').textContent = error.message;
@@ -213,16 +214,16 @@ export function bindLecturePrep(course, state, commit, rerender) {
   };
   const source = document.querySelector("#prep-quiz-source");
   if (source)
-    source.onchange = () => {
+    source.onchange = async () => {
       try {
-        save({ quizSource: source.value }, true);
+        await save({ quizSource: source.value }, true);
       } catch (error) {
         document.querySelector("#prep-status").textContent = error.message;
       }
     };
-  date.onchange = () => {
+  date.onchange = async () => {
     try {
-      if (record() && (document.querySelector('#learning-form') || notes && notes.value !== record().notes)) save({});
+      if (record() && (document.querySelector('#learning-form') || notes && notes.value !== record().notes)) await save({});
       selectedDate = date.value;
       rerender();
     } catch (error) {
@@ -232,12 +233,12 @@ export function bindLecturePrep(course, state, commit, rerender) {
   };
   document.querySelectorAll("[data-discussed]").forEach(
     (box) =>
-      (box.onchange = () => {
+      (box.onchange = async () => {
         try {
           const old = record().discussed.filter(
             (id) => id !== box.dataset.discussed,
           );
-          save({
+          await save({
             discussed: box.checked ? [...old, box.dataset.discussed] : old,
           });
           document.querySelector("#prep-status").textContent =
@@ -248,9 +249,9 @@ export function bindLecturePrep(course, state, commit, rerender) {
         }
       }),
   );
-  document.querySelector("#prep-save")?.addEventListener("click", () => {
+  document.querySelector("#prep-save")?.addEventListener("click", async () => {
     try {
-      save({});
+      await save({});
       document.querySelector("#prep-notes-status").textContent =
         "Lecture notes saved.";
     } catch (error) {

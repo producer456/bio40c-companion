@@ -283,9 +283,11 @@ export function clarificationPage(state, schedule) {
   return `<p class="lede">Fill in Woods’ corrections as you hear them. Confirm each item separately; leave unanswered items open.</p><p role="status">${count} of ${items.length} course details confirmed. The supplied registration schedule is included; later corrections take precedence. Assignment deadlines are confirmed separately below.</p>${entries.map(([key, title, baseline]) => form(state, key, title, baseline)).join("")}<section class="card"><h2>Assignment deadlines</h2><label>Choose the assignment to correct<select id="clarification-assignment"><option value="">Choose an assignment…</option>${state.assignments.map((a) => `<option value="${escape(a.id)}">${escape(a.title)}${a.due ? " · " + escape(a.due) : ""}</option>`).join("")}</select></label><p>Add assignments on the Assignments page first. No old syllabus dates are used automatically.</p></section><div id="deadline-clarification"></div>`;
 }
 export function bindClarifications(state, commit) {
+  const current=typeof state==='function'?state:()=>state;
   function bind(root) {
     root.querySelectorAll("form[data-clarification]").forEach((form) => {
-      const save = (status) => {
+      const save = async (status) => {
+        const state=current();
         const message = form.querySelector("[data-clarification-error]");
         try {
           if (status === "confirmed" && !form.reportValidity()) return;
@@ -298,7 +300,7 @@ export function bindClarifications(state, commit) {
                   weight: Number(fields.get("weight-" + r.id)),
                 }))
               : String(fields.get("value") ?? "").trim();
-          commit(
+          await commit(
             confirmDetail(
               state,
               key,
@@ -325,6 +327,7 @@ export function bindClarifications(state, commit) {
   const select = document.querySelector("#clarification-assignment");
   if (select)
     select.onchange = () => {
+      const state=current();
       const host = document.querySelector("#deadline-clarification");
       const assignment = state.assignments.find((a) => a.id === select.value);
       host.innerHTML = assignment

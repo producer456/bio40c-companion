@@ -1,7 +1,59 @@
+import {CourseStore} from './course-store.js';
 import {PublicCalendar} from './public-calendar.js';
 import {CourseConnection} from './course-connection.js';
 import {validateHub,timeline,nextActions,bindAgenda,reviewCard,questionsCard,bindHub} from './learning-theme.js';
-let connection;
+let connection, courseStore;
+let backgroundDirty = false, backgroundPending = false;
+for (const eventName of ['input', 'change']) {
+  document.addEventListener(eventName, event => {
+    if (event.target.closest('main')) backgroundDirty = true;
+  });
+}
+function backgroundRender() {
+  backgroundPending = true;
+  if (!backgroundDirty && !courseStore?.pending && !document.querySelector('textarea:focus,input:focus,select:focus')) {
+    backgroundPending = false;
+    U();
+  }
+}
+function saveError(error) {
+  h = 'Could not save changes: ' + error.message + ' Export a backup before closing this page.';
+  let notice = document.getElementById('save-error');
+  if (!notice) {
+    notice = document.createElement('p');
+    notice.id = 'save-error';
+    notice.className = 'notice';
+    notice.setAttribute('role', 'alert');
+    document.querySelector('main')?.prepend(notice);
+  }
+  notice.textContent = h;
+}
+function saveStatus() {
+  const el = document.getElementById('course-save-status');
+  if (el) el.textContent = courseStore?.failed
+    ? 'Saving paused — export a backup before reloading.'
+    : courseStore?.pending ? 'Saving changes…' : 'Changes saved on this device.';
+}
+async function saveCourse(next, {replace = false, ...nativeOptions} = {}) {
+  try {
+    if (w && !replace) throw Error('Existing unreadable backup is protected. Restore a valid backup first.');
+    p = a(next);
+    if (d) {
+      window.webkit.messageHandlers.companion.postMessage({action: 'save', state: p, ...nativeOptions});
+    } else {
+      const task = courseStore.save(p, {replace});
+      saveStatus();
+      try { await task; }
+      finally {
+        saveStatus();
+        if (backgroundPending) backgroundRender();
+      }
+    }
+  } catch (error) {
+    saveError(error);
+    throw error;
+  }
+}
 import { validateClarifications, clarificationPage, bindClarifications, gradingConfirmed, pointsGrade, pointsTarget } from './clarifications.js';
 import { scheduleCard, registrationState } from './schedule.js';
 import { lecturePreview, lecturePage, bindLecturePrep, validateLecturePrep, lectureQuiz, quizCard } from './lecture-prep.js';
@@ -342,25 +394,7 @@ function A(e) {
     .map((e) => k(e.source, e.page) + ` · PDF p. ` + e.page)
     .join(`<br>`);
 }
-function j() {
-  try {
-    if ((a(p), w))
-      throw Error(
-        `Existing unreadable backup is protected. Restore a valid backup first.`,
-      );
-    d
-      ? window.webkit.messageHandlers.companion.postMessage({
-          action: `save`,
-          state: p,
-        })
-      : localStorage.setItem(u, JSON.stringify(p));
-  } catch (e) {
-    h =
-      `Could not save changes: ` +
-      String(e) +
-      `. Export a backup before closing this page.`;
-  }
-}
+function j() { return saveCourse(p).catch(saveError); }
 function M(e) {
   ((m = e), (location.hash = e), U(), document.querySelector(`main`)?.focus());
 }
@@ -429,7 +463,7 @@ function P(e) {
         `</div>`
       : ``) +
     `<div class="feature-body">` + (m==='today'?nextActions(p,connection):m==='assignments'?timeline(p,connection,true):'') + e + (m==='settings'?(connection?.panel()??''):'') + (['lecture','today'].includes(m)?reviewCard(f,p,d):'') + (m==='lecture'?questionsCard(p):'') +
-    `</div></main><footer>Built for learning together. Unofficial course companion · Content ` +
+    `</div></main><footer><p id="course-save-status" role="status">${courseStore?.failed?'Saving paused — export a backup before reloading.':courseStore?.pending?'Saving changes…':''}</p>Built for learning together. Unofficial course companion · Content ` +
     T(f.version) +
     `<br>Original practice questions, not official exam questions. Diagrams: OpenStax · Access for free at openstax.org. · CC BY-NC-SA 4.0.</footer></div>`),
     J());
@@ -792,6 +826,7 @@ function H() {
   );
 }
 function U() {
+  backgroundDirty=false;backgroundPending=false;
   connection?.capture();
   if (m === 'clarifications') { P(clarificationPage(p, f.schedule)); return; }
   if (m === 'lecture') {
@@ -856,40 +891,15 @@ function q(e, t = {}) {
 }
 function J() {
   connection?.bind();
-  bindAgenda(p,next=>{p=a(next);j();},U,connection);
-  bindHub(f,p,next=>{p=a(next);j();},U);
+  bindAgenda(()=>p,saveCourse,U,connection);
+  bindHub(f,()=>p,saveCourse,U);
   document.querySelector('#learning-theme')?.addEventListener('change',event=>{p.learningTheme=event.target.value==='learning';j();U();});
-  bindSourceStudy(p,next=>{
-    if(w)throw Error('Restore a valid backup before saving study responses.');
-    const valid=a(next);
-    if(!d)localStorage.setItem(u,JSON.stringify(valid));
-    else window.webkit.messageHandlers.companion.postMessage({action:'save',state:valid});
-    p=valid;
-  },U);
+  bindSourceStudy(()=>p,saveCourse,U);
   document.querySelector('.skip-content')?.addEventListener('click',event=>{event.preventDefault();const main=document.querySelector('main');main.focus();main.scrollIntoView({block:'start'});});
   document.querySelector('#appearance')?.addEventListener('change',event=>{p.theme=event.target.value;j();applyAppearance();});
   document.querySelectorAll('[data-lecture-quiz]').forEach(button=>button.onclick=()=>{const quiz=lectureQuiz(f,p,button.dataset.lectureQuiz);W(quiz.questions,quiz.questions.length,quiz.title);});
-  bindLecturePrep(f,p,next=>{
-    if (w) throw Error('Restore a valid backup before saving lecture preparation.');
-    const previous=p;
-    p=a(next);
-    try {
-      if (!d) localStorage.setItem(u,JSON.stringify(p));
-      else window.webkit.messageHandlers.companion.postMessage({action:'save',state:p,lecturePrep:true});
-    } catch(error) {p=previous;throw error;}
-  },U);
-  bindClarifications(p, next => {
-    if (w) throw Error('Restore a valid backup before changing course details.');
-    const previous = p;
-    p = a(next);
-    try {
-      if (!d) localStorage.setItem(u, JSON.stringify(p));
-      else window.webkit.messageHandlers.companion.postMessage({action:'save', state:p, clarification:true});
-    } catch (error) { p = previous; throw error; }
-    h = d ? '' : 'Course detail saved.';
-    S = d ? 'Saving course detail…' : '';
-    U();
-  });
+  bindLecturePrep(f,()=>p,next=>saveCourse(next,{lecturePrep:true}),U);
+  bindClarifications(()=>p,async next=>{await saveCourse(next,{clarification:true});h=d?'':'Course detail saved.';U();});
   (document
     .querySelectorAll(`[data-source]`)
     .forEach(
@@ -987,7 +997,7 @@ function J() {
           let t = a(JSON.parse(await e.text()));
           confirm(
             `Replace the course data on this device with this backup? Export your current data first if needed.`,
-          ) && ((p = t), (w = !1), j(), (h = `Backup restored.`), U());
+          ) && (await saveCourse(t,{replace:true}), (w = !1), (h = `Backup restored.`), U());
         } catch (e) {
           alert(`Restore failed: ` + String(e));
         }
@@ -1204,7 +1214,8 @@ async function X() {
     ((w = !0),
       (h = `Saved data could not be read. It has not been overwritten. Recover the original browser data or restore a valid backup before making changes.`));
   }
-  connection = new (document.querySelector('meta[name=public-course-calendar]')&&!d?PublicCalendar:CourseConnection)({get:()=>p,set:next=>{p=a(next);j();},render:()=>{if(!document.querySelector('textarea:focus,input:focus'))U();},native:d});
+  if(!d){courseStore=new CourseStore({key:u,initial:p,get:()=>p,set:next=>{p=next;applyAppearance();},validate:a,notify:saveError});window.addEventListener('storage',event=>{if(event.key===u&&!backgroundDirty){courseStore.receive();backgroundRender();}});window.bio40Store=courseStore;window.addEventListener('beforeunload',event=>{if(courseStore.pending||courseStore.failed){event.preventDefault();event.returnValue='';}});}
+  connection = new (document.querySelector('meta[name=public-course-calendar]')&&!d?PublicCalendar:CourseConnection)({get:()=>p,set:next=>{p=a(next);j();},render:backgroundRender,native:d});
   if(w)connection.local.enabled=false;
   window.bio40Connection=connection;
   setTimeout(()=>connection.sync(),1500);
