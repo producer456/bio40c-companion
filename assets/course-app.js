@@ -1,5 +1,5 @@
 import {CourseConnection} from './course-connection.js';
-import {validateHub,timeline,reviewCard,questionsCard,bindHub} from './learning-theme.js';
+import {validateHub,timeline,nextActions,bindAgenda,reviewCard,questionsCard,bindHub} from './learning-theme.js';
 let connection;
 import { validateClarifications, clarificationPage, bindClarifications, gradingConfirmed, pointsGrade, pointsTarget } from './clarifications.js';
 import { scheduleCard, registrationState } from './schedule.js';
@@ -427,60 +427,14 @@ function P(e) {
         D(`Dismiss`, `dismiss`, `class="quiet"`) +
         `</div>`
       : ``) +
-    `<div class="feature-body">` + (['today','assignments'].includes(m)?timeline(p,connection,m==='assignments'):'') + e + (m==='settings'?(connection?.panel()??''):'') + (['lecture','today'].includes(m)?reviewCard(f,p,d):'') + (m==='lecture'?questionsCard(p):'') +
+    `<div class="feature-body">` + (m==='today'?nextActions(p,connection):m==='assignments'?timeline(p,connection,true):'') + e + (m==='settings'?(connection?.panel()??''):'') + (['lecture','today'].includes(m)?reviewCard(f,p,d):'') + (m==='lecture'?questionsCard(p):'') +
     `</div></main><footer>Built for learning together. Unofficial course companion · Content ` +
     T(f.version) +
     `<br>Original practice questions, not official exam questions. Diagrams: OpenStax · Access for free at openstax.org. · CC BY-NC-SA 4.0.</footer></div>`),
     J());
 }
 function F() {
-  let e = p.assignments
-      .filter((e) => e.status === `todo` || e.status === `missing`)
-      .sort((e, t) => (e.due || `9999`).localeCompare(t.due || `9999`))
-      .slice(0, 5),
-    t = r(p.assignments, p.rules, p.gradingMethod),
-    n = p.attempts.length,
-    i = p.attempts.filter((e) => e.correct).length;
-  return (
-    `<div class="agenda-layout"><div class="agenda-main"><section class="study-start"><div><span class="eyebrow">BIO 40C / STUDY DESK</span><h2>Ready for a little recall?</h2><p>Digestion, filtration, hormones, immunity and reproduction.</p></div><a class="button" href="#course">Open course library <span aria-hidden="true">↗</span></a></section><div class="stats"><article><span>Graded work</span><strong>` +
-    E(t.current) +
-    `</strong><small>` + (gradingConfirmed(p) ? 'Confirmed grading method' : 'Provisional grading method · confirm in Course details') + `</small></article><article><span>Practice answers</span><strong>` +
-    n +
-    `</strong><small>` +
-    (n
-      ? Math.round((i / n) * 100) + `% correct across attempts`
-      : `Your first session starts here`) +
-    `</small></article><article><span>Open assignments</span><strong>` +
-    p.assignments.filter((e) => e.status === `todo` || e.status === `missing`)
-      .length +
-    `</strong><small>Only assignments you have entered</small></article></div><div class="section-heading"><h2>On your horizon</h2><a href="#assignments">Manage assignments →</a></div><section class="card">` +
-    (e.length
-      ? e
-          .map(
-            (e) =>
-              `<div class="list-row"><div><strong>` +
-              T(e.title) +
-              `</strong><small>` +
-              T(e.due || `Date not set`) +
-              ` · ` +
-              T(e.status) +
-              `</small></div><span>` +
-              T(e.possible ?? `?`) +
-              ` pts</span></div>`,
-          )
-          .join(``)
-      : `<div class="empty"><h3>A clean slate.</h3><p>Add your assignments or import a reviewed list. Old syllabus dates have not been turned into deadlines.</p><a href="#assignments">Add your first assignment →</a></div>`) +
-    `</section></div><aside class="agenda-reference">` + scheduleCard(f.schedule,p) + lecturePreview(f.schedule) + `</aside></div><div class="section-heading"><h2>Explore the course</h2><a href="#course">All six units →</a></div><div class="unit-grid">` +
-    f.units.slice(0, 3).map(I).join(``) +
-    `</div>` +
-    (d
-      ? `<section class="card"><h2>Plan my next study session</h2><p>Your deadlines and weakest practiced topics help prioritize the next step.</p>` +
-        D(`Build my study plan`, `plan`) +
-        `<div class="response" id="tutor-result">` +
-        T(C) +
-        `</div></section>`
-      : ``)
-  );
+  return `<details class="card"><summary>Study tools & class schedule</summary><div class="agenda-layout"><div class="agenda-main"><h2>Prepare for class</h2><p><a href="#lecture">Lecture prep</a> · <a href="#course">Course library</a> · <a href="#practice">Practice</a> · <a href="#grades">Grade planner</a></p></div><aside class="agenda-reference">${scheduleCard(f.schedule,p)}${lecturePreview(f.schedule)}</aside></div></details>`;
 }
 function I(e) {
   let t = f.questions.filter((t) => t.unit === e.id).length;
@@ -901,6 +855,7 @@ function q(e, t = {}) {
 }
 function J() {
   connection?.bind();
+  bindAgenda(p,next=>{p=a(next);j();},U,connection);
   bindHub(f,p,next=>{p=a(next);j();},U);
   document.querySelector('#learning-theme')?.addEventListener('change',event=>{p.learningTheme=event.target.value==='learning';j();U();});
   bindSourceStudy(p,next=>{

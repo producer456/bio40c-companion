@@ -42,3 +42,12 @@ These are selected guided checkpoints, not a question for every slide, an offici
 ## Learning and optional private sync
 
 Choose **Presentation → Learning** for guided recall, spaced review and readable study layouts. Lecture Prep includes summaries, key points and teacher questions. Connect your own private Bio 40C service in Settings to share progress and receive your Canvas calendar. Tailscale and browser local-network permission may be required. Public assets contain no personal calendar or progress. Calendar data does not verify submissions; check Canvas for undated work and authoritative requirements.
+
+## Assignment-first homepage
+
+Today leads with the nearest unfinished deadline, then groups other work as overdue,
+today, tomorrow, this week or needing a confirmed deadline (Pacific time). It combines
+the connected Canvas calendar with manually entered assignments. Add something from
+class captures a title, optional date, category and next action in existing course
+storage and backups. Personal completion does not verify or submit work in Canvas.
+Study tools and the class schedule remain below the assignment agenda.
