@@ -1,3 +1,4 @@
+import {PublicCalendar} from './public-calendar.js';
 import {CourseConnection} from './course-connection.js';
 import {validateHub,timeline,nextActions,bindAgenda,reviewCard,questionsCard,bindHub} from './learning-theme.js';
 let connection;
@@ -1203,7 +1204,7 @@ async function X() {
     ((w = !0),
       (h = `Saved data could not be read. It has not been overwritten. Recover the original browser data or restore a valid backup before making changes.`));
   }
-  connection = new CourseConnection({get:()=>p,set:next=>{p=a(next);j();},render:()=>{if(!document.querySelector('textarea:focus,input:focus'))U();},native:d});
+  connection = new (document.querySelector('meta[name=public-course-calendar]')&&!d?PublicCalendar:CourseConnection)({get:()=>p,set:next=>{p=a(next);j();},render:()=>{if(!document.querySelector('textarea:focus,input:focus'))U();},native:d});
   if(w)connection.local.enabled=false;
   window.bio40Connection=connection;
   setTimeout(()=>connection.sync(),1500);

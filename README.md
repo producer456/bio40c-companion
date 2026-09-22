@@ -41,7 +41,7 @@ These are selected guided checkpoints, not a question for every slide, an offici
 
 ## Learning and optional private sync
 
-Choose **Presentation → Learning** for guided recall, spaced review and readable study layouts. Lecture Prep includes summaries, key points and teacher questions. Connect your own private Bio 40C service in Settings to share progress and receive your Canvas calendar. Tailscale and browser local-network permission may be required. Public assets contain no personal calendar or progress. Calendar data does not verify submissions; check Canvas for undated work and authoritative requirements.
+Choose **Presentation → Learning** for guided recall, spaced review and readable study layouts. Lecture Prep includes summaries, key points and teacher questions. The website loads shared Bio 40C dates over ordinary HTTPS, with no Tailscale or local-network permission. Notes and progress stay local; transfer them between devices using backups. The shared dates come from the site owner’s section and may differ from an individual student’s deadlines. Calendar data does not verify submissions; check Canvas for undated work and authoritative requirements.
 
 ## Assignment-first homepage
 
@@ -51,3 +51,27 @@ the connected Canvas calendar with manually entered assignments. Add something f
 class captures a title, optional date, category and next action in existing course
 storage and backups. Personal completion does not verify or submit work in Canvas.
 Study tools and the class schedule remain below the assignment agenda.
+
+
+## Shared Canvas calendar
+
+`calendar.json` contains only approved Bio 40C (course 39756) titles, dates, course
+links, cancellation flags and source-change history. It excludes the personal feed
+URL, other courses, descriptions, attendees, notes, grades and student progress.
+The private feed URL stays on the owner's Mac. A local publisher reads the feed,
+filters course 39756 and reconstructs public course links, then updates only
+`calendar.json` through the Mac's existing GitHub connection. Neither GitHub nor
+visitors receive the private feed credential. No Canvas API access is required.
+
+The Mac publisher runs about every 30 minutes while the Mac is available. GitHub
+Pages publishes each updated snapshot. Previously published dates and source-change
+history are retained beyond Canvas's rolling window. On a feed error, the publisher
+retains saved dates with an error and the original successful check time. If the Mac
+is asleep or offline, publication pauses; the UI flags dates older than two hours.
+Open pages check for a newer snapshot every five minutes and when returning to the
+foreground. “Refresh published dates” reloads the latest published snapshot; it does
+not directly query Canvas.
+
+The public website uses a separate calendar-only cache, never reads the former
+private connection settings, and permits only same-origin data requests. Private
+client apps retain their existing Tailscale sync. Website progress sync is not provided.
